@@ -1,0 +1,24 @@
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\bin\Debug\Newtonsoft.Json.dll
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csprojAssemblyReference.cache
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.EditProfileForm.resources
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.MainWindow.resources
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Properties.Resources.resources
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.GenerateResource.cache
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.CopyComplete
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.pdb
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.exe
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.pdb
+Y:\tarkov\emutarkov launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe.config
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe.config
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.pdb
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\bin\Debug\Newtonsoft.Json.dll
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csprojAssemblyReference.cache
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.EditProfileForm.resources
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.MainWindow.resources
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Properties.Resources.resources
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.GenerateResource.cache
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.CopyComplete
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.exe
+Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.pdb

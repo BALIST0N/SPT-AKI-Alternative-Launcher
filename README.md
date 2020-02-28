@@ -1,2 +1,3 @@
-# Emutarkov-Alternative-Launcher
-Alternative launcher for emutarkov
+# JustEmuTarkov launcher 0.12
+
+john cena

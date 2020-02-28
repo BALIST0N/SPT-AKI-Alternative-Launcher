@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v3.5,Profile=Client": {},
+    ".NETFramework,Version=v3.5,Profile=Client/win": {},
+    ".NETFramework,Version=v3.5,Profile=Client/win-x64": {},
+    ".NETFramework,Version=v3.5,Profile=Client/win-x86": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v3.5,Profile=Client": []
+  },
+  "packageFolders": {
+    "C:\\Users\\BALIST0N\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "Y:\\tarkov\\emutarkov launcher\\EFT_Launcher_12\\EFT_Launcher_12.csproj",
+      "projectName": "EFT_Launcher_12",
+      "projectPath": "Y:\\tarkov\\emutarkov launcher\\EFT_Launcher_12\\EFT_Launcher_12.csproj",
+      "packagesPath": "C:\\Users\\BALIST0N\\.nuget\\packages\\",
+      "outputPath": "Y:\\tarkov\\emutarkov launcher\\EFT_Launcher_12\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\BALIST0N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net35-client"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net35-client": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net35-client": {}
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
