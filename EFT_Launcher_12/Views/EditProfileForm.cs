@@ -9,12 +9,14 @@ namespace EFT_Launcher_12
     public partial class EditProfileForm : Form
     {
         string profilePath;
+        string tempPath;
         ProfileExtended profileToEdit;
         List<HideoutUpgradesArea> hideoutLevels;
 
         public EditProfileForm(int id)
         {
             profilePath = Path.Combine(Globals.profilesFolder,"profiles/"+ id + "/character.json");
+            tempPath = Path.Combine(Globals.profilesFolder, "profiles/" + id + "/TestSaveLauncher.json");
             hideoutLevels = new List<HideoutUpgradesArea>();
 
             #region hideoutlevel init
@@ -68,10 +70,10 @@ namespace EFT_Launcher_12
 
         private void saveButton_Click(object sender, EventArgs e) //saving the profile 
         {
-            profileToEdit.Info.Nickname = nicknameTextBox.Text;
-            profileToEdit.Info.Side = sideselectorComboBox.SelectedItem.ToString();
-            profileToEdit.Info.Experience = Convert.ToInt32(experienceBox.Value);
-            profileToEdit.Info.GameVersion = gameVersionCombo.SelectedItem.ToString();
+            profileToEdit.info.nickname = nicknameTextBox.Text;
+            profileToEdit.info.side = sideselectorComboBox.SelectedItem.ToString();
+            profileToEdit.info.experience = Convert.ToInt32(experienceBox.Value);
+            profileToEdit.info.gameVersion = gameVersionCombo.SelectedItem.ToString();
 
             SetSkillValue("Endurance", enduranceNumericBox.Value);
             SetSkillValue("Strength", strenghNumericBox.Value);
@@ -93,12 +95,12 @@ namespace EFT_Launcher_12
             try
             {
                 //using (StreamWriter file = File.CreateText(profilePath))
-                using (StreamWriter file = File.CreateText(Environment.CurrentDirectory + "/testProfileSave.json"))
+                using ( StreamWriter file = File.CreateText(tempPath) )
                 {
                     JsonSerializer serializer = new JsonSerializer();
-                    serializer.Serialize(file, profileToEdit);
+                    serializer.Serialize(file, profileToEdit );
                 }
-                MessageBox.Show("profile saved succesfullly");
+                MessageBox.Show("temp file created");
             }
             catch(Exception ex)
             {
@@ -109,12 +111,12 @@ namespace EFT_Launcher_12
 
         private void SetInfo()
         {
-            Text += profileToEdit.Info.Nickname;
+            Text += profileToEdit.info.nickname;
 
-            nicknameTextBox.Text = profileToEdit.Info.Nickname;
-            sideselectorComboBox.SelectedItem = profileToEdit.Info.Side;
-            experienceBox.Value = profileToEdit.Info.Experience;
-            gameVersionCombo.SelectedItem = profileToEdit.Info.GameVersion;
+            nicknameTextBox.Text = profileToEdit.info.nickname;
+            sideselectorComboBox.SelectedItem = profileToEdit.info.side;
+            experienceBox.Value = profileToEdit.info.experience;
+            gameVersionCombo.SelectedItem = profileToEdit.info.gameVersion;
 
             #region INIT SKILLS numericBoxes
             enduranceNumericBox.Value = GetSkillValue("Endurance");
@@ -140,23 +142,24 @@ namespace EFT_Launcher_12
 
         private decimal GetSkillValue(string skill)
         {
-            return profileToEdit.Skills.Common[profileToEdit.Skills.Common.FindIndex(x => x.Id.Equals(skill))].Progress;
+            //return profileToEdit.skills[profileToEdit.skills.listskills.FindIndex(x => x.id.Equals(skill))].progress;
+            return profileToEdit.skills.common.Find(x => x.id.Equals(skill)).progress;
         }
 
         private void SetSkillValue(string skill, decimal newval)
         {
-            profileToEdit.Skills.Common[profileToEdit.Skills.Common.FindIndex(x => x.Id.Equals(skill))].Progress = newval;
+            profileToEdit.skills.common.Find(x => x.id.Equals(skill)).progress = newval;
         }
 
         private void hideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             hideoutLevelNumeric.Maximum = hideoutLevels[this.hideoutAreaComboBox.SelectedIndex].levelMax;
-            hideoutLevelNumeric.Value = profileToEdit.Hideout.Areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level;
+            hideoutLevelNumeric.Value = profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level;
         }
 
         private void hideoutLevelNumeric_ValueChanged(object sender, EventArgs e)
         {
-            profileToEdit.Hideout.Areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
+            profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
         }
 
         /// <summary>
@@ -168,9 +171,9 @@ namespace EFT_Launcher_12
             public string areaName;
             public int levelMax;
 
-            public HideoutUpgradesArea(int a, string n, int u)
+            public HideoutUpgradesArea(int t, string n, int u)
             {
-                areaType = a;
+                areaType = t;
                 areaName = n;
                 levelMax = u;
             }
