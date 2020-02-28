@@ -41,20 +41,20 @@ namespace EFT_Launcher_12
 
     public class Hydration
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class Energy
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class Health2
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class Head
@@ -64,8 +64,8 @@ namespace EFT_Launcher_12
 
     public class Health3
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class Chest
@@ -75,8 +75,8 @@ namespace EFT_Launcher_12
 
     public class Health4
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class Stomach
@@ -86,8 +86,8 @@ namespace EFT_Launcher_12
 
     public class Health5
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class LeftArm
@@ -97,8 +97,8 @@ namespace EFT_Launcher_12
 
     public class Health6
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class RightArm
@@ -108,8 +108,8 @@ namespace EFT_Launcher_12
 
     public class Health7
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class LeftLeg
@@ -119,8 +119,8 @@ namespace EFT_Launcher_12
 
     public class Health8
     {
-        public int Current;
-        public int Maximum;
+        public float Current;
+        public float Maximum;
     }
 
     public class RightLeg
