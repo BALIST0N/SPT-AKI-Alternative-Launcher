@@ -9,14 +9,12 @@ namespace EFT_Launcher_12
     public partial class EditProfileForm : Form
     {
         string profilePath;
-        string tempPath;
         ProfileExtended profileToEdit;
         List<HideoutUpgradesArea> hideoutLevels;
 
         public EditProfileForm(int id)
         {
             profilePath = Path.Combine(Globals.profilesFolder,"profiles/"+ id + "/character.json");
-            tempPath = Path.Combine(Globals.profilesFolder, "profiles/" + id + "/TestSaveLauncher.json");
             hideoutLevels = new List<HideoutUpgradesArea>();
 
             #region hideoutlevel init
@@ -50,6 +48,7 @@ namespace EFT_Launcher_12
         {
             try
             {
+               
                 using (StreamReader r = new StreamReader(profilePath))
                 {
                     profileToEdit = JsonConvert.DeserializeObject<ProfileExtended>(r.ReadToEnd());
@@ -68,7 +67,7 @@ namespace EFT_Launcher_12
             }
         }
 
-        private void saveButton_Click(object sender, EventArgs e) //saving the profile 
+        private void SaveButton_Click(object sender, EventArgs e) //saving the profile 
         {
             profileToEdit.info.nickname = nicknameTextBox.Text;
             profileToEdit.info.side = sideselectorComboBox.SelectedItem.ToString();
@@ -94,13 +93,39 @@ namespace EFT_Launcher_12
 
             try
             {
-                //using (StreamWriter file = File.CreateText(profilePath))
-                using ( StreamWriter file = File.CreateText(tempPath) )
+                /*
+                using (StreamReader r = new StreamReader(profilePath))
                 {
-                    JsonSerializer serializer = new JsonSerializer();
-                    serializer.Serialize(file, profileToEdit );
+                    
+                    dynamic realProfile = JsonConvert.DeserializeObject(r.ReadToEnd());
+                    
+                    realProfile.Info.Nickname = profileToEdit.info.nickname;
+                    realProfile.Info.Side = profileToEdit.info.side;
+                    realProfile.Info.Experience = profileToEdit.info.experience;
+                    realProfile.Info.GameVersion = profileToEdit.info.gameVersion;
+
+                    realProfile.Skills.Common = new List<ProfileExtended.Skills.Skill>();
+                    foreach(ProfileExtended.Skills.Skill cheval in profileToEdit.skills.common)
+                    {
+                        realProfile.Skills.Common.Add(cheval);
+                    }
+
+                    realProfile.Hideout.Areas = new List<ProfileExtended.Hideout.Area>();
+                    foreach (ProfileExtended.Hideout.Area fromage in profileToEdit.hideout.areas)
+                    {
+                        realProfile.Hideout.Areas.Add(fromage);
+                    }
+                    
+
+                    using (StreamWriter file = File.CreateText(profilePath))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        serializer.Serialize(file, profileToEdit);
+                    }
+                    MessageBox.Show("profile succesfully saved");
+                    
                 }
-                MessageBox.Show("temp file created");
+                */
             }
             catch(Exception ex)
             {
@@ -151,13 +176,13 @@ namespace EFT_Launcher_12
             profileToEdit.skills.common.Find(x => x.id.Equals(skill)).progress = newval;
         }
 
-        private void hideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void HideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             hideoutLevelNumeric.Maximum = hideoutLevels[this.hideoutAreaComboBox.SelectedIndex].levelMax;
             hideoutLevelNumeric.Value = profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level;
         }
 
-        private void hideoutLevelNumeric_ValueChanged(object sender, EventArgs e)
+        private void HideoutLevelNumeric_ValueChanged(object sender, EventArgs e)
         {
             profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
         }

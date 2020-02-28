@@ -22,3 +22,17 @@ Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csp
 Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.CopyComplete
 Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.exe
 Y:\tarkov\emutarkov launcher house\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.pdb
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csprojAssemblyReference.cache
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.EditProfileForm.resources
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.MainWindow.resources
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Properties.Resources.resources
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.GenerateResource.cache
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe.config
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.pdb
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\Newtonsoft.Json.dll
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\System.Numerics.dll
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\System.Numerics.xml
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.CopyComplete
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.exe
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.pdb

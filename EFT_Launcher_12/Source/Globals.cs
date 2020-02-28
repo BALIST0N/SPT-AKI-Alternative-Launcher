@@ -14,11 +14,11 @@ namespace EFT_Launcher_12
 		
 		static Globals()
 		{
-			serverFolder = Environment.CurrentDirectory;
-			profilesFolder = Path.Combine(Environment.CurrentDirectory, "user");
+			//serverFolder = Environment.CurrentDirectory;
+			//profilesFolder = Path.Combine(Environment.CurrentDirectory, "user");
 
-			//serverFolder = "Y:/tarkov/emutarkov git/EmuTarkov-Server";
-			//profilesFolder = "Y:/tarkov/emutarkov git/EmuTarkov-Server/user";
+			serverFolder = "Y:/tarkov/emutarkov git/EmuTarkov-Server";
+			profilesFolder = "Y:/tarkov/emutarkov git/EmuTarkov-Server/user";
 
 			gameFolder = Properties.Settings.Default.gameFolder;
 			launchServer = true;

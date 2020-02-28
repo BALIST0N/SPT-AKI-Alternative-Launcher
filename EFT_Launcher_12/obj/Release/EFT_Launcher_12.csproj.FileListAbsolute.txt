@@ -1,0 +1,12 @@
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Release\EmuTarkov-Launcher.exe.config
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Release\EmuTarkov-Launcher.exe
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Release\EmuTarkov-Launcher.pdb
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Release\Newtonsoft.Json.dll
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.csprojAssemblyReference.cache
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.EditProfileForm.resources
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.MainWindow.resources
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.Properties.Resources.resources
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.csproj.GenerateResource.cache
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.csproj.CopyComplete
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EmuTarkov-Launcher.exe
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EmuTarkov-Launcher.pdb

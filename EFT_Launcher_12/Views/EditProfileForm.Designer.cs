@@ -166,6 +166,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.Enabled = false;
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(530, 318);
@@ -174,7 +175,7 @@
             this.saveButton.TabIndex = 6;
             this.saveButton.Text = "Save ! ";
             this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // label5
             // 
@@ -651,7 +652,7 @@
             this.hideoutAreaComboBox.Name = "hideoutAreaComboBox";
             this.hideoutAreaComboBox.Size = new System.Drawing.Size(144, 26);
             this.hideoutAreaComboBox.TabIndex = 49;
-            this.hideoutAreaComboBox.SelectedIndexChanged += new System.EventHandler(this.hideoutAreaComboBox_SelectedIndexChanged);
+            this.hideoutAreaComboBox.SelectedIndexChanged += new System.EventHandler(this.HideoutAreaComboBox_SelectedIndexChanged);
             // 
             // hideoutLevelNumeric
             // 
@@ -672,7 +673,7 @@
             0,
             0,
             0});
-            this.hideoutLevelNumeric.ValueChanged += new System.EventHandler(this.hideoutLevelNumeric_ValueChanged);
+            this.hideoutLevelNumeric.ValueChanged += new System.EventHandler(this.HideoutLevelNumeric_ValueChanged);
             // 
             // EditProfileForm
             // 
