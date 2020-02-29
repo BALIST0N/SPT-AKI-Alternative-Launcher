@@ -190,7 +190,15 @@ namespace EFT_Launcher_12
 			proc.StartInfo.CreateNoWindow = true;
 			proc.StartInfo.UseShellExecute = false;
 			proc.StartInfo.WorkingDirectory = Globals.serverFolder;
-			proc.StartInfo.FileName = Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe");
+			if( File.Exists(Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe")))
+			{
+				proc.StartInfo.FileName = Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe");
+			}
+			else
+			{
+				proc.StartInfo.FileName =  Path.Combine(Globals.serverFolder, "start.bat");
+			}
+			
 			
 			// stdout
 			proc.StartInfo.RedirectStandardError = true;
