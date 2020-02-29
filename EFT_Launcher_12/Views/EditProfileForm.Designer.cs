@@ -668,11 +668,6 @@
             this.hideoutLevelNumeric.Name = "hideoutLevelNumeric";
             this.hideoutLevelNumeric.Size = new System.Drawing.Size(72, 26);
             this.hideoutLevelNumeric.TabIndex = 50;
-            this.hideoutLevelNumeric.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
             this.hideoutLevelNumeric.ValueChanged += new System.EventHandler(this.HideoutLevelNumeric_ValueChanged);
             // 
             // EditProfileForm

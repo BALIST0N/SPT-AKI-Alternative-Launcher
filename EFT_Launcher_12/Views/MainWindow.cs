@@ -11,8 +11,6 @@ namespace EFT_Launcher_12
 {
 	public partial class MainWindow : Form
 	{
-
-
 		private Profile[] profiles = new Profile[10];
 		private delegate void SetTextCallback(string text);
 		private delegate void ResetLauncherCallback();
@@ -68,21 +66,18 @@ namespace EFT_Launcher_12
 			if ( File.Exists(Path.Combine(gamePathTextBox.Text, "EscapeFromTarkov.exe")) )
 			{
 				gameExists = true;
+				gamePathTextBox.ForeColor = Color.White;
+				Globals.gameFolder = gamePathTextBox.Text;
+				Properties.Settings.Default.gameFolder = Globals.gameFolder;
+				Properties.Settings.Default.Save();
 
-				if( File.Exists(Path.Combine(gamePathTextBox.Text, "client.config.json")) == false )
+				if ( File.Exists(Path.Combine(gamePathTextBox.Text, "client.config.json")) == false )
 				{
-					MessageBox.Show("gameFolder has been found but Client.config.json is missing");
 					backendUrlLabel.Text = "Backend URL : ?";
 				}
 				else
 				{
-					gamePathTextBox.ForeColor = Color.White;
-					Globals.gameFolder = gamePathTextBox.Text;
-					Properties.Settings.Default.gameFolder = Globals.gameFolder;
-					Properties.Settings.Default.Save();
-
 					string json = File.ReadAllText(Path.Combine(Globals.gameFolder, "client.config.json"));
-
 					Globals.clientConfig = JsonConvert.DeserializeObject<ClientConfig>(json);
 					backendUrlLabel.Text = "Backend URL : " + Globals.clientConfig.BackendUrl;
 				}
@@ -165,10 +160,16 @@ namespace EFT_Launcher_12
 			
 			if (Globals.launchServer)
 			{
-				// no need for this.member, we're accessing members inside the class
-				this.Height = 400;
-				LaunchServer();
-				this.killServerButton.Show();
+				try
+				{
+					LaunchServer();
+					this.Height = 400;
+					this.killServerButton.Show();
+				}
+				catch(Exception ex)
+				{
+					MessageBox.Show("something went wrong :" + ex.Message );
+				}
 			}
 
 			// start game

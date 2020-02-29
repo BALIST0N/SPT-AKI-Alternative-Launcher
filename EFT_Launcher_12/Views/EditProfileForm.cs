@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace EFT_Launcher_12
 {
@@ -39,8 +40,8 @@ namespace EFT_Launcher_12
             hideoutLevels.Add(new HideoutUpgradesArea(18, "Solar Power", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(19, "Booze Generator", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(20, "Bitcoin Farm", 3));
+            hideoutLevels.Add(new HideoutUpgradesArea(21, "number 21", 1));
             #endregion
-	    
             InitializeComponent();
         }
 
@@ -48,10 +49,10 @@ namespace EFT_Launcher_12
         {
             try
             {
-               
                 using (StreamReader r = new StreamReader(profilePath))
                 {
                     profileToEdit = JsonConvert.DeserializeObject<ProfileExtended>(r.ReadToEnd());
+                    profileToEdit.hideout.areas = profileToEdit.hideout.areas.OrderBy(o => o.type).ToList();
                     SetInfo();
                 }
             }
@@ -96,7 +97,6 @@ namespace EFT_Launcher_12
                 /*
                 using (StreamReader r = new StreamReader(profilePath))
                 {
-                    
                     dynamic realProfile = JsonConvert.DeserializeObject(r.ReadToEnd());
                     
                     realProfile.Info.Nickname = profileToEdit.info.nickname;
@@ -178,13 +178,20 @@ namespace EFT_Launcher_12
 
         private void HideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //ignore raising value changed event
+            //super important it cause the hideout numeric to change values and save without user input
+            hideoutLevelNumeric.ValueChanged -= new EventHandler(HideoutLevelNumeric_ValueChanged);
+
             hideoutLevelNumeric.Maximum = hideoutLevels[this.hideoutAreaComboBox.SelectedIndex].levelMax;
-            hideoutLevelNumeric.Value = profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level;
+            hideoutLevelNumeric.Value = profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level;
+
+            hideoutLevelNumeric.ValueChanged += new EventHandler(HideoutLevelNumeric_ValueChanged);//re-enable user input event ! 
         }
 
         private void HideoutLevelNumeric_ValueChanged(object sender, EventArgs e)
         {
-            profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
+            profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level = Convert.ToInt32(hideoutLevelNumeric.Value);
+            //profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
         }
 
         /// <summary>
