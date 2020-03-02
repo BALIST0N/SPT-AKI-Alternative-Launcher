@@ -93,6 +93,21 @@ namespace EFT_Launcher_12
             SetSkillValue("Search", searchNumericBox.Value);
             SetSkillValue("MagDrills", magdrillsNumericBox.Value);
 
+            //weapon skills
+            SetSkillValue("Pistol", pistolNumericBox.Value);
+            SetSkillValue("Revolver", revolverNumericBox.Value);
+            SetSkillValue("SMG", SMGNumericBox.Value);
+            SetSkillValue("Assault", assaultNumericBox.Value);
+            SetSkillValue("Shotgun", shotgunNumericBox.Value);
+            SetSkillValue("Sniper", sniperNumericBox.Value);
+            SetSkillValue("LMG", lmgNumericBox.Value);
+            SetSkillValue("HMG", hmgNumericBox.Value);
+            SetSkillValue("DMR", dmrNumericBox.Value);
+            SetSkillValue("Launcher", launcherNumericBox.Value);
+            SetSkillValue("AttachedLauncher", attachLauncherNumericBox.Value);
+            SetSkillValue("Throwing", throwNumericBox.Value);
+            SetSkillValue("melee", meleeNumericBox.Value);
+
             try
             {
                 string json = File.ReadAllText(profilePath);
