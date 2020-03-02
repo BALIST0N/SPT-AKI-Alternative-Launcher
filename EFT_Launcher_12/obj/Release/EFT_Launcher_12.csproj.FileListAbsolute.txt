@@ -10,3 +10,5 @@ Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launche
 Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EFT_Launcher_12.csproj.CopyComplete
 Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EmuTarkov-Launcher.exe
 Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Release\EmuTarkov-Launcher.pdb
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Release\System.Numerics.dll
+Y:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Release\System.Numerics.xml

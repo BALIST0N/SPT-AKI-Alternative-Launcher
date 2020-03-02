@@ -21,7 +21,7 @@ namespace EFT_Launcher_12
 			profilesFolder = "Y:/tarkov/emutarkov git/EmuTarkov-Server/user";
 
 			gameFolder = Properties.Settings.Default.gameFolder;
-			launchServer = true;
+			launchServer = false;
 			clientConfig = null;
 		}
 	}

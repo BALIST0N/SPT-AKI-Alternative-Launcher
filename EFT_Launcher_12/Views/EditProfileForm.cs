@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Linq;
+using Newtonsoft.Json.Linq;
 
 namespace EFT_Launcher_12
 {
@@ -40,7 +41,7 @@ namespace EFT_Launcher_12
             hideoutLevels.Add(new HideoutUpgradesArea(18, "Solar Power", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(19, "Booze Generator", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(20, "Bitcoin Farm", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(21, "number 21", 1));
+            hideoutLevels.Add(new HideoutUpgradesArea(21, "Christmas Tree", 1));
             #endregion
             InitializeComponent();
         }
@@ -94,38 +95,34 @@ namespace EFT_Launcher_12
 
             try
             {
-                /*
-                using (StreamReader r = new StreamReader(profilePath))
+                string json = File.ReadAllText(profilePath);
+                JObject realProfile = JObject.Parse(json);
+
+                realProfile.SelectToken("Info")["Nickname"] = profileToEdit.info.nickname;
+                realProfile.SelectToken("Info")["Side"] = profileToEdit.info.side;
+                realProfile.SelectToken("Info")["Experience"] = profileToEdit.info.experience;
+                realProfile.SelectToken("Info")["GameVersion"] = profileToEdit.info.gameVersion;
+
+                for (int i = 0; i < profileToEdit.skills.common.Count; i++)
                 {
-                    dynamic realProfile = JsonConvert.DeserializeObject(r.ReadToEnd());
-                    
-                    realProfile.Info.Nickname = profileToEdit.info.nickname;
-                    realProfile.Info.Side = profileToEdit.info.side;
-                    realProfile.Info.Experience = profileToEdit.info.experience;
-                    realProfile.Info.GameVersion = profileToEdit.info.gameVersion;
-
-                    realProfile.Skills.Common = new List<ProfileExtended.Skills.Skill>();
-                    foreach(ProfileExtended.Skills.Skill cheval in profileToEdit.skills.common)
-                    {
-                        realProfile.Skills.Common.Add(cheval);
-                    }
-
-                    realProfile.Hideout.Areas = new List<ProfileExtended.Hideout.Area>();
-                    foreach (ProfileExtended.Hideout.Area fromage in profileToEdit.hideout.areas)
-                    {
-                        realProfile.Hideout.Areas.Add(fromage);
-                    }
-                    
-
-                    using (StreamWriter file = File.CreateText(profilePath))
-                    {
-                        JsonSerializer serializer = new JsonSerializer();
-                        serializer.Serialize(file, profileToEdit);
-                    }
-                    MessageBox.Show("profile succesfully saved");
-                    
+                    realProfile.SelectToken("Skills").SelectToken("Common")[i]["Progress"] = profileToEdit.skills.common[i].progress;
                 }
-                */
+
+                foreach (ProfileExtended.Hideout.Area a in profileToEdit.hideout.areas)
+                {
+                    realProfile.SelectToken("Hideout").SelectToken("Areas")[a.type]["level"] = a.level;
+                }
+
+
+                //using (StreamWriter file = File.CreateText( Path.Combine(Globals.profilesFolder, "profiles/1/TestSaveProfile.json") ))
+                using (StreamWriter file = File.CreateText(profilePath))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Formatting = Formatting.Indented;
+                    serializer.Serialize(file, realProfile);
+                }
+                MessageBox.Show("profile succesfully saved");
+                                
             }
             catch(Exception ex)
             {
@@ -162,6 +159,23 @@ namespace EFT_Launcher_12
             recoilNumericBox.Value = GetSkillValue("RecoilControl");
             searchNumericBox.Value = GetSkillValue("Search");
             magdrillsNumericBox.Value = GetSkillValue("MagDrills");
+
+            //weapons skills
+            pistolNumericBox.Value = GetSkillValue("Pistol");
+            revolverNumericBox.Value = GetSkillValue("Revolver");
+            SMGNumericBox.Value = GetSkillValue("SMG");
+            assaultNumericBox.Value = GetSkillValue("Assault");
+            shotgunNumericBox.Value = GetSkillValue("Shotgun");
+            sniperNumericBox.Value = GetSkillValue("Sniper");
+
+            lmgNumericBox.Value = GetSkillValue("LMG");
+            hmgNumericBox.Value = GetSkillValue("HMG");
+            dmrNumericBox.Value = GetSkillValue("DMR");
+            launcherNumericBox.Value = GetSkillValue("Launcher");
+            attachLauncherNumericBox.Value = GetSkillValue("AttachedLauncher");
+            throwNumericBox.Value = GetSkillValue("Throwing");
+            meleeNumericBox.Value = GetSkillValue("Melee");
+
             #endregion
         }
 

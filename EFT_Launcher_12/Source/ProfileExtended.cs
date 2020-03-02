@@ -19,12 +19,18 @@ namespace EFT_Launcher_12
         public class Skills
         {
             public List<Skill> common;
+            public List<Mastering> mastering;
             public class Skill
             {
                 public string id;
                 public decimal progress;
                 public decimal pointsEarnedDuringSession;
                 public int lastAcces;
+            }
+            public class Mastering
+            {
+                public string id;
+                public int progress;
             }
         }
 
