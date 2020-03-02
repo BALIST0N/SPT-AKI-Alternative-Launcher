@@ -140,6 +140,11 @@ namespace EFT_Launcher_12
             experienceBox.Value = profileToEdit.info.experience;
             gameVersionCombo.SelectedItem = profileToEdit.info.gameVersion;
 
+            foreach(ProfileExtended.Skills.Mastering m in profileToEdit.skills.mastering)
+            {
+                masteringComboBox.Items.Add(m.id);
+            }
+
             #region INIT SKILLS numericBoxes
             enduranceNumericBox.Value = GetSkillValue("Endurance");
             strenghNumericBox.Value = GetSkillValue("Strength");
@@ -223,6 +228,18 @@ namespace EFT_Launcher_12
                 areaName = n;
                 levelMax = u;
             }
+        }
+
+        private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            masteringProgressNumericBox.ValueChanged -= new EventHandler(masteringProgressNumericBox_ValueChanged);
+            masteringProgressNumericBox.Value = profileToEdit.skills.mastering.Find( x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString()) ).progress;
+            masteringProgressNumericBox.ValueChanged += new EventHandler(masteringProgressNumericBox_ValueChanged);
+        }
+
+        private void masteringProgressNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = Convert.ToInt32( masteringProgressNumericBox.Value);
         }
     }
 }

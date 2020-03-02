@@ -78,7 +78,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.masteringTabPage = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
             this.customisationTabPage = new System.Windows.Forms.TabPage();
             this.wskillsTabPage = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
@@ -107,6 +106,10 @@
             this.hmgNumericBox = new System.Windows.Forms.NumericUpDown();
             this.lmgNumericBox = new System.Windows.Forms.NumericUpDown();
             this.meleeNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.masteringComboBox = new System.Windows.Forms.ComboBox();
+            this.masteringProgressNumericBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.experienceBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enduranceNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vitalityNumericBox)).BeginInit();
@@ -144,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.hmgNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lmgNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).BeginInit();
             this.SuspendLayout();
             // 
             // experienceBox
@@ -804,22 +808,15 @@
             // masteringTabPage
             // 
             this.masteringTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.masteringTabPage.Controls.Add(this.masteringProgressNumericBox);
+            this.masteringTabPage.Controls.Add(this.masteringComboBox);
+            this.masteringTabPage.Controls.Add(this.label37);
             this.masteringTabPage.Controls.Add(this.label6);
             this.masteringTabPage.Location = new System.Drawing.Point(4, 22);
             this.masteringTabPage.Name = "masteringTabPage";
             this.masteringTabPage.Size = new System.Drawing.Size(497, 307);
             this.masteringTabPage.TabIndex = 3;
             this.masteringTabPage.Text = "Mastering";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Historic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(50, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(262, 45);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "To be Definined";
             // 
             // customisationTabPage
             // 
@@ -1190,6 +1187,50 @@
             this.meleeNumericBox.Size = new System.Drawing.Size(52, 26);
             this.meleeNumericBox.TabIndex = 85;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Historic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 30);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Weapon";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI Historic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(188, 25);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(100, 30);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Progress";
+            // 
+            // masteringComboBox
+            // 
+            this.masteringComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.masteringComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.masteringComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteringComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.masteringComboBox.FormattingEnabled = true;
+            this.masteringComboBox.Location = new System.Drawing.Point(24, 58);
+            this.masteringComboBox.Name = "masteringComboBox";
+            this.masteringComboBox.Size = new System.Drawing.Size(167, 29);
+            this.masteringComboBox.TabIndex = 2;
+            this.masteringComboBox.SelectedIndexChanged += new System.EventHandler(this.masteringComboBox_SelectedIndexChanged);
+            // 
+            // masteringProgressNumericBox
+            // 
+            this.masteringProgressNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.masteringProgressNumericBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteringProgressNumericBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.masteringProgressNumericBox.Location = new System.Drawing.Point(197, 58);
+            this.masteringProgressNumericBox.Name = "masteringProgressNumericBox";
+            this.masteringProgressNumericBox.Size = new System.Drawing.Size(91, 29);
+            this.masteringProgressNumericBox.TabIndex = 3;
+            this.masteringProgressNumericBox.ValueChanged += new System.EventHandler(this.masteringProgressNumericBox_ValueChanged);
+            // 
             // EditProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1246,6 +1287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.hmgNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lmgNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1302,7 +1344,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage masteringTabPage;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage wskillsTabPage;
         private System.Windows.Forms.NumericUpDown meleeNumericBox;
         private System.Windows.Forms.NumericUpDown throwNumericBox;
@@ -1331,5 +1372,9 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown pistolNumericBox;
         private System.Windows.Forms.TabPage customisationTabPage;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox masteringComboBox;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.NumericUpDown masteringProgressNumericBox;
     }
 }
