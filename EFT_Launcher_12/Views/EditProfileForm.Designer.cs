@@ -670,12 +670,13 @@
             "standard",
             "edge_of_darkness"});
             this.hideoutAreaComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.hideoutAreaComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hideoutAreaComboBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hideoutAreaComboBox.ForeColor = System.Drawing.Color.White;
             this.hideoutAreaComboBox.FormattingEnabled = true;
-            this.hideoutAreaComboBox.Location = new System.Drawing.Point(18, 51);
+            this.hideoutAreaComboBox.Location = new System.Drawing.Point(15, 49);
             this.hideoutAreaComboBox.Name = "hideoutAreaComboBox";
-            this.hideoutAreaComboBox.Size = new System.Drawing.Size(195, 31);
+            this.hideoutAreaComboBox.Size = new System.Drawing.Size(200, 31);
             this.hideoutAreaComboBox.TabIndex = 49;
             this.hideoutAreaComboBox.SelectedIndexChanged += new System.EventHandler(this.HideoutAreaComboBox_SelectedIndexChanged);
             // 
@@ -684,7 +685,7 @@
             this.hideoutLevelNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.hideoutLevelNumeric.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hideoutLevelNumeric.ForeColor = System.Drawing.Color.White;
-            this.hideoutLevelNumeric.Location = new System.Drawing.Point(228, 52);
+            this.hideoutLevelNumeric.Location = new System.Drawing.Point(221, 49);
             this.hideoutLevelNumeric.Maximum = new decimal(new int[] {
             3,
             0,
@@ -703,6 +704,7 @@
             this.tabControl1.Controls.Add(this.masteringTabPage);
             this.tabControl1.Controls.Add(this.hideoutTabPage);
             this.tabControl1.Controls.Add(this.customisationTabPage);
+            this.tabControl1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(-1, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -779,9 +781,9 @@
             this.hideoutTabPage.Controls.Add(this.hideoutAreaComboBox);
             this.hideoutTabPage.Controls.Add(this.hideoutLevelNumeric);
             this.hideoutTabPage.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hideoutTabPage.Location = new System.Drawing.Point(4, 22);
+            this.hideoutTabPage.Location = new System.Drawing.Point(4, 23);
             this.hideoutTabPage.Name = "hideoutTabPage";
-            this.hideoutTabPage.Size = new System.Drawing.Size(497, 307);
+            this.hideoutTabPage.Size = new System.Drawing.Size(497, 306);
             this.hideoutTabPage.TabIndex = 2;
             this.hideoutTabPage.Text = "Hideout";
             // 
@@ -789,7 +791,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 22);
+            this.label4.Location = new System.Drawing.Point(10, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 26);
             this.label4.TabIndex = 51;
@@ -799,7 +801,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(223, 22);
+            this.label5.Location = new System.Drawing.Point(216, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 26);
             this.label5.TabIndex = 52;
@@ -812,9 +814,9 @@
             this.masteringTabPage.Controls.Add(this.masteringComboBox);
             this.masteringTabPage.Controls.Add(this.label37);
             this.masteringTabPage.Controls.Add(this.label6);
-            this.masteringTabPage.Location = new System.Drawing.Point(4, 22);
+            this.masteringTabPage.Location = new System.Drawing.Point(4, 23);
             this.masteringTabPage.Name = "masteringTabPage";
-            this.masteringTabPage.Size = new System.Drawing.Size(497, 307);
+            this.masteringTabPage.Size = new System.Drawing.Size(497, 306);
             this.masteringTabPage.TabIndex = 3;
             this.masteringTabPage.Text = "Mastering";
             // 
@@ -856,9 +858,9 @@
             this.wskillsTabPage.Controls.Add(this.label16);
             this.wskillsTabPage.Controls.Add(this.label26);
             this.wskillsTabPage.Controls.Add(this.pistolNumericBox);
-            this.wskillsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.wskillsTabPage.Location = new System.Drawing.Point(4, 23);
             this.wskillsTabPage.Name = "wskillsTabPage";
-            this.wskillsTabPage.Size = new System.Drawing.Size(497, 307);
+            this.wskillsTabPage.Size = new System.Drawing.Size(497, 306);
             this.wskillsTabPage.TabIndex = 5;
             this.wskillsTabPage.Text = "Weapons Skills";
             // 
@@ -1190,20 +1192,20 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Historic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 25);
+            this.label6.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 30);
+            this.label6.Size = new System.Drawing.Size(86, 26);
             this.label6.TabIndex = 0;
             this.label6.Text = "Weapon";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI Historic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(188, 25);
+            this.label37.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(216, 20);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(100, 30);
+            this.label37.Size = new System.Drawing.Size(90, 26);
             this.label37.TabIndex = 1;
             this.label37.Text = "Progress";
             // 
@@ -1211,23 +1213,28 @@
             // 
             this.masteringComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.masteringComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.masteringComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteringComboBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.masteringComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.masteringComboBox.FormattingEnabled = true;
-            this.masteringComboBox.Location = new System.Drawing.Point(24, 58);
+            this.masteringComboBox.Location = new System.Drawing.Point(15, 49);
             this.masteringComboBox.Name = "masteringComboBox";
-            this.masteringComboBox.Size = new System.Drawing.Size(167, 29);
+            this.masteringComboBox.Size = new System.Drawing.Size(200, 31);
             this.masteringComboBox.TabIndex = 2;
             this.masteringComboBox.SelectedIndexChanged += new System.EventHandler(this.masteringComboBox_SelectedIndexChanged);
             // 
             // masteringProgressNumericBox
             // 
             this.masteringProgressNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.masteringProgressNumericBox.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteringProgressNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.masteringProgressNumericBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.masteringProgressNumericBox.Location = new System.Drawing.Point(197, 58);
+            this.masteringProgressNumericBox.Location = new System.Drawing.Point(221, 49);
+            this.masteringProgressNumericBox.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.masteringProgressNumericBox.Name = "masteringProgressNumericBox";
-            this.masteringProgressNumericBox.Size = new System.Drawing.Size(91, 29);
+            this.masteringProgressNumericBox.Size = new System.Drawing.Size(100, 31);
             this.masteringProgressNumericBox.TabIndex = 3;
             this.masteringProgressNumericBox.ValueChanged += new System.EventHandler(this.masteringProgressNumericBox_ValueChanged);
             // 

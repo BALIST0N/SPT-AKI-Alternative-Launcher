@@ -108,6 +108,11 @@ namespace EFT_Launcher_12
                     realProfile.SelectToken("Skills").SelectToken("Common")[i]["Progress"] = profileToEdit.skills.common[i].progress;
                 }
 
+                for (int i = 0; i < profileToEdit.skills.mastering.Count; i++)
+                {
+                    realProfile.SelectToken("Skills").SelectToken("Mastering")[i]["Progress"] = profileToEdit.skills.mastering[i].progress;
+                }
+
                 foreach (ProfileExtended.Hideout.Area a in profileToEdit.hideout.areas)
                 {
                     realProfile.SelectToken("Hideout").SelectToken("Areas")[a.type]["level"] = a.level;

@@ -44,11 +44,6 @@ namespace EFT_Launcher_12
 				{
 					profilesListBox.Items.Add(dico[key].email);
 					profiles[dico[key].id] = dico[key];
-
-					if (File.Exists(Path.Combine(Globals.profilesFolder, "Profiles/" + dico[key].id + @"\character.json")) && !profilesListBox.Items.Contains(dico[key].email))
-					{
-						//useless since now profiles can exist if its the first time playing
-					}
 				}
 			}
 		}
@@ -128,10 +123,16 @@ namespace EFT_Launcher_12
 
 		private void profileEditButton_Click(object sender, EventArgs e)
 		{
-			int select = profiles[profilesListBox.SelectedIndex].id;
-			EditProfileForm edit = new EditProfileForm(select);
-
-			edit.Show();
+			int profileid = profiles[profilesListBox.SelectedIndex].id;
+			if( File.Exists(Path.Combine(Globals.profilesFolder, "Profiles/" + profileid + @"\character.json")) )
+			{
+				EditProfileForm edit = new EditProfileForm(profileid);
+				edit.Show();
+			}		
+			else
+			{
+				MessageBox.Show("this profile does't have data, launch the game for being able to edit your profile");
+			}
 		}
 
 		private string GenerateToken(string email, string password)
