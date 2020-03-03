@@ -78,7 +78,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.masteringTabPage = new System.Windows.Forms.TabPage();
-            this.customisationTabPage = new System.Windows.Forms.TabPage();
             this.wskillsTabPage = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -226,7 +225,7 @@
             this.saveButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(0, 331);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(502, 30);
+            this.saveButton.Size = new System.Drawing.Size(386, 30);
             this.saveButton.TabIndex = 6;
             this.saveButton.Text = "Save ! ";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -703,12 +702,11 @@
             this.tabControl1.Controls.Add(this.wskillsTabPage);
             this.tabControl1.Controls.Add(this.masteringTabPage);
             this.tabControl1.Controls.Add(this.hideoutTabPage);
-            this.tabControl1.Controls.Add(this.customisationTabPage);
             this.tabControl1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(-1, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(505, 333);
+            this.tabControl1.Size = new System.Drawing.Size(387, 333);
             this.tabControl1.TabIndex = 51;
             // 
             // generalTabPAge
@@ -723,10 +721,10 @@
             this.generalTabPAge.Controls.Add(this.gameVersionCombo);
             this.generalTabPAge.Controls.Add(this.label7);
             this.generalTabPAge.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generalTabPAge.Location = new System.Drawing.Point(4, 22);
+            this.generalTabPAge.Location = new System.Drawing.Point(4, 23);
             this.generalTabPAge.Name = "generalTabPAge";
             this.generalTabPAge.Padding = new System.Windows.Forms.Padding(3);
-            this.generalTabPAge.Size = new System.Drawing.Size(497, 307);
+            this.generalTabPAge.Size = new System.Drawing.Size(379, 306);
             this.generalTabPAge.TabIndex = 0;
             this.generalTabPAge.Text = "General";
             // 
@@ -766,10 +764,10 @@
             this.skillsTabPage.Controls.Add(this.strenghNumericBox);
             this.skillsTabPage.Controls.Add(this.label25);
             this.skillsTabPage.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skillsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.skillsTabPage.Location = new System.Drawing.Point(4, 23);
             this.skillsTabPage.Name = "skillsTabPage";
             this.skillsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.skillsTabPage.Size = new System.Drawing.Size(497, 307);
+            this.skillsTabPage.Size = new System.Drawing.Size(379, 306);
             this.skillsTabPage.TabIndex = 1;
             this.skillsTabPage.Text = "Skills";
             // 
@@ -783,7 +781,7 @@
             this.hideoutTabPage.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hideoutTabPage.Location = new System.Drawing.Point(4, 23);
             this.hideoutTabPage.Name = "hideoutTabPage";
-            this.hideoutTabPage.Size = new System.Drawing.Size(497, 306);
+            this.hideoutTabPage.Size = new System.Drawing.Size(379, 306);
             this.hideoutTabPage.TabIndex = 2;
             this.hideoutTabPage.Text = "Hideout";
             // 
@@ -816,18 +814,9 @@
             this.masteringTabPage.Controls.Add(this.label6);
             this.masteringTabPage.Location = new System.Drawing.Point(4, 23);
             this.masteringTabPage.Name = "masteringTabPage";
-            this.masteringTabPage.Size = new System.Drawing.Size(497, 306);
+            this.masteringTabPage.Size = new System.Drawing.Size(379, 306);
             this.masteringTabPage.TabIndex = 3;
             this.masteringTabPage.Text = "Mastering";
-            // 
-            // customisationTabPage
-            // 
-            this.customisationTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.customisationTabPage.Location = new System.Drawing.Point(4, 22);
-            this.customisationTabPage.Name = "customisationTabPage";
-            this.customisationTabPage.Size = new System.Drawing.Size(497, 307);
-            this.customisationTabPage.TabIndex = 4;
-            this.customisationTabPage.Text = "Customisaton";
             // 
             // wskillsTabPage
             // 
@@ -860,7 +849,7 @@
             this.wskillsTabPage.Controls.Add(this.pistolNumericBox);
             this.wskillsTabPage.Location = new System.Drawing.Point(4, 23);
             this.wskillsTabPage.Name = "wskillsTabPage";
-            this.wskillsTabPage.Size = new System.Drawing.Size(497, 306);
+            this.wskillsTabPage.Size = new System.Drawing.Size(379, 306);
             this.wskillsTabPage.TabIndex = 5;
             this.wskillsTabPage.Text = "Weapons Skills";
             // 
@@ -1243,7 +1232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(502, 362);
+            this.ClientSize = new System.Drawing.Size(386, 362);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.saveButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -1378,7 +1367,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown pistolNumericBox;
-        private System.Windows.Forms.TabPage customisationTabPage;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox masteringComboBox;
         private System.Windows.Forms.Label label37;

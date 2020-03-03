@@ -106,7 +106,7 @@ namespace EFT_Launcher_12
             SetSkillValue("Launcher", launcherNumericBox.Value);
             SetSkillValue("AttachedLauncher", attachLauncherNumericBox.Value);
             SetSkillValue("Throwing", throwNumericBox.Value);
-            SetSkillValue("melee", meleeNumericBox.Value);
+            SetSkillValue("Melee", meleeNumericBox.Value);
 
             try
             {
@@ -132,7 +132,6 @@ namespace EFT_Launcher_12
                 {
                     realProfile.SelectToken("Hideout").SelectToken("Areas")[a.type]["level"] = a.level;
                 }
-
 
                 //using (StreamWriter file = File.CreateText( Path.Combine(Globals.profilesFolder, "profiles/1/TestSaveProfile.json") ))
                 using (StreamWriter file = File.CreateText(profilePath))
