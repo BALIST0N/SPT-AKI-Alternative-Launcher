@@ -1297,6 +1297,7 @@
             // traderLevelNumericBox
             // 
             this.traderLevelNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.traderLevelNumericBox.Enabled = false;
             this.traderLevelNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.traderLevelNumericBox.ForeColor = System.Drawing.Color.White;
             this.traderLevelNumericBox.Location = new System.Drawing.Point(27, 164);
@@ -1322,6 +1323,7 @@
             // traderSalesNumericBox
             // 
             this.traderSalesNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.traderSalesNumericBox.Enabled = false;
             this.traderSalesNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.traderSalesNumericBox.ForeColor = System.Drawing.Color.White;
             this.traderSalesNumericBox.Location = new System.Drawing.Point(109, 164);
@@ -1348,6 +1350,7 @@
             // 
             this.traderStandingNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.traderStandingNumericBox.DecimalPlaces = 2;
+            this.traderStandingNumericBox.Enabled = false;
             this.traderStandingNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.traderStandingNumericBox.ForeColor = System.Drawing.Color.White;
             this.traderStandingNumericBox.Increment = new decimal(new int[] {
