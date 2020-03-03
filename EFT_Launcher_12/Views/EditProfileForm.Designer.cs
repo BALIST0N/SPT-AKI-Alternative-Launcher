@@ -74,41 +74,50 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalTabPAge = new System.Windows.Forms.TabPage();
             this.skillsTabPage = new System.Windows.Forms.TabPage();
-            this.hideoutTabPage = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.masteringTabPage = new System.Windows.Forms.TabPage();
             this.wskillsTabPage = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.pistolNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.revolverNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.SMGNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.assaultNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.shotgunNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.sniperNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.meleeNumericBox = new System.Windows.Forms.NumericUpDown();
             this.throwNumericBox = new System.Windows.Forms.NumericUpDown();
             this.attachLauncherNumericBox = new System.Windows.Forms.NumericUpDown();
             this.launcherNumericBox = new System.Windows.Forms.NumericUpDown();
             this.dmrNumericBox = new System.Windows.Forms.NumericUpDown();
             this.hmgNumericBox = new System.Windows.Forms.NumericUpDown();
             this.lmgNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.meleeNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.masteringComboBox = new System.Windows.Forms.ComboBox();
+            this.sniperNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.shotgunNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.assaultNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SMGNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.revolverNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.pistolNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.masteringTabPage = new System.Windows.Forms.TabPage();
             this.masteringProgressNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.masteringComboBox = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.hideoutTabPage = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tradersTabPage = new System.Windows.Forms.TabPage();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.traderListComboBox = new System.Windows.Forms.ComboBox();
+            this.traderLevelNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.label40 = new System.Windows.Forms.Label();
+            this.traderSalesNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.label41 = new System.Windows.Forms.Label();
+            this.traderStandingNumericBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.experienceBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enduranceNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vitalityNumericBox)).BeginInit();
@@ -130,23 +139,27 @@
             this.tabControl1.SuspendLayout();
             this.generalTabPAge.SuspendLayout();
             this.skillsTabPage.SuspendLayout();
-            this.hideoutTabPage.SuspendLayout();
-            this.masteringTabPage.SuspendLayout();
             this.wskillsTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pistolNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.revolverNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SMGNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assaultNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shotgunNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sniperNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.throwNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachLauncherNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.launcherNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dmrNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hmgNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lmgNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sniperNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shotgunNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assaultNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SMGNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.revolverNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pistolNumericBox)).BeginInit();
+            this.masteringTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).BeginInit();
+            this.hideoutTabPage.SuspendLayout();
+            this.tradersTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traderSalesNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traderStandingNumericBox)).BeginInit();
             this.SuspendLayout();
             // 
             // experienceBox
@@ -702,6 +715,7 @@
             this.tabControl1.Controls.Add(this.wskillsTabPage);
             this.tabControl1.Controls.Add(this.masteringTabPage);
             this.tabControl1.Controls.Add(this.hideoutTabPage);
+            this.tabControl1.Controls.Add(this.tradersTabPage);
             this.tabControl1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(-1, -3);
             this.tabControl1.Name = "tabControl1";
@@ -771,53 +785,6 @@
             this.skillsTabPage.TabIndex = 1;
             this.skillsTabPage.Text = "Skills";
             // 
-            // hideoutTabPage
-            // 
-            this.hideoutTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.hideoutTabPage.Controls.Add(this.label5);
-            this.hideoutTabPage.Controls.Add(this.label4);
-            this.hideoutTabPage.Controls.Add(this.hideoutAreaComboBox);
-            this.hideoutTabPage.Controls.Add(this.hideoutLevelNumeric);
-            this.hideoutTabPage.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hideoutTabPage.Location = new System.Drawing.Point(4, 23);
-            this.hideoutTabPage.Name = "hideoutTabPage";
-            this.hideoutTabPage.Size = new System.Drawing.Size(379, 306);
-            this.hideoutTabPage.TabIndex = 2;
-            this.hideoutTabPage.Text = "Hideout";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 26);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Area";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(216, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 26);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Level";
-            // 
-            // masteringTabPage
-            // 
-            this.masteringTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.masteringTabPage.Controls.Add(this.masteringProgressNumericBox);
-            this.masteringTabPage.Controls.Add(this.masteringComboBox);
-            this.masteringTabPage.Controls.Add(this.label37);
-            this.masteringTabPage.Controls.Add(this.label6);
-            this.masteringTabPage.Location = new System.Drawing.Point(4, 23);
-            this.masteringTabPage.Name = "masteringTabPage";
-            this.masteringTabPage.Size = new System.Drawing.Size(379, 306);
-            this.masteringTabPage.TabIndex = 3;
-            this.masteringTabPage.Text = "Mastering";
-            // 
             // wskillsTabPage
             // 
             this.wskillsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -853,225 +820,20 @@
             this.wskillsTabPage.TabIndex = 5;
             this.wskillsTabPage.Text = "Weapons Skills";
             // 
-            // label16
+            // meleeNumericBox
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(43, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 18);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Pistol :";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(21, 50);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(70, 18);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "Revolver :";
-            // 
-            // pistolNumericBox
-            // 
-            this.pistolNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.pistolNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pistolNumericBox.ForeColor = System.Drawing.Color.White;
-            this.pistolNumericBox.Location = new System.Drawing.Point(97, 16);
-            this.pistolNumericBox.Maximum = new decimal(new int[] {
+            this.meleeNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.meleeNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meleeNumericBox.ForeColor = System.Drawing.Color.White;
+            this.meleeNumericBox.Location = new System.Drawing.Point(307, 208);
+            this.meleeNumericBox.Maximum = new decimal(new int[] {
             5100,
             0,
             0,
             0});
-            this.pistolNumericBox.Name = "pistolNumericBox";
-            this.pistolNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.pistolNumericBox.TabIndex = 62;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(43, 82);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 18);
-            this.label17.TabIndex = 63;
-            this.label17.Text = "SMG :";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(29, 114);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(59, 18);
-            this.label27.TabIndex = 64;
-            this.label27.Text = "Assault :";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(20, 146);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 18);
-            this.label28.TabIndex = 65;
-            this.label28.Text = "Shotgun :";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(14, 178);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(74, 18);
-            this.label29.TabIndex = 66;
-            this.label29.Text = "SnNiPaRs :";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(252, 18);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(44, 18);
-            this.label30.TabIndex = 67;
-            this.label30.Text = "LMG :";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(249, 50);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(47, 18);
-            this.label31.TabIndex = 68;
-            this.label31.Text = "HMG :";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(223, 114);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(73, 18);
-            this.label32.TabIndex = 69;
-            this.label32.Text = "Launcher :";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(168, 146);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(133, 18);
-            this.label33.TabIndex = 70;
-            this.label33.Text = "Attached Launcher :";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(222, 178);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(74, 18);
-            this.label34.TabIndex = 71;
-            this.label34.Text = "Throwing :";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(241, 210);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(55, 18);
-            this.label35.TabIndex = 72;
-            this.label35.Text = "Melee :";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(249, 82);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(47, 18);
-            this.label36.TabIndex = 73;
-            this.label36.Text = "DMR :";
-            // 
-            // revolverNumericBox
-            // 
-            this.revolverNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.revolverNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revolverNumericBox.ForeColor = System.Drawing.Color.White;
-            this.revolverNumericBox.Location = new System.Drawing.Point(97, 48);
-            this.revolverNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.revolverNumericBox.Name = "revolverNumericBox";
-            this.revolverNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.revolverNumericBox.TabIndex = 74;
-            // 
-            // SMGNumericBox
-            // 
-            this.SMGNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.SMGNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SMGNumericBox.ForeColor = System.Drawing.Color.White;
-            this.SMGNumericBox.Location = new System.Drawing.Point(97, 80);
-            this.SMGNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.SMGNumericBox.Name = "SMGNumericBox";
-            this.SMGNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.SMGNumericBox.TabIndex = 75;
-            // 
-            // assaultNumericBox
-            // 
-            this.assaultNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.assaultNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assaultNumericBox.ForeColor = System.Drawing.Color.White;
-            this.assaultNumericBox.Location = new System.Drawing.Point(97, 112);
-            this.assaultNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.assaultNumericBox.Name = "assaultNumericBox";
-            this.assaultNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.assaultNumericBox.TabIndex = 76;
-            // 
-            // shotgunNumericBox
-            // 
-            this.shotgunNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.shotgunNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shotgunNumericBox.ForeColor = System.Drawing.Color.White;
-            this.shotgunNumericBox.Location = new System.Drawing.Point(97, 144);
-            this.shotgunNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.shotgunNumericBox.Name = "shotgunNumericBox";
-            this.shotgunNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.shotgunNumericBox.TabIndex = 77;
-            // 
-            // sniperNumericBox
-            // 
-            this.sniperNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.sniperNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sniperNumericBox.ForeColor = System.Drawing.Color.White;
-            this.sniperNumericBox.Location = new System.Drawing.Point(97, 176);
-            this.sniperNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.sniperNumericBox.Name = "sniperNumericBox";
-            this.sniperNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.sniperNumericBox.TabIndex = 78;
+            this.meleeNumericBox.Name = "meleeNumericBox";
+            this.meleeNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.meleeNumericBox.TabIndex = 85;
             // 
             // throwNumericBox
             // 
@@ -1163,53 +925,238 @@
             this.lmgNumericBox.Size = new System.Drawing.Size(52, 26);
             this.lmgNumericBox.TabIndex = 79;
             // 
-            // meleeNumericBox
+            // sniperNumericBox
             // 
-            this.meleeNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.meleeNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meleeNumericBox.ForeColor = System.Drawing.Color.White;
-            this.meleeNumericBox.Location = new System.Drawing.Point(307, 208);
-            this.meleeNumericBox.Maximum = new decimal(new int[] {
+            this.sniperNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.sniperNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sniperNumericBox.ForeColor = System.Drawing.Color.White;
+            this.sniperNumericBox.Location = new System.Drawing.Point(97, 176);
+            this.sniperNumericBox.Maximum = new decimal(new int[] {
             5100,
             0,
             0,
             0});
-            this.meleeNumericBox.Name = "meleeNumericBox";
-            this.meleeNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.meleeNumericBox.TabIndex = 85;
+            this.sniperNumericBox.Name = "sniperNumericBox";
+            this.sniperNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.sniperNumericBox.TabIndex = 78;
             // 
-            // label6
+            // shotgunNumericBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 26);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Weapon";
+            this.shotgunNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.shotgunNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shotgunNumericBox.ForeColor = System.Drawing.Color.White;
+            this.shotgunNumericBox.Location = new System.Drawing.Point(97, 144);
+            this.shotgunNumericBox.Maximum = new decimal(new int[] {
+            5100,
+            0,
+            0,
+            0});
+            this.shotgunNumericBox.Name = "shotgunNumericBox";
+            this.shotgunNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.shotgunNumericBox.TabIndex = 77;
             // 
-            // label37
+            // assaultNumericBox
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(216, 20);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(90, 26);
-            this.label37.TabIndex = 1;
-            this.label37.Text = "Progress";
+            this.assaultNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.assaultNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assaultNumericBox.ForeColor = System.Drawing.Color.White;
+            this.assaultNumericBox.Location = new System.Drawing.Point(97, 112);
+            this.assaultNumericBox.Maximum = new decimal(new int[] {
+            5100,
+            0,
+            0,
+            0});
+            this.assaultNumericBox.Name = "assaultNumericBox";
+            this.assaultNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.assaultNumericBox.TabIndex = 76;
             // 
-            // masteringComboBox
+            // SMGNumericBox
             // 
-            this.masteringComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.masteringComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.masteringComboBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masteringComboBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.masteringComboBox.FormattingEnabled = true;
-            this.masteringComboBox.Location = new System.Drawing.Point(15, 49);
-            this.masteringComboBox.Name = "masteringComboBox";
-            this.masteringComboBox.Size = new System.Drawing.Size(200, 31);
-            this.masteringComboBox.TabIndex = 2;
-            this.masteringComboBox.SelectedIndexChanged += new System.EventHandler(this.masteringComboBox_SelectedIndexChanged);
+            this.SMGNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.SMGNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMGNumericBox.ForeColor = System.Drawing.Color.White;
+            this.SMGNumericBox.Location = new System.Drawing.Point(97, 80);
+            this.SMGNumericBox.Maximum = new decimal(new int[] {
+            5100,
+            0,
+            0,
+            0});
+            this.SMGNumericBox.Name = "SMGNumericBox";
+            this.SMGNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.SMGNumericBox.TabIndex = 75;
+            // 
+            // revolverNumericBox
+            // 
+            this.revolverNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.revolverNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revolverNumericBox.ForeColor = System.Drawing.Color.White;
+            this.revolverNumericBox.Location = new System.Drawing.Point(97, 48);
+            this.revolverNumericBox.Maximum = new decimal(new int[] {
+            5100,
+            0,
+            0,
+            0});
+            this.revolverNumericBox.Name = "revolverNumericBox";
+            this.revolverNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.revolverNumericBox.TabIndex = 74;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(249, 82);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(47, 18);
+            this.label36.TabIndex = 73;
+            this.label36.Text = "DMR :";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(241, 210);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(55, 18);
+            this.label35.TabIndex = 72;
+            this.label35.Text = "Melee :";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(222, 178);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(74, 18);
+            this.label34.TabIndex = 71;
+            this.label34.Text = "Throwing :";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(168, 146);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(133, 18);
+            this.label33.TabIndex = 70;
+            this.label33.Text = "Attached Launcher :";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(223, 114);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(73, 18);
+            this.label32.TabIndex = 69;
+            this.label32.Text = "Launcher :";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(249, 50);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(47, 18);
+            this.label31.TabIndex = 68;
+            this.label31.Text = "HMG :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(252, 18);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(44, 18);
+            this.label30.TabIndex = 67;
+            this.label30.Text = "LMG :";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(14, 178);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(74, 18);
+            this.label29.TabIndex = 66;
+            this.label29.Text = "SnNiPaRs :";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(20, 146);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(68, 18);
+            this.label28.TabIndex = 65;
+            this.label28.Text = "Shotgun :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(29, 114);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(59, 18);
+            this.label27.TabIndex = 64;
+            this.label27.Text = "Assault :";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(43, 82);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(45, 18);
+            this.label17.TabIndex = 63;
+            this.label17.Text = "SMG :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(43, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(48, 18);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Pistol :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(21, 50);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(70, 18);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "Revolver :";
+            // 
+            // pistolNumericBox
+            // 
+            this.pistolNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.pistolNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pistolNumericBox.ForeColor = System.Drawing.Color.White;
+            this.pistolNumericBox.Location = new System.Drawing.Point(97, 16);
+            this.pistolNumericBox.Maximum = new decimal(new int[] {
+            5100,
+            0,
+            0,
+            0});
+            this.pistolNumericBox.Name = "pistolNumericBox";
+            this.pistolNumericBox.Size = new System.Drawing.Size(52, 26);
+            this.pistolNumericBox.TabIndex = 62;
+            // 
+            // masteringTabPage
+            // 
+            this.masteringTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.masteringTabPage.Controls.Add(this.masteringProgressNumericBox);
+            this.masteringTabPage.Controls.Add(this.masteringComboBox);
+            this.masteringTabPage.Controls.Add(this.label37);
+            this.masteringTabPage.Controls.Add(this.label6);
+            this.masteringTabPage.Location = new System.Drawing.Point(4, 23);
+            this.masteringTabPage.Name = "masteringTabPage";
+            this.masteringTabPage.Size = new System.Drawing.Size(379, 306);
+            this.masteringTabPage.TabIndex = 3;
+            this.masteringTabPage.Text = "Mastering";
             // 
             // masteringProgressNumericBox
             // 
@@ -1226,6 +1173,197 @@
             this.masteringProgressNumericBox.Size = new System.Drawing.Size(100, 31);
             this.masteringProgressNumericBox.TabIndex = 3;
             this.masteringProgressNumericBox.ValueChanged += new System.EventHandler(this.masteringProgressNumericBox_ValueChanged);
+            // 
+            // masteringComboBox
+            // 
+            this.masteringComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.masteringComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.masteringComboBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masteringComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.masteringComboBox.FormattingEnabled = true;
+            this.masteringComboBox.Location = new System.Drawing.Point(15, 49);
+            this.masteringComboBox.Name = "masteringComboBox";
+            this.masteringComboBox.Size = new System.Drawing.Size(200, 31);
+            this.masteringComboBox.TabIndex = 2;
+            this.masteringComboBox.SelectedIndexChanged += new System.EventHandler(this.masteringComboBox_SelectedIndexChanged);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(216, 20);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(90, 26);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Progress";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 26);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Weapon";
+            // 
+            // hideoutTabPage
+            // 
+            this.hideoutTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.hideoutTabPage.Controls.Add(this.label5);
+            this.hideoutTabPage.Controls.Add(this.label4);
+            this.hideoutTabPage.Controls.Add(this.hideoutAreaComboBox);
+            this.hideoutTabPage.Controls.Add(this.hideoutLevelNumeric);
+            this.hideoutTabPage.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hideoutTabPage.Location = new System.Drawing.Point(4, 23);
+            this.hideoutTabPage.Name = "hideoutTabPage";
+            this.hideoutTabPage.Size = new System.Drawing.Size(379, 306);
+            this.hideoutTabPage.TabIndex = 2;
+            this.hideoutTabPage.Text = "Hideout";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(216, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 26);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Level";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 26);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Area";
+            // 
+            // tradersTabPage
+            // 
+            this.tradersTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.tradersTabPage.Controls.Add(this.label41);
+            this.tradersTabPage.Controls.Add(this.traderStandingNumericBox);
+            this.tradersTabPage.Controls.Add(this.label40);
+            this.tradersTabPage.Controls.Add(this.traderSalesNumericBox);
+            this.tradersTabPage.Controls.Add(this.label38);
+            this.tradersTabPage.Controls.Add(this.label39);
+            this.tradersTabPage.Controls.Add(this.traderListComboBox);
+            this.tradersTabPage.Controls.Add(this.traderLevelNumericBox);
+            this.tradersTabPage.Location = new System.Drawing.Point(4, 23);
+            this.tradersTabPage.Name = "tradersTabPage";
+            this.tradersTabPage.Size = new System.Drawing.Size(379, 306);
+            this.tradersTabPage.TabIndex = 6;
+            this.tradersTabPage.Text = "Traders";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(22, 135);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 26);
+            this.label38.TabIndex = 56;
+            this.label38.Text = "Level";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(22, 32);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(69, 26);
+            this.label39.TabIndex = 55;
+            this.label39.Text = "Trader";
+            // 
+            // traderListComboBox
+            // 
+            this.traderListComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "standard",
+            "edge_of_darkness"});
+            this.traderListComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.traderListComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.traderListComboBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traderListComboBox.ForeColor = System.Drawing.Color.White;
+            this.traderListComboBox.FormattingEnabled = true;
+            this.traderListComboBox.Location = new System.Drawing.Point(27, 61);
+            this.traderListComboBox.Name = "traderListComboBox";
+            this.traderListComboBox.Size = new System.Drawing.Size(306, 31);
+            this.traderListComboBox.TabIndex = 53;
+            this.traderListComboBox.SelectedIndexChanged += new System.EventHandler(this.traderListComboBox_SelectedIndexChanged);
+            // 
+            // traderLevelNumericBox
+            // 
+            this.traderLevelNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.traderLevelNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traderLevelNumericBox.ForeColor = System.Drawing.Color.White;
+            this.traderLevelNumericBox.Location = new System.Drawing.Point(27, 164);
+            this.traderLevelNumericBox.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.traderLevelNumericBox.Name = "traderLevelNumericBox";
+            this.traderLevelNumericBox.Size = new System.Drawing.Size(54, 31);
+            this.traderLevelNumericBox.TabIndex = 54;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(104, 135);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(97, 26);
+            this.label40.TabIndex = 58;
+            this.label40.Text = "SalesSum";
+            // 
+            // traderSalesNumericBox
+            // 
+            this.traderSalesNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.traderSalesNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traderSalesNumericBox.ForeColor = System.Drawing.Color.White;
+            this.traderSalesNumericBox.Location = new System.Drawing.Point(109, 164);
+            this.traderSalesNumericBox.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.traderSalesNumericBox.Name = "traderSalesNumericBox";
+            this.traderSalesNumericBox.Size = new System.Drawing.Size(118, 31);
+            this.traderSalesNumericBox.TabIndex = 57;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(242, 135);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(91, 26);
+            this.label41.TabIndex = 60;
+            this.label41.Text = "Standing";
+            // 
+            // traderStandingNumericBox
+            // 
+            this.traderStandingNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.traderStandingNumericBox.DecimalPlaces = 2;
+            this.traderStandingNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traderStandingNumericBox.ForeColor = System.Drawing.Color.White;
+            this.traderStandingNumericBox.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.traderStandingNumericBox.Location = new System.Drawing.Point(247, 164);
+            this.traderStandingNumericBox.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.traderStandingNumericBox.Name = "traderStandingNumericBox";
+            this.traderStandingNumericBox.Size = new System.Drawing.Size(86, 31);
+            this.traderStandingNumericBox.TabIndex = 59;
             // 
             // EditProfileForm
             // 
@@ -1264,26 +1402,31 @@
             this.generalTabPAge.PerformLayout();
             this.skillsTabPage.ResumeLayout(false);
             this.skillsTabPage.PerformLayout();
-            this.hideoutTabPage.ResumeLayout(false);
-            this.hideoutTabPage.PerformLayout();
-            this.masteringTabPage.ResumeLayout(false);
-            this.masteringTabPage.PerformLayout();
             this.wskillsTabPage.ResumeLayout(false);
             this.wskillsTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pistolNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.revolverNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SMGNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assaultNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shotgunNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sniperNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.throwNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attachLauncherNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.launcherNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dmrNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hmgNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lmgNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sniperNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shotgunNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assaultNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SMGNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.revolverNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pistolNumericBox)).EndInit();
+            this.masteringTabPage.ResumeLayout(false);
+            this.masteringTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).EndInit();
+            this.hideoutTabPage.ResumeLayout(false);
+            this.hideoutTabPage.PerformLayout();
+            this.tradersTabPage.ResumeLayout(false);
+            this.tradersTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traderSalesNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traderStandingNumericBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1371,5 +1514,14 @@
         private System.Windows.Forms.ComboBox masteringComboBox;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.NumericUpDown masteringProgressNumericBox;
+        private System.Windows.Forms.TabPage tradersTabPage;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox traderListComboBox;
+        private System.Windows.Forms.NumericUpDown traderLevelNumericBox;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.NumericUpDown traderStandingNumericBox;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.NumericUpDown traderSalesNumericBox;
     }
 }

@@ -164,6 +164,11 @@ namespace EFT_Launcher_12
                 masteringComboBox.Items.Add(m.id);
             }
 
+            foreach(string tr in profileToEdit.traderStandings.Keys)
+            {
+                traderListComboBox.Items.Add(tr);
+            }
+
             #region INIT SKILLS numericBoxes
             enduranceNumericBox.Value = GetSkillValue("Endurance");
             strenghNumericBox.Value = GetSkillValue("Strength");
@@ -259,6 +264,14 @@ namespace EFT_Launcher_12
         private void masteringProgressNumericBox_ValueChanged(object sender, EventArgs e)
         {
             profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = Convert.ToInt32( masteringProgressNumericBox.Value);
+        }
+
+        private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string trader = this.traderListComboBox.SelectedItem.ToString();
+            traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
+            traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
+            traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
         }
     }
 }

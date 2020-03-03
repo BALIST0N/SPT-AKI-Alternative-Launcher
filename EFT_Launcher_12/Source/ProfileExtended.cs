@@ -7,6 +7,7 @@ namespace EFT_Launcher_12
         public Info info;
         public Skills skills;
         public Hideout hideout;
+        public Dictionary<string, Trader> traderStandings;
 
         public class Info
         {
@@ -47,6 +48,22 @@ namespace EFT_Launcher_12
 				public bool constructing;
 				public object[] slots;
             }
+        }
+
+        public class Trader
+        {
+            public int currentLevel;
+            public int currentSalesSum;
+            public decimal currentStanding;
+            public Dictionary<string, LoyaltyLevel> loyaltyLevels;
+
+            public class LoyaltyLevel
+            {
+                public int minLevel;
+                public int minSalesSum;
+                public decimal minStanding;
+            }
+
         }
     }
 }
