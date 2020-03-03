@@ -13,11 +13,25 @@ namespace EFT_Launcher_12
         string profilePath;
         ProfileExtended profileToEdit;
         List<HideoutUpgradesArea> hideoutLevels;
+        Dictionary<string, string> tradersNames;
 
         public EditProfileForm(int id)
         {
             profilePath = Path.Combine(Globals.profilesFolder,"profiles/"+ id + "/character.json");
             hideoutLevels = new List<HideoutUpgradesArea>();
+            tradersNames = new Dictionary<string, string>();
+
+            #region init Traders Names
+            tradersNames.Add("5a7c2eca46aef81a7ca2145d", "Mechanic");
+            tradersNames.Add("5ac3b934156ae10c4430e83c", "Ragman");
+            tradersNames.Add("5c0647fdd443bc2504c2d371", "Jaeger");
+            tradersNames.Add("54cb50c76803fa8b248b4571", "Prapor");
+            tradersNames.Add("54cb57776803fa99248b456e", "Therapist");
+            tradersNames.Add("579dc571d53a0658a154fbec", "Fence");
+            tradersNames.Add("5935c25fb3acc3127c3d8cd9", "Peacekeeper");
+            tradersNames.Add("58330581ace78e27b8b10cee", "Skier");
+            tradersNames.Add("ragfair", "Ragfair");
+            #endregion
 
             #region hideoutlevel init
             hideoutLevels.Add(new HideoutUpgradesArea(0,  "Vents", 3));
@@ -166,7 +180,14 @@ namespace EFT_Launcher_12
 
             foreach(string tr in profileToEdit.traderStandings.Keys)
             {
-                traderListComboBox.Items.Add(tr);
+                if(tradersNames.ContainsKey(tr) == true )
+                {
+                    traderListComboBox.Items.Add(tradersNames[tr]);
+                }
+                else
+                {
+                    traderListComboBox.Items.Add(tr);
+                }
             }
 
             #region INIT SKILLS numericBoxes
@@ -269,6 +290,10 @@ namespace EFT_Launcher_12
         private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string trader = this.traderListComboBox.SelectedItem.ToString();
+            string traderid = tradersNames.FirstOrDefault(x => x.Value == trader).Key;
+
+            if(traderid != null ){ trader = traderid; }
+            
             traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
             traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
             traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
