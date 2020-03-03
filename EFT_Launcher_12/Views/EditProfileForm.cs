@@ -18,8 +18,9 @@ namespace EFT_Launcher_12
         public EditProfileForm(int id)
         {
             profilePath = Path.Combine(Globals.profilesFolder,"profiles/"+ id + "/character.json");
-            hideoutLevels = new List<HideoutUpgradesArea>();
             tradersNames = new Dictionary<string, string>();
+            hideoutLevels = new List<HideoutUpgradesArea>();
+            
 
             #region init Traders Names
             tradersNames.Add("5a7c2eca46aef81a7ca2145d", "Mechanic");
@@ -90,37 +91,37 @@ namespace EFT_Launcher_12
             profileToEdit.info.experience = Convert.ToInt32(experienceBox.Value);
             profileToEdit.info.gameVersion = gameVersionCombo.SelectedItem.ToString();
 
-            SetSkillValue("Endurance", enduranceNumericBox.Value);
-            SetSkillValue("Strength", strenghNumericBox.Value);
-            SetSkillValue("Vitality", vitalityNumericBox.Value);
-            SetSkillValue("Health", healthNumericBox.Value);
-            SetSkillValue("StressResistance", stressNumericBox.Value);
-            SetSkillValue("Metabolism", metabolismNumericBox.Value);
-            SetSkillValue("Immunity", immunityNumericBox.Value);
-            SetSkillValue("Perception", perceptionNumericBox.Value);
-            SetSkillValue("Intellect", intelNumericBox.Value);
-            SetSkillValue("Attention", attentionNumericBox.Value);
-            SetSkillValue("Charisma", charismaNumericBox.Value);
-            SetSkillValue("Memory", memoryNumericBox.Value);
-            SetSkillValue("CovertMovement", covertNumericBox.Value);
-            SetSkillValue("RecoilControl", recoilNumericBox.Value);
-            SetSkillValue("Search", searchNumericBox.Value);
-            SetSkillValue("MagDrills", magdrillsNumericBox.Value);
-
+            profileToEdit.SetSkillValue("Endurance", enduranceNumericBox.Value);
+            profileToEdit.SetSkillValue("Strength", strenghNumericBox.Value);
+            profileToEdit.SetSkillValue("Vitality", vitalityNumericBox.Value);
+            profileToEdit.SetSkillValue("Health", healthNumericBox.Value);
+            profileToEdit.SetSkillValue("StressResistance", stressNumericBox.Value);
+            profileToEdit.SetSkillValue("Metabolism", metabolismNumericBox.Value);
+            profileToEdit.SetSkillValue("Immunity", immunityNumericBox.Value);
+            profileToEdit.SetSkillValue("Perception", perceptionNumericBox.Value);
+            profileToEdit.SetSkillValue("Intellect", intelNumericBox.Value);
+            profileToEdit.SetSkillValue("Attention", attentionNumericBox.Value);
+            profileToEdit.SetSkillValue("Charisma", charismaNumericBox.Value);
+            profileToEdit.SetSkillValue("Memory", memoryNumericBox.Value);
+            profileToEdit.SetSkillValue("CovertMovement", covertNumericBox.Value);
+            profileToEdit.SetSkillValue("RecoilControl", recoilNumericBox.Value);
+            profileToEdit.SetSkillValue("Search", searchNumericBox.Value);
+            profileToEdit.SetSkillValue("MagDrills", magdrillsNumericBox.Value);
+            
             //weapon skills
-            SetSkillValue("Pistol", pistolNumericBox.Value);
-            SetSkillValue("Revolver", revolverNumericBox.Value);
-            SetSkillValue("SMG", SMGNumericBox.Value);
-            SetSkillValue("Assault", assaultNumericBox.Value);
-            SetSkillValue("Shotgun", shotgunNumericBox.Value);
-            SetSkillValue("Sniper", sniperNumericBox.Value);
-            SetSkillValue("LMG", lmgNumericBox.Value);
-            SetSkillValue("HMG", hmgNumericBox.Value);
-            SetSkillValue("DMR", dmrNumericBox.Value);
-            SetSkillValue("Launcher", launcherNumericBox.Value);
-            SetSkillValue("AttachedLauncher", attachLauncherNumericBox.Value);
-            SetSkillValue("Throwing", throwNumericBox.Value);
-            SetSkillValue("Melee", meleeNumericBox.Value);
+            profileToEdit.SetSkillValue("Pistol", pistolNumericBox.Value);
+            profileToEdit.SetSkillValue("Revolver", revolverNumericBox.Value);
+            profileToEdit.SetSkillValue("SMG", SMGNumericBox.Value);
+            profileToEdit.SetSkillValue("Assault", assaultNumericBox.Value);
+            profileToEdit.SetSkillValue("Shotgun", shotgunNumericBox.Value);
+            profileToEdit.SetSkillValue("Sniper", sniperNumericBox.Value);
+            profileToEdit.SetSkillValue("LMG", lmgNumericBox.Value);
+            profileToEdit.SetSkillValue("HMG", hmgNumericBox.Value);
+            profileToEdit.SetSkillValue("DMR", dmrNumericBox.Value);
+            profileToEdit.SetSkillValue("Launcher", launcherNumericBox.Value);
+            profileToEdit.SetSkillValue("AttachedLauncher", attachLauncherNumericBox.Value);
+            profileToEdit.SetSkillValue("Throwing", throwNumericBox.Value);
+            profileToEdit.SetSkillValue("Melee", meleeNumericBox.Value);
 
             try
             {
@@ -191,53 +192,42 @@ namespace EFT_Launcher_12
             }
 
             #region INIT SKILLS numericBoxes
-            enduranceNumericBox.Value = GetSkillValue("Endurance");
-            strenghNumericBox.Value = GetSkillValue("Strength");
-            vitalityNumericBox.Value = GetSkillValue("Vitality");
-            healthNumericBox.Value = GetSkillValue("Health");
-            stressNumericBox.Value = GetSkillValue("StressResistance");
+            enduranceNumericBox.Value = profileToEdit.GetSkillValue("Endurance");
+            strenghNumericBox.Value = profileToEdit.GetSkillValue("Strength");
+            vitalityNumericBox.Value = profileToEdit.GetSkillValue("Vitality");
+            healthNumericBox.Value = profileToEdit.GetSkillValue("Health");
+            stressNumericBox.Value = profileToEdit.GetSkillValue("StressResistance");
 
-            metabolismNumericBox.Value = GetSkillValue("Metabolism");
-            immunityNumericBox.Value = GetSkillValue("Immunity");
-            perceptionNumericBox.Value = GetSkillValue("Perception");
-            intelNumericBox.Value = GetSkillValue("Intellect");
-            attentionNumericBox.Value = GetSkillValue("Attention");
-            charismaNumericBox.Value = GetSkillValue("Charisma");
-            memoryNumericBox.Value = GetSkillValue("Memory");
+            metabolismNumericBox.Value = profileToEdit.GetSkillValue("Metabolism");
+            immunityNumericBox.Value = profileToEdit.GetSkillValue("Immunity");
+            perceptionNumericBox.Value = profileToEdit.GetSkillValue("Perception");
+            intelNumericBox.Value = profileToEdit.GetSkillValue("Intellect");
+            attentionNumericBox.Value = profileToEdit.GetSkillValue("Attention");
+            charismaNumericBox.Value = profileToEdit.GetSkillValue("Charisma");
+            memoryNumericBox.Value = profileToEdit.GetSkillValue("Memory");
 
-            covertNumericBox.Value = GetSkillValue("CovertMovement");
-            recoilNumericBox.Value = GetSkillValue("RecoilControl");
-            searchNumericBox.Value = GetSkillValue("Search");
-            magdrillsNumericBox.Value = GetSkillValue("MagDrills");
+            covertNumericBox.Value = profileToEdit.GetSkillValue("CovertMovement");
+            recoilNumericBox.Value = profileToEdit.GetSkillValue("RecoilControl");
+            searchNumericBox.Value = profileToEdit.GetSkillValue("Search");
+            magdrillsNumericBox.Value = profileToEdit.GetSkillValue("MagDrills");
 
             //weapons skills
-            pistolNumericBox.Value = GetSkillValue("Pistol");
-            revolverNumericBox.Value = GetSkillValue("Revolver");
-            SMGNumericBox.Value = GetSkillValue("SMG");
-            assaultNumericBox.Value = GetSkillValue("Assault");
-            shotgunNumericBox.Value = GetSkillValue("Shotgun");
-            sniperNumericBox.Value = GetSkillValue("Sniper");
+            pistolNumericBox.Value = profileToEdit.GetSkillValue("Pistol");
+            revolverNumericBox.Value = profileToEdit.GetSkillValue("Revolver");
+            SMGNumericBox.Value = profileToEdit.GetSkillValue("SMG");
+            assaultNumericBox.Value = profileToEdit.GetSkillValue("Assault");
+            shotgunNumericBox.Value = profileToEdit.GetSkillValue("Shotgun");
+            sniperNumericBox.Value = profileToEdit.GetSkillValue("Sniper");
 
-            lmgNumericBox.Value = GetSkillValue("LMG");
-            hmgNumericBox.Value = GetSkillValue("HMG");
-            dmrNumericBox.Value = GetSkillValue("DMR");
-            launcherNumericBox.Value = GetSkillValue("Launcher");
-            attachLauncherNumericBox.Value = GetSkillValue("AttachedLauncher");
-            throwNumericBox.Value = GetSkillValue("Throwing");
-            meleeNumericBox.Value = GetSkillValue("Melee");
+            lmgNumericBox.Value = profileToEdit.GetSkillValue("LMG");
+            hmgNumericBox.Value = profileToEdit.GetSkillValue("HMG");
+            dmrNumericBox.Value = profileToEdit.GetSkillValue("DMR");
+            launcherNumericBox.Value = profileToEdit.GetSkillValue("Launcher");
+            attachLauncherNumericBox.Value = profileToEdit.GetSkillValue("AttachedLauncher");
+            throwNumericBox.Value = profileToEdit.GetSkillValue("Throwing");
+            meleeNumericBox.Value = profileToEdit.GetSkillValue("Melee");
 
             #endregion
-        }
-
-        private decimal GetSkillValue(string skill)
-        {
-            //return profileToEdit.skills[profileToEdit.skills.listskills.FindIndex(x => x.id.Equals(skill))].progress;
-            return profileToEdit.skills.common.Find(x => x.id.Equals(skill)).progress;
-        }
-
-        private void SetSkillValue(string skill, decimal newval)
-        {
-            profileToEdit.skills.common.Find(x => x.id.Equals(skill)).progress = newval;
         }
 
         private void HideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -256,23 +246,6 @@ namespace EFT_Launcher_12
         {
             profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level = Convert.ToInt32(hideoutLevelNumeric.Value);
             //profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
-        }
-
-        /// <summary>
-        /// hideout upgrades level object
-        /// </summary>
-        internal class HideoutUpgradesArea
-        {
-            public int areaType;
-            public string areaName;
-            public int levelMax;
-
-            public HideoutUpgradesArea(int t, string n, int u)
-            {
-                areaType = t;
-                areaName = n;
-                levelMax = u;
-            }
         }
 
         private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -297,6 +270,23 @@ namespace EFT_Launcher_12
             traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
             traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
             traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
+        }
+
+        /// <summary>
+        /// hideout upgrades level object
+        /// </summary>
+        internal class HideoutUpgradesArea
+        {
+            public int areaType;
+            public string areaName;
+            public int levelMax;
+
+            public HideoutUpgradesArea(int t, string n, int u)
+            {
+                areaType = t;
+                areaName = n;
+                levelMax = u;
+            }
         }
     }
 }
