@@ -126,7 +126,7 @@ namespace EFT_Launcher_12
 			int profileid = profiles[profilesListBox.SelectedIndex].id;
 			if( File.Exists(Path.Combine(Globals.profilesFolder, "Profiles/" + profileid + @"\character.json")) )
 			{
-				EditProfileForm edit = new EditProfileForm(profileid);
+				EditProfileForm edit = new EditProfileForm(profileid,this.Location);
 				edit.Show();
 			}		
 			else
