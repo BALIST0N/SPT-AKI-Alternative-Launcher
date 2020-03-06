@@ -42,7 +42,7 @@ namespace EFT_Launcher_12
 
 				foreach(string key in dico.Keys)
 				{
-					profilesListBox.Items.Add(dico[key].email);
+					profilesListBox.Items.Add(dico[key].nickname);
 					profiles[dico[key].id] = dico[key];
 				}
 			}
