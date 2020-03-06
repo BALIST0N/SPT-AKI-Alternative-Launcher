@@ -17,7 +17,7 @@ namespace EFT_Launcher_12
 
         public EditProfileForm(int id, System.Drawing.Point location)
         {
-            profilePath = Path.Combine(Globals.profilesFolder,"profiles/"+ id + "/character.json");
+            profilePath = Path.Combine(Globals.profilesFolder, id + "/character.json");
             tradersNames = new Dictionary<string, string>();
             hideoutLevels = new List<HideoutUpgradesArea>();
             this.StartPosition = FormStartPosition.Manual;

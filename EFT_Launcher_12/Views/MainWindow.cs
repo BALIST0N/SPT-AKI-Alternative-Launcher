@@ -30,13 +30,13 @@ namespace EFT_Launcher_12
 
 		public void LoadProfiles()
 		{
-			if (!File.Exists(Path.Combine(Globals.profilesFolder, "profiles.config.json")))
+			if (!File.Exists(Globals.accountsFile))
 			{
 				MessageBox.Show("unable to find profiles, make sure the launcher is in Emutarkov server folder");
 				return;
 			}
 
-			using (StreamReader r = new StreamReader(Path.Combine(Globals.profilesFolder, "profiles.config.json")))
+			using (StreamReader r = new StreamReader(Globals.accountsFile))
 			{
 				Dictionary<string, Profile> dico = JsonConvert.DeserializeObject<Dictionary<string, Profile>>(r.ReadToEnd());
 
@@ -124,7 +124,7 @@ namespace EFT_Launcher_12
 		private void profileEditButton_Click(object sender, EventArgs e)
 		{
 			int profileid = profiles[profilesListBox.SelectedIndex].id;
-			if( File.Exists(Path.Combine(Globals.profilesFolder, "Profiles/" + profileid + @"\character.json")) )
+			if( File.Exists(Path.Combine(Globals.profilesFolder,  profileid + "/character.json")) )
 			{
 				EditProfileForm edit = new EditProfileForm(profileid,this.Location);
 				edit.Show();
