@@ -37,6 +37,7 @@
             this.serverOutputRichBox = new System.Windows.Forms.RichTextBox();
             this.backendUrlLabel = new System.Windows.Forms.Label();
             this.killServerButton = new System.Windows.Forms.Button();
+            this.startServerChackBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -142,12 +143,25 @@
             this.killServerButton.Visible = false;
             this.killServerButton.Click += new System.EventHandler(this.killServerButton_Click);
             // 
+            // startServerChackBox
+            // 
+            this.startServerChackBox.AutoSize = true;
+            this.startServerChackBox.BackColor = System.Drawing.Color.Transparent;
+            this.startServerChackBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.startServerChackBox.Location = new System.Drawing.Point(254, 131);
+            this.startServerChackBox.Name = "startServerChackBox";
+            this.startServerChackBox.Size = new System.Drawing.Size(82, 17);
+            this.startServerChackBox.TabIndex = 11;
+            this.startServerChackBox.Text = "Start Server";
+            this.startServerChackBox.UseVisualStyleBackColor = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(584, 161);
+            this.Controls.Add(this.startServerChackBox);
             this.Controls.Add(this.killServerButton);
             this.Controls.Add(this.backendUrlLabel);
             this.Controls.Add(this.serverOutputRichBox);
@@ -177,5 +191,6 @@
 		private System.Windows.Forms.RichTextBox serverOutputRichBox;
         private System.Windows.Forms.Label backendUrlLabel;
         private System.Windows.Forms.Button killServerButton;
+        private System.Windows.Forms.CheckBox startServerChackBox;
     }
 }

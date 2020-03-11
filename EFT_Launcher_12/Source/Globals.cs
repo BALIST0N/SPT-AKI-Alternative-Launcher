@@ -9,7 +9,6 @@ namespace EFT_Launcher_12
 		public static string serverFolder;
 		public static string accountsFile;
 		public static string profilesFolder;
-		public static bool launchServer;
 		public static ClientConfig clientConfig;
 		
 		static Globals()
@@ -21,7 +20,6 @@ namespace EFT_Launcher_12
 			profilesFolder = serverFolder + "/user/profiles";
 
 			gameFolder = Properties.Settings.Default.gameFolder;
-			launchServer = true;
 			clientConfig = null;
 		}
 	}

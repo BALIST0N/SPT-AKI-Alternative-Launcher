@@ -48,10 +48,7 @@ namespace EFT_Launcher_12
 			}
 		}
 
-		// we need to check absolutely everything.
-		// if there is one thing we learned from the 0.8.0-alpha,
-		// it's that people don't or can't read.
-		//baliston : people can read, they are just lazy as F, so make the launcher as simple as possible
+		//check everything bafore enabling buttons.
 		private void validateValues()
 		{
 			bool gameExists = false;
@@ -105,13 +102,7 @@ namespace EFT_Launcher_12
 			}
 		}
 
-
 		private void gamePathTextBox_TextChanged(object sender, EventArgs e)
-		{
-			validateValues();
-		}
-
-		private void backendUrlTextBox_TextChanged(object sender, EventArgs e)
 		{
 			validateValues();
 		}
@@ -159,13 +150,11 @@ namespace EFT_Launcher_12
 		{
 			int select = profilesListBox.SelectedIndex;
 			
-			if (Globals.launchServer)
+			if (startServerChackBox.Checked)
 			{
 				try
 				{
 					LaunchServer();
-					this.Height = 400;
-					this.killServerButton.Show();
 				}
 				catch(Exception ex)
 				{
@@ -187,38 +176,40 @@ namespace EFT_Launcher_12
 		{
 			Process proc = new Process();
 
-			// normal properties
-			proc.StartInfo.CreateNoWindow = true;
-			proc.StartInfo.UseShellExecute = false;
 			proc.StartInfo.WorkingDirectory = Globals.serverFolder;
 			if( File.Exists(Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe")))
 			{
 				proc.StartInfo.FileName = Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe");
+				proc.StartInfo.CreateNoWindow = true;
+				proc.StartInfo.UseShellExecute = false;
+
+				proc.StartInfo.RedirectStandardError = true;
+				proc.StartInfo.RedirectStandardInput = true;
+				proc.StartInfo.RedirectStandardOutput = true;
+				proc.StartInfo.StandardOutputEncoding = Encoding.UTF8;
+				proc.EnableRaisingEvents = true;
+				proc.Exited += ServerTerminated;
+
+				proc.Start();
+
+				proc.BeginOutputReadLine();
+				proc.OutputDataReceived += proc_OutputDataReceived;
+				serverProcessName = proc.ProcessName;
+
+				this.Height = 400;
+				this.killServerButton.Show();
 			}
-			else
+			else if( File.Exists(Path.Combine(Globals.serverFolder, "start.bat")) )
 			{
 				proc.StartInfo.FileName =  Path.Combine(Globals.serverFolder, "start.bat");
+				proc.Start();
 			}
-			
-			
-			// stdout
-			proc.StartInfo.RedirectStandardError = true;
-			proc.StartInfo.RedirectStandardInput = true;
-			proc.StartInfo.RedirectStandardOutput = true;
-			proc.StartInfo.StandardOutputEncoding = Encoding.UTF8;
-			proc.EnableRaisingEvents = true;
-			proc.Exited += ServerTerminated;
 
-			proc.Start();
 
-			proc.BeginOutputReadLine();
-			proc.OutputDataReceived += proc_OutputDataReceived;
-			serverProcessName = proc.ProcessName;
 		}
 
 		private void killServer()
 		{
-			// what is the point of throw-catch if you're not going to use it?
 			Process[] procs = Process.GetProcessesByName(serverProcessName);
 
 			if (procs.Length > 0)
@@ -276,8 +267,7 @@ namespace EFT_Launcher_12
 			// If these threads are different, it returns true.
 			if (serverOutputRichBox.InvokeRequired)
 			{
-				ResetLauncherCallback d = new ResetLauncherCallback(resetLauncherSize);
-				Invoke(d, new object[] { });
+				Invoke(new ResetLauncherCallback(resetLauncherSize));
 			}
 			else
 			{
@@ -291,7 +281,6 @@ namespace EFT_Launcher_12
 		private void killServerButton_Click(object sender, EventArgs e)
 		{
 			killServer();
-
 		}
 	}
 
