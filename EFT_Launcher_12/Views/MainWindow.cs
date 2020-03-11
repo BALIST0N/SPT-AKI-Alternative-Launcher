@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace EFT_Launcher_12
 {
@@ -117,8 +118,11 @@ namespace EFT_Launcher_12
 			int profileid = profiles[profilesListBox.SelectedIndex].id;
 			if( File.Exists(Path.Combine(Globals.profilesFolder,  profileid + "/character.json")) )
 			{
-				EditProfileForm edit = new EditProfileForm(profileid,this.Location);
-				edit.Show();
+				if(Application.OpenForms.OfType<EditProfileForm>().Count() == 0)
+				{
+					EditProfileForm edit = new EditProfileForm(profileid, this.Location);
+					edit.Show();
+				}
 			}		
 			else
 			{
@@ -175,8 +179,8 @@ namespace EFT_Launcher_12
 		private void LaunchServer()
 		{
 			Process proc = new Process();
-
 			proc.StartInfo.WorkingDirectory = Globals.serverFolder;
+
 			if( File.Exists(Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe")))
 			{
 				proc.StartInfo.FileName = Path.Combine(Globals.serverFolder, "EmuTarkov-Server.exe");
@@ -204,8 +208,6 @@ namespace EFT_Launcher_12
 				proc.StartInfo.FileName =  Path.Combine(Globals.serverFolder, "start.bat");
 				proc.Start();
 			}
-
-
 		}
 
 		private void killServer()
