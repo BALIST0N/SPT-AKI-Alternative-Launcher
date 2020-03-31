@@ -154,7 +154,7 @@ namespace EFT_Launcher_12
 		{
 			int select = profilesListBox.SelectedIndex;
 			
-			if (startServerChackBox.Checked)
+			if (startServerChackBox.Checked || startServerChackBox.Visible == false)
 			{
 				try
 				{

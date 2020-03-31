@@ -21,3 +21,7 @@ EFT_Launcher_12/obj/Release/EmuTarkov-Launcher.exe
 EFT_Launcher_12/obj/Release/EmuTarkov-Launcher.pdb
 EFT_Launcher_12/obj/Release/TempPE/Properties.Resources.Designer.cs.dll
 EFT_Launcher_12/Properties/Newtonsoft.Json.dll
+EFT_Launcher_12/bin/Release/Newtonsoft.Json.dll
+EFT_Launcher_12/bin/Release/EmuTarkov-Launcher.exe
+EFT_Launcher_12/bin/Release/EmuTarkov-Launcher.exe.config
+EFT_Launcher_12/bin/Release/EmuTarkov-Launcher.pdb

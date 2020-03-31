@@ -154,6 +154,7 @@
             this.startServerChackBox.TabIndex = 11;
             this.startServerChackBox.Text = "Start Server";
             this.startServerChackBox.UseVisualStyleBackColor = false;
+            this.startServerChackBox.Visible = false;
             // 
             // MainWindow
             // 
