@@ -123,7 +123,7 @@ namespace EFT_Launcher_12
 					EditProfileForm edit = new EditProfileForm(profileid, this.Location);
 					edit.Show();
 				}
-			}		
+			}
 			else
 			{
 				MessageBox.Show("this profile does't have data, launch the game for being able to edit your profile");
