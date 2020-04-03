@@ -15,13 +15,13 @@ namespace EFT_Launcher_12
         List<HideoutUpgradesArea> hideoutLevels;
         Dictionary<string, string> tradersNames;
 
-        public EditProfileForm(int id, System.Drawing.Point location)
+        public EditProfileForm(string id, System.Drawing.Point location)
         {
             profilePath = Path.Combine(Globals.profilesFolder, id + "/character.json");
             tradersNames = new Dictionary<string, string>();
             hideoutLevels = new List<HideoutUpgradesArea>();
             this.StartPosition = FormStartPosition.Manual;
-            location.X += 500;
+            location.X += 100;
             this.Location = location;
             
             #region init Traders Names

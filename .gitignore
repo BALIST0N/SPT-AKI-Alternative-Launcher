@@ -25,3 +25,10 @@ EFT_Launcher_12/bin/Release/Newtonsoft.Json.dll
 EFT_Launcher_12/bin/Release/EmuTarkov-Launcher.exe
 EFT_Launcher_12/bin/Release/EmuTarkov-Launcher.exe.config
 EFT_Launcher_12/bin/Release/EmuTarkov-Launcher.pdb
+EFT_Launcher_12/bin/Debug/EmuTarkov-Launcher.exe
+EFT_Launcher_12/bin/Debug/EmuTarkov-Launcher.exe.config
+EFT_Launcher_12/bin/Debug/EmuTarkov-Launcher.pdb
+EFT_Launcher_12/bin/Debug/Newtonsoft.Json.dll
+EFT_Launcher_12/obj/Debug/EFT_Launcher_12.csproj.GenerateResource.cache
+EFT_Launcher_12/obj/Debug/EFT_Launcher_12.csprojAssemblyReference.cache
+EFT_Launcher_12/obj/Release/EFT_Launcher_12.csprojAssemblyReference.cache

@@ -41,10 +41,18 @@ namespace EFT_Launcher_12
 			{
 				Dictionary<string, Profile> dico = JsonConvert.DeserializeObject<Dictionary<string, Profile>>(r.ReadToEnd());
 
-				foreach(string key in dico.Keys)
+				foreach (string key in dico.Keys)
 				{
 					profilesListBox.Items.Add(dico[key].nickname);
-					profiles[dico[key].id] = dico[key];
+					for(int i = 0; i < profiles.Length; i++)
+					{
+						if(profiles[i] == null)
+						{
+							profiles[i] = dico[key];
+							break;
+						}
+					}
+					
 				}
 			}
 		}
@@ -115,7 +123,7 @@ namespace EFT_Launcher_12
 
 		private void profileEditButton_Click(object sender, EventArgs e)
 		{
-			int profileid = profiles[profilesListBox.SelectedIndex].id;
+			string profileid = profiles[profilesListBox.SelectedIndex - 1].id;
 			if( File.Exists(Path.Combine(Globals.profilesFolder,  profileid + "/character.json")) )
 			{
 				if(Application.OpenForms.OfType<EditProfileForm>().Count() == 0)
@@ -130,6 +138,7 @@ namespace EFT_Launcher_12
 			}
 		}
 
+		/*
 		private string GenerateToken(string email, string password)
 		{
 			LoginToken token = new LoginToken(email, password);
@@ -144,6 +153,14 @@ namespace EFT_Launcher_12
 
 			// add begin and end part of the token
 			return beginKey + result + endKey;
+		}*/
+
+		private string GenerateToken(string email, string password,string accountid)
+		{
+			LoginToken token = new LoginToken(email, password);
+			string convertedStr = Convert.ToBase64String(Encoding.UTF8.GetBytes( JsonConvert.SerializeObject(token) )) + "=";
+			return "-bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid;
+
 		}
 
 
@@ -152,7 +169,7 @@ namespace EFT_Launcher_12
 		//**************************************************//
 		private void startButton_Click(object sender, EventArgs e)
 		{
-			int select = profilesListBox.SelectedIndex;
+			int select = profilesListBox.SelectedIndex -1;
 			
 			if (startServerChackBox.Checked || startServerChackBox.Visible == false)
 			{
@@ -168,14 +185,13 @@ namespace EFT_Launcher_12
 
 			// start game
 			ProcessStartInfo startGame = new ProcessStartInfo(Path.Combine(Globals.gameFolder, "EscapeFromTarkov.exe"));
-			startGame.Arguments = GenerateToken(profiles[select].email, profiles[select].password) + " -token=" + select + " -screenmode=fullscreen";
+			startGame.Arguments = GenerateToken(profiles[select].email, profiles[select].password,profiles[select].id);
 			startGame.UseShellExecute = false;
 			startGame.WorkingDirectory = Globals.gameFolder;
 			Process.Start(startGame);
 			this.startButton.Enabled = false;
 		}
 
-		// package-private doesn't benefit from the optimizations that private has
 		private void LaunchServer()
 		{
 			Process proc = new Process();
@@ -288,7 +304,7 @@ namespace EFT_Launcher_12
 
 	internal class Profile
 	{
-		public int id;
+		public string id;
 		public string nickname;
 		public string email;
 		public string password;
