@@ -39,9 +39,15 @@ namespace EFT_Launcher_12
 			using (StreamReader r = new StreamReader(Globals.accountsFile))
 			{
 				Dictionary<string, Profile> dico = JsonConvert.DeserializeObject<Dictionary<string, Profile>>(r.ReadToEnd());
-				try
+
+				if (dico != null)
 				{
-					if (dico != null)
+					if(dico.Count == 0)
+					{
+						profileEditButton.Text = "Create Profile";
+						profileEditButton.Enabled = true;
+					}
+					else
 					{
 						foreach (string key in dico.Keys)
 						{
@@ -49,15 +55,12 @@ namespace EFT_Launcher_12
 							profiles.Add(dico[key]);
 						}
 					}
-					else
-					{
-						profileEditButton.Text = "Create Profile";
-						profileEditButton.Enabled = true;
-					}
 				}
-				catch(Exception ex)
+				else
 				{
-					//do nothing just skip this bullshit
+					//account file is corrupted ..? 
+					profileEditButton.Text = "Create Profile";
+					profileEditButton.Enabled = true;
 				}
 			}
 		}
