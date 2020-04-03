@@ -12,7 +12,7 @@ namespace EFT_Launcher_12
 {
 	public partial class MainWindow : Form
 	{
-		private Profile[] profiles = new Profile[10];
+		private List<Profile> profiles = new List<Profile>();
 		private delegate void SetTextCallback(string text);
 		private delegate void ResetLauncherCallback();
 		private string serverProcessName;
@@ -26,7 +26,6 @@ namespace EFT_Launcher_12
 			profilesListBox.SelectedIndex = 0;
 			this.gamePathTextBox.Text = Globals.gameFolder;
 			LoadProfiles();
-
 		}
 
 		public void LoadProfiles()
@@ -40,19 +39,25 @@ namespace EFT_Launcher_12
 			using (StreamReader r = new StreamReader(Globals.accountsFile))
 			{
 				Dictionary<string, Profile> dico = JsonConvert.DeserializeObject<Dictionary<string, Profile>>(r.ReadToEnd());
-
-				foreach (string key in dico.Keys)
+				try
 				{
-					profilesListBox.Items.Add(dico[key].nickname);
-					for(int i = 0; i < profiles.Length; i++)
+					if (dico != null)
 					{
-						if(profiles[i] == null)
+						foreach (string key in dico.Keys)
 						{
-							profiles[i] = dico[key];
-							break;
+							profilesListBox.Items.Add(dico[key].nickname);
+							profiles.Add(dico[key]);
 						}
 					}
-					
+					else
+					{
+						profileEditButton.Text = "Create Profile";
+						profileEditButton.Enabled = true;
+					}
+				}
+				catch(Exception ex)
+				{
+					//do nothing just skip this bullshit
 				}
 			}
 		}
@@ -123,44 +128,38 @@ namespace EFT_Launcher_12
 
 		private void profileEditButton_Click(object sender, EventArgs e)
 		{
-			string profileid = profiles[profilesListBox.SelectedIndex - 1].id;
-			if( File.Exists(Path.Combine(Globals.profilesFolder,  profileid + "/character.json")) )
+			if(profileEditButton.Text == "Create Profile")
 			{
-				if(Application.OpenForms.OfType<EditProfileForm>().Count() == 0)
+				if (Application.OpenForms.OfType<Views.CreateAccountForm>().Count() == 0)
 				{
-					EditProfileForm edit = new EditProfileForm(profileid, this.Location);
-					edit.Show();
+					Views.CreateAccountForm c = new Views.CreateAccountForm(this.Location);
+					c.Show();
 				}
 			}
 			else
 			{
-				MessageBox.Show("this profile does't have data, launch the game for being able to edit your profile");
+				string profileid = profiles[profilesListBox.SelectedIndex - 1].id;
+				if (File.Exists(Path.Combine(Globals.profilesFolder, profileid + "/character.json")))
+				{
+					if (Application.OpenForms.OfType<EditProfileForm>().Count() == 0)
+					{
+						EditProfileForm edit = new EditProfileForm(profileid, this.Location);
+						edit.Show();
+					}
+				}
+				else
+				{
+					MessageBox.Show("this profile does't have data, launch the game for being able to edit your profile");
+				}
 			}
+
 		}
-
-		/*
-		private string GenerateToken(string email, string password)
-		{
-			LoginToken token = new LoginToken(email, password);
-			string beginKey = "-bC5vLmcuaS5u=";
-			string endKey = "=";
-
-			// serialize login token
-			string serialized = JsonConvert.SerializeObject(token);
-
-			// encode login token to base64
-			string result = Convert.ToBase64String(Encoding.UTF8.GetBytes(serialized));
-
-			// add begin and end part of the token
-			return beginKey + result + endKey;
-		}*/
 
 		private string GenerateToken(string email, string password,string accountid)
 		{
 			LoginToken token = new LoginToken(email, password);
 			string convertedStr = Convert.ToBase64String(Encoding.UTF8.GetBytes( JsonConvert.SerializeObject(token) )) + "=";
 			return "-bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid;
-
 		}
 
 
@@ -250,7 +249,6 @@ namespace EFT_Launcher_12
 		void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
 		{
 			string res = e.Data;
-			
 			// get line color here
 			if(res != null )
 			{
