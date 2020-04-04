@@ -13,8 +13,8 @@ namespace EFT_Launcher_12
 		
 		static Globals()
 		{
-			//serverFolder = Environment.CurrentDirectory;
-			serverFolder = "Y:/tarkov/emutarkov 12.4-R2";
+			serverFolder = Environment.CurrentDirectory;
+			//serverFolder = "Y:/tarkov/emutarkov 12.4-R2";
 
 			accountsFile = serverFolder + "/user/configs/accounts.json";
 			profilesFolder = serverFolder + "/user/profiles";

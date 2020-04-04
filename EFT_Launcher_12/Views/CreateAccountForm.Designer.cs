@@ -162,7 +162,7 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CreateAccountForm";
-            this.Text = "CreateAccountForm";
+            this.Text = "Create new profile ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
