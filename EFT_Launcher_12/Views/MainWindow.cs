@@ -132,7 +132,7 @@ namespace EFT_Launcher_12
 
 		private void profilesListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			validateValues();
+			if(profilesListBox.SelectedIndex > 0) { validateValues(); }
 		}
 
 		private void profileEditButton_Click(object sender, EventArgs e)
@@ -161,7 +161,6 @@ namespace EFT_Launcher_12
 					MessageBox.Show("this profile does't have data, launch the game for being able to edit your profile");
 				}
 			}
-
 		}
 
 		private string GenerateToken(string email, string password,string accountid)
