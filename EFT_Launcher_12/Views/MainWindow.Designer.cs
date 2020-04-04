@@ -177,7 +177,7 @@
             this.MaximumSize = new System.Drawing.Size(600, 400);
             this.MinimumSize = new System.Drawing.Size(600, 160);
             this.Name = "MainWindow";
-            this.Text = "Emutarkov Launcher (Alternative Version)";
+            this.Text = "Emutarkov Launcher (Alternative Version) 12.4-R2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
