@@ -58,17 +58,17 @@
             this.nicknameTextBox.Location = new System.Drawing.Point(125, 12);
             this.nicknameTextBox.Name = "nicknameTextBox";
             this.nicknameTextBox.Size = new System.Drawing.Size(167, 26);
-            this.nicknameTextBox.TabIndex = 13;
+            this.nicknameTextBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 49);
+            this.label2.Location = new System.Drawing.Point(70, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.Size = new System.Drawing.Size(49, 18);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Email :";
+            this.label2.Text = "Login :";
             // 
             // label3
             // 
@@ -90,7 +90,6 @@
             this.gameVersionCombo.ForeColor = System.Drawing.Color.White;
             this.gameVersionCombo.FormattingEnabled = true;
             this.gameVersionCombo.Items.AddRange(new object[] {
-            "Select a version !",
             "standard",
             "Prepare to escape",
             "Left Behind",
@@ -98,7 +97,7 @@
             this.gameVersionCombo.Location = new System.Drawing.Point(125, 109);
             this.gameVersionCombo.Name = "gameVersionCombo";
             this.gameVersionCombo.Size = new System.Drawing.Size(168, 26);
-            this.gameVersionCombo.TabIndex = 18;
+            this.gameVersionCombo.TabIndex = 4;
             // 
             // label7
             // 
@@ -119,7 +118,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(125, 47);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(167, 26);
-            this.emailTextBox.TabIndex = 20;
+            this.emailTextBox.TabIndex = 2;
             // 
             // passwordTextbox
             // 
@@ -129,8 +128,9 @@
             this.passwordTextbox.ForeColor = System.Drawing.Color.White;
             this.passwordTextbox.Location = new System.Drawing.Point(125, 77);
             this.passwordTextbox.Name = "passwordTextbox";
+            this.passwordTextbox.PasswordChar = '*';
             this.passwordTextbox.Size = new System.Drawing.Size(167, 26);
-            this.passwordTextbox.TabIndex = 21;
+            this.passwordTextbox.TabIndex = 3;
             // 
             // saveButton
             // 
@@ -139,7 +139,7 @@
             this.saveButton.Location = new System.Drawing.Point(1, 153);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(302, 30);
-            this.saveButton.TabIndex = 22;
+            this.saveButton.TabIndex = 5;
             this.saveButton.Text = "Create profile";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
