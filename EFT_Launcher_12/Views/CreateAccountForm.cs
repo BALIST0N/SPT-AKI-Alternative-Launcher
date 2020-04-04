@@ -42,7 +42,7 @@ namespace EFT_Launcher_12.Views
                         profileToAdd.edition = "Prepare To Escape";
                         break;
                     case 3:
-                        profileToAdd.edition = "Edga Of Darkness";
+                        profileToAdd.edition = "Edge Of Darkness";
                         break;
                 }
 
