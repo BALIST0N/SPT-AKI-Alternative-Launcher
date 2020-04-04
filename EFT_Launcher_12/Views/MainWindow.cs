@@ -82,7 +82,13 @@ namespace EFT_Launcher_12
 
 				if ( File.Exists(Path.Combine(gamePathTextBox.Text, "client.config.json")) == false )
 				{
-					backendUrlLabel.Text = "Backend URL : ?";
+					backendUrlLabel.Text = "Backend URL : " + Globals.clientConfig.BackendUrl;
+					using (StreamWriter file = File.CreateText( Path.Combine(Globals.gameFolder,"client.config.json") ))
+					{
+						JsonSerializer serializer = new JsonSerializer();
+						serializer.Formatting = Formatting.Indented;
+						serializer.Serialize(file, Globals.clientConfig);
+					}
 				}
 				else
 				{
@@ -164,7 +170,6 @@ namespace EFT_Launcher_12
 			string convertedStr = Convert.ToBase64String(Encoding.UTF8.GetBytes( JsonConvert.SerializeObject(token) )) + "=";
 			return "-bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid;
 		}
-
 
 		//**************************************************//
 		//					PROCESS FUNCTIONS				//
