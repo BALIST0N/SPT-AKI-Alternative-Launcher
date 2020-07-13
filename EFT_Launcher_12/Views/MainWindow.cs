@@ -25,6 +25,7 @@ namespace EFT_Launcher_12
 			profileEditButton.Enabled = false;
 			profilesListBox.SelectedIndex = 0;
 			this.gamePathTextBox.Text = Globals.gameFolder;
+			this.backendUrlLabel.Text = this.backendUrlLabel.Text + Globals.clientConfig.BackendUrl;
 			LoadProfiles();
 		}
 
@@ -79,23 +80,6 @@ namespace EFT_Launcher_12
 				Globals.gameFolder = gamePathTextBox.Text;
 				Properties.Settings.Default.gameFolder = Globals.gameFolder;
 				Properties.Settings.Default.Save();
-
-				if ( File.Exists(Path.Combine(gamePathTextBox.Text, "client.config.json")) == false )
-				{
-					backendUrlLabel.Text = "Backend URL : " + Globals.clientConfig.BackendUrl;
-					using (StreamWriter file = File.CreateText( Path.Combine(Globals.gameFolder,"client.config.json") ))
-					{
-						JsonSerializer serializer = new JsonSerializer();
-						serializer.Formatting = Formatting.Indented;
-						serializer.Serialize(file, Globals.clientConfig);
-					}
-				}
-				else
-				{
-					string json = File.ReadAllText(Path.Combine(Globals.gameFolder, "client.config.json"));
-					Globals.clientConfig = JsonConvert.DeserializeObject<ClientConfig>(json);
-					backendUrlLabel.Text = "Backend URL : " + Globals.clientConfig.BackendUrl;
-				}
 			}
 			else
 			{
@@ -167,7 +151,11 @@ namespace EFT_Launcher_12
 		{
 			LoginToken token = new LoginToken(email, password);
 			string convertedStr = Convert.ToBase64String(Encoding.UTF8.GetBytes( JsonConvert.SerializeObject(token) )) + "=";
-			return "-bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid;
+			return "-bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid + " -config=" + JsonConvert.SerializeObject(Globals.clientConfig);
+
+			//return "-bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid;
+
+
 		}
 
 		//**************************************************//
@@ -305,9 +293,15 @@ namespace EFT_Launcher_12
 		{
 			killServer();
 		}
-	}
 
-	internal class Profile
+        private void backendUrlLabel_Click(object sender, EventArgs e)
+        {
+			//popup window to allow change backend url
+			MessageBox.Show("you will be able to change the back url soon");
+        }
+    }
+
+    internal class Profile
 	{
 		public string id;
 		public string nickname;

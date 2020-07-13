@@ -124,11 +124,12 @@
             this.backendUrlLabel.BackColor = System.Drawing.Color.Transparent;
             this.backendUrlLabel.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backendUrlLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.backendUrlLabel.Location = new System.Drawing.Point(12, 131);
+            this.backendUrlLabel.Location = new System.Drawing.Point(12, 125);
             this.backendUrlLabel.Name = "backendUrlLabel";
             this.backendUrlLabel.Size = new System.Drawing.Size(100, 18);
             this.backendUrlLabel.TabIndex = 9;
             this.backendUrlLabel.Text = "backend URL : ";
+            this.backendUrlLabel.Click += new System.EventHandler(this.backendUrlLabel_Click);
             // 
             // killServerButton
             // 
@@ -148,7 +149,7 @@
             this.startServerChackBox.AutoSize = true;
             this.startServerChackBox.BackColor = System.Drawing.Color.Transparent;
             this.startServerChackBox.ForeColor = System.Drawing.SystemColors.Control;
-            this.startServerChackBox.Location = new System.Drawing.Point(254, 131);
+            this.startServerChackBox.Location = new System.Drawing.Point(412, 77);
             this.startServerChackBox.Name = "startServerChackBox";
             this.startServerChackBox.Size = new System.Drawing.Size(82, 17);
             this.startServerChackBox.TabIndex = 11;
@@ -177,7 +178,7 @@
             this.MaximumSize = new System.Drawing.Size(600, 400);
             this.MinimumSize = new System.Drawing.Size(600, 160);
             this.Name = "MainWindow";
-            this.Text = "Emutarkov Launcher (Alternative Version) 12.4-R2";
+            this.Text = "Emutarkov Launcher (Alternative Version) 12.6-R4";
             this.ResumeLayout(false);
             this.PerformLayout();
 
