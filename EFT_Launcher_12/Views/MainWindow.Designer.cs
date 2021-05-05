@@ -43,8 +43,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Tomato;
             this.label1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 18);
@@ -121,15 +122,17 @@
             // backendUrlLabel
             // 
             this.backendUrlLabel.AutoSize = true;
-            this.backendUrlLabel.BackColor = System.Drawing.Color.Transparent;
+            this.backendUrlLabel.BackColor = System.Drawing.Color.SandyBrown;
             this.backendUrlLabel.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backendUrlLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.backendUrlLabel.ForeColor = System.Drawing.Color.Black;
             this.backendUrlLabel.Location = new System.Drawing.Point(12, 125);
             this.backendUrlLabel.Name = "backendUrlLabel";
             this.backendUrlLabel.Size = new System.Drawing.Size(100, 18);
             this.backendUrlLabel.TabIndex = 9;
             this.backendUrlLabel.Text = "backend URL : ";
             this.backendUrlLabel.Click += new System.EventHandler(this.backendUrlLabel_Click);
+            this.backendUrlLabel.MouseEnter += new System.EventHandler(this.backendUrlLabel_MouseEnter);
+            this.backendUrlLabel.MouseLeave += new System.EventHandler(this.backendUrlLabel_MouseLeave);
             // 
             // killServerButton
             // 
@@ -162,6 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 161);
             this.Controls.Add(this.startServerChackBox);
             this.Controls.Add(this.killServerButton);
@@ -178,7 +182,8 @@
             this.MaximumSize = new System.Drawing.Size(600, 400);
             this.MinimumSize = new System.Drawing.Size(600, 160);
             this.Name = "MainWindow";
-            this.Text = "Emutarkov Launcher (Alternative Version) 12.6-R4";
+            this.Text = "SPT-AKI Launcher (Alternative Version)";
+            this.Shown += new System.EventHandler(this.MainWindow_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

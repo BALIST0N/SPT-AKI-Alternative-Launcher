@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,10 +9,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>EFT_Launcher_12</RootNamespace>
     <AssemblyName>EmuTarkov-Launcher</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -55,17 +57,20 @@
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>EFT_Launcher_12.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll</HintPath>
+    <Reference Include="Costura, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.4.1.0\lib\net40\Costura.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>.\Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
       <HintPath>Properties\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -77,12 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\ClientConfig.cs" />
-    <Compile Include="Views\CreateAccountForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\CreateAccountForm.Designer.cs">
-      <DependentUpon>CreateAccountForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\EditProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +89,12 @@
       <DependentUpon>EditProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Source\Globals.cs" />
+    <Compile Include="Views\EditServerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditServerSettings.Designer.cs">
+      <DependentUpon>EditServerSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,11 +104,11 @@
     <Compile Include="Source\ProfileExtended.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\CreateAccountForm.resx">
-      <DependentUpon>CreateAccountForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\EditProfileForm.resx">
       <DependentUpon>EditProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditServerSettings.resx">
+      <DependentUpon>EditServerSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -119,6 +124,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,14 +136,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.6.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.0.0\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.0.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.0.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+  </Target>
 </Project>

@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Windows.Forms;
-using System.Collections.Generic;
-using Newtonsoft.Json;
-using System.Linq;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace EFT_Launcher_12
 {
@@ -17,7 +17,7 @@ namespace EFT_Launcher_12
 
         public EditProfileForm(string id, System.Drawing.Point location)
         {
-            profilePath = Path.Combine(Globals.profilesFolder, id + "/character.json");
+            profilePath = Path.Combine(Globals.profilesFolder, id +".json");
             tradersNames = new Dictionary<string, string>();
             hideoutLevels = new List<HideoutUpgradesArea>();
             this.StartPosition = FormStartPosition.Manual;
@@ -69,9 +69,21 @@ namespace EFT_Launcher_12
             {
                 using (StreamReader r = new StreamReader(profilePath))
                 {
-                    profileToEdit = JsonConvert.DeserializeObject<ProfileExtended>(r.ReadToEnd());
-                    profileToEdit.hideout.areas = profileToEdit.hideout.areas.OrderBy(o => o.type).ToList();
-                    SetInfo();
+                    dynamic profileex = JObject.Parse(r.ReadToEnd());
+
+                    string t1 = (string)profileex["characters"]["pmc"].ToString();
+                    profileToEdit = JsonConvert.DeserializeObject<ProfileExtended>( t1 );
+                    if(profileToEdit.hideout != null )
+                    {
+                        profileToEdit.hideout.areas = profileToEdit.hideout.areas.OrderBy(o => o.type).ToList();
+                        this.wipeProfileCheckbox.Checked = (bool)profileex["info"]["wipe"];
+                        SetInfo();
+                    }
+                    else
+                    {
+                        MessageBox.Show(" the profile exist but not initialized, please start the game and choose your side ;)");
+                        this.Close();
+                    }                    
                 }
             }
             catch (Exception ex)
@@ -93,13 +105,13 @@ namespace EFT_Launcher_12
             profileToEdit.info.experience = Convert.ToInt32(experienceBox.Value);
             profileToEdit.info.gameVersion = gameVersionCombo.SelectedItem.ToString();
 
-            profileToEdit.SetSkillValue("Endurance", enduranceNumericBox.Value);
-            profileToEdit.SetSkillValue("Strength", strenghNumericBox.Value);
-            profileToEdit.SetSkillValue("Vitality", vitalityNumericBox.Value);
-            profileToEdit.SetSkillValue("Health", healthNumericBox.Value);
-            profileToEdit.SetSkillValue("StressResistance", stressNumericBox.Value);
-            profileToEdit.SetSkillValue("Metabolism", metabolismNumericBox.Value);
-            profileToEdit.SetSkillValue("Immunity", immunityNumericBox.Value);
+            profileToEdit.SetSkillValue("Endurance", EnduranceTrackBar.Value);
+            profileToEdit.SetSkillValue("Strength", StrengthTrackBar.Value);
+            profileToEdit.SetSkillValue("Vitality", VitalityTrackBar.Value);
+            profileToEdit.SetSkillValue("Health", HealthTrackBar.Value);
+            profileToEdit.SetSkillValue("StressResistance", StressTrackBar.Value);
+            profileToEdit.SetSkillValue("Metabolism", MetabolismTrackbar.Value);
+            profileToEdit.SetSkillValue("Immunity", ImmunityTrackbar.Value);
             profileToEdit.SetSkillValue("Perception", perceptionNumericBox.Value);
             profileToEdit.SetSkillValue("Intellect", intelNumericBox.Value);
             profileToEdit.SetSkillValue("Attention", attentionNumericBox.Value);
@@ -109,7 +121,14 @@ namespace EFT_Launcher_12
             profileToEdit.SetSkillValue("RecoilControl", recoilNumericBox.Value);
             profileToEdit.SetSkillValue("Search", searchNumericBox.Value);
             profileToEdit.SetSkillValue("MagDrills", magdrillsNumericBox.Value);
+
+            profileToEdit.SetSkillValue("AimDrills", aimNumericBox.Value);
+            profileToEdit.SetSkillValue("Surgery", surgeryNumericBox.Value);
+            profileToEdit.SetSkillValue("ProneMovement", proneNumericBox.Value);
+            profileToEdit.SetSkillValue("Crafting", craftingNumericBox.Value);
+            profileToEdit.SetSkillValue("HideoutManagement", hideoutManagementNumericBox.Value);
             
+
             //weapon skills
             profileToEdit.SetSkillValue("Pistol", pistolNumericBox.Value);
             profileToEdit.SetSkillValue("Revolver", revolverNumericBox.Value);
@@ -127,36 +146,41 @@ namespace EFT_Launcher_12
 
             try
             {
-                string json = File.ReadAllText(profilePath);
-                JObject realProfile = JObject.Parse(json);
+                //using (StreamWriter file = File.CreateText( Path.Combine(Globals.profilesFolder, "profiles/1/TestSaveProfile.json") ))
+                
+                dynamic ProfileJSON = JObject.Parse( File.ReadAllText(profilePath) );
 
-                realProfile.SelectToken("Info")["Nickname"] = profileToEdit.info.nickname;
-                realProfile.SelectToken("Info")["Side"] = profileToEdit.info.side;
-                realProfile.SelectToken("Info")["Experience"] = profileToEdit.info.experience;
-                realProfile.SelectToken("Info")["GameVersion"] = profileToEdit.info.gameVersion;
+                dynamic characterPmcData = ProfileJSON["characters"]["pmc"];
+                characterPmcData.SelectToken("Info")["Nickname"] = profileToEdit.info.nickname;
+                characterPmcData.SelectToken("Info")["Side"] = profileToEdit.info.side;
+                characterPmcData.SelectToken("Info")["Experience"] = profileToEdit.info.experience;
+                characterPmcData.SelectToken("Info")["GameVersion"] = profileToEdit.info.gameVersion;
 
                 for (int i = 0; i < profileToEdit.skills.common.Count; i++)
                 {
-                    realProfile.SelectToken("Skills").SelectToken("Common")[i]["Progress"] = profileToEdit.skills.common[i].progress;
+                    characterPmcData.SelectToken("Skills").SelectToken("Common")[i]["Progress"] = profileToEdit.skills.common[i].progress;
                 }
 
                 for (int i = 0; i < profileToEdit.skills.mastering.Count; i++)
                 {
-                    realProfile.SelectToken("Skills").SelectToken("Mastering")[i]["Progress"] = profileToEdit.skills.mastering[i].progress;
+                    characterPmcData.SelectToken("Skills").SelectToken("Mastering")[i]["Progress"] = profileToEdit.skills.mastering[i].progress;
                 }
 
                 foreach (ProfileExtended.Hideout.Area a in profileToEdit.hideout.areas)
                 {
-                    realProfile.SelectToken("Hideout").SelectToken("Areas")[a.type]["level"] = a.level;
+                    characterPmcData.SelectToken("Hideout").SelectToken("Areas")[a.type]["level"] = a.level;
                 }
 
-                //using (StreamWriter file = File.CreateText( Path.Combine(Globals.profilesFolder, "profiles/1/TestSaveProfile.json") ))
+                ProfileJSON["characters"]["pmc"] = characterPmcData;
+                ProfileJSON["info"]["wipe"] = this.wipeProfileCheckbox.Checked;
+
                 using (StreamWriter file = File.CreateText(profilePath))
                 {
                     JsonSerializer serializer = new JsonSerializer();
                     serializer.Formatting = Formatting.Indented;
-                    serializer.Serialize(file, realProfile);
+                    serializer.Serialize(file, ProfileJSON);
                 }
+                
                 MessageBox.Show("profile succesfully saved");
                                 
             }
@@ -194,14 +218,14 @@ namespace EFT_Launcher_12
             }
 
             #region INIT SKILLS numericBoxes
-            enduranceNumericBox.Value = profileToEdit.GetSkillValue("Endurance");
-            strenghNumericBox.Value = profileToEdit.GetSkillValue("Strength");
-            vitalityNumericBox.Value = profileToEdit.GetSkillValue("Vitality");
-            healthNumericBox.Value = profileToEdit.GetSkillValue("Health");
-            stressNumericBox.Value = profileToEdit.GetSkillValue("StressResistance");
+            EnduranceTrackBar.Value = profileToEdit.GetSkillValue("Endurance");
+            StrengthTrackBar.Value = profileToEdit.GetSkillValue("Strength");
+            VitalityTrackBar.Value = profileToEdit.GetSkillValue("Vitality");
+            HealthTrackBar.Value = profileToEdit.GetSkillValue("Health");
+            StressTrackBar.Value = profileToEdit.GetSkillValue("StressResistance");
 
-            metabolismNumericBox.Value = profileToEdit.GetSkillValue("Metabolism");
-            immunityNumericBox.Value = profileToEdit.GetSkillValue("Immunity");
+            MetabolismTrackbar.Value = profileToEdit.GetSkillValue("Metabolism");
+            ImmunityTrackbar.Value = profileToEdit.GetSkillValue("Immunity");
             perceptionNumericBox.Value = profileToEdit.GetSkillValue("Perception");
             intelNumericBox.Value = profileToEdit.GetSkillValue("Intellect");
             attentionNumericBox.Value = profileToEdit.GetSkillValue("Attention");
@@ -212,6 +236,13 @@ namespace EFT_Launcher_12
             recoilNumericBox.Value = profileToEdit.GetSkillValue("RecoilControl");
             searchNumericBox.Value = profileToEdit.GetSkillValue("Search");
             magdrillsNumericBox.Value = profileToEdit.GetSkillValue("MagDrills");
+
+            aimNumericBox.Value = profileToEdit.GetSkillValue("AimDrills");
+            surgeryNumericBox.Value = profileToEdit.GetSkillValue("Surgery");
+            proneNumericBox.Value = profileToEdit.GetSkillValue("ProneMovement");
+            craftingNumericBox.Value = profileToEdit.GetSkillValue("Crafting");
+            hideoutManagementNumericBox.Value = profileToEdit.GetSkillValue("HideoutManagement");
+
 
             //weapons skills
             pistolNumericBox.Value = profileToEdit.GetSkillValue("Pistol");
@@ -267,11 +298,22 @@ namespace EFT_Launcher_12
             string trader = this.traderListComboBox.SelectedItem.ToString();
             string traderid = tradersNames.FirstOrDefault(x => x.Value == trader).Key;
 
-            if(traderid != null ){ trader = traderid; }
-            
+            if (traderid != null) { trader = traderid; }
+
             traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
             traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
             traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
+        }
+
+        private void TrackBars_ValueChanged(object sender, EventArgs e)
+        {
+            TrackBar t = (TrackBar)sender;
+            string name = t.Name.Replace("TrackBar", "").Replace("Trackbar", "") + "LevelLabel";
+            try
+            {
+                this.Controls.Find(name, true).FirstOrDefault().Text = t.Value.ToString();
+            }
+            catch{}
         }
 
         /// <summary>

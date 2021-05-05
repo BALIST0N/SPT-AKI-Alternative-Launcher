@@ -33,12 +33,12 @@ namespace EFT_Launcher_12
                 public string id;
                 public int progress;
             }
-
         }
-        public decimal GetSkillValue(string skill)
+
+        public int GetSkillValue(string skill)
         {
             //return profileToEdit.skills[profileToEdit.skills.listskills.FindIndex(x => x.id.Equals(skill))].progress;
-            return this.skills.common.Find(x => x.id.Equals(skill)).progress;
+            return System.Convert.ToInt32( this.skills.common.Find(x => x.id.Equals(skill)).progress );
         }
 
         public void SetSkillValue(string skill, decimal newval)
