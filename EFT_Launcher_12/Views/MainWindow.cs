@@ -28,7 +28,7 @@ namespace EFT_Launcher_12
             profileEditButton.Enabled = false;
             profilesListBox.SelectedIndex = 0;
             this.gamePathTextBox.Text = Globals.gameFolder;
-            this.backendUrlLabel.Text = "Backend URL : " + Globals.clientConfig.BackendUrl;
+            this.backendUrlLabel.Text = "Backend URL : " + Globals.backendUrl;
         }
 
 		private void MainWindow_Shown(object sender, EventArgs e)
@@ -240,9 +240,8 @@ namespace EFT_Launcher_12
 		{
 			LoginToken token = new LoginToken(username, password);
 			string convertedStr = Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(token))) + "=";
-			return "-force-gfx-jobs native -bC5vLmcuaS5u=" + convertedStr + " -token=" + accountid + " -config=" + JsonConvert.SerializeObject(Globals.clientConfig);
-			//return "-force-gfx-jobs native -token=" + accountid + " -config=" + JsonConvert.SerializeObject(Globals.clientConfig);
-
+			//return "-force-gfx-jobs native -bC5vLmcuaS5u=" + convertedStr + "-token=" + accountid + " -config=" + JsonConvert.SerializeObject(Globals.clientConfig);
+			return "-token=" + accountid + " -config={'BackendUrl':'" + Globals.backendUrl + "','Version':'live'}";
 		}
 
 		private void killServer()
@@ -272,8 +271,7 @@ namespace EFT_Launcher_12
 			// get line color here
 			if(res != null )
 			{
-				res = res.Replace(@"(\\e\[[0-1];3[0-9])m", ""); // it should replace all \e[0;32m things
-				res = res.Replace("[2J[0;0f", "").Replace("[0m", "").Replace("[36m", "").Replace("[37m", "").Replace("[40m", "").Replace("[41m", "").Replace("[42m", "").Replace("[43m", "").Replace("[33m", "");
+				res = System.Text.RegularExpressions.Regex.Replace(res, @"\[[0-1];[0-9][a-z]|\[[0-9][0-9][a-z]|\[[0-9][a-z]|\[[0-9][A-Z]",String.Empty); //it should replace all [0;32m things
 			}
 			SetConsoleOutputText(res + "\n");
 		}

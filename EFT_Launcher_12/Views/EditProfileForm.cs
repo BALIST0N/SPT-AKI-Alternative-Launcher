@@ -81,7 +81,7 @@ namespace EFT_Launcher_12
                     }
                     else
                     {
-                        MessageBox.Show(" the profile exist but not initialized, please start the game and choose your side ;)");
+                        MessageBox.Show(" the profile "+ (string)profileex["info"]["username"] +" is not initialized, please start the game and choose your side ;)");
                         this.Close();
                     }                    
                 }
@@ -112,37 +112,35 @@ namespace EFT_Launcher_12
             profileToEdit.SetSkillValue("StressResistance", StressTrackBar.Value);
             profileToEdit.SetSkillValue("Metabolism", MetabolismTrackbar.Value);
             profileToEdit.SetSkillValue("Immunity", ImmunityTrackbar.Value);
-            profileToEdit.SetSkillValue("Perception", perceptionNumericBox.Value);
-            profileToEdit.SetSkillValue("Intellect", intelNumericBox.Value);
-            profileToEdit.SetSkillValue("Attention", attentionNumericBox.Value);
-            profileToEdit.SetSkillValue("Charisma", charismaNumericBox.Value);
-            profileToEdit.SetSkillValue("Memory", memoryNumericBox.Value);
-            profileToEdit.SetSkillValue("CovertMovement", covertNumericBox.Value);
-            profileToEdit.SetSkillValue("RecoilControl", recoilNumericBox.Value);
-            profileToEdit.SetSkillValue("Search", searchNumericBox.Value);
-            profileToEdit.SetSkillValue("MagDrills", magdrillsNumericBox.Value);
+            profileToEdit.SetSkillValue("Perception", PerceptionTrackBar.Value);
+            profileToEdit.SetSkillValue("Intellect", IntelectTrackBar.Value);
+            profileToEdit.SetSkillValue("Attention", AttentionTrackBar.Value);
+            profileToEdit.SetSkillValue("Charisma", CharismaTrackBar.Value);
+            profileToEdit.SetSkillValue("Memory", AttentionTrackBar.Value);
+            profileToEdit.SetSkillValue("CovertMovement", CovertTrackBar.Value);
+            profileToEdit.SetSkillValue("RecoilControl", RecoilTrackBar.Value);
+            profileToEdit.SetSkillValue("Search", SearchingTrackBar.Value);
+            profileToEdit.SetSkillValue("MagDrills", MagdrillsTrackBar.Value);
 
-            profileToEdit.SetSkillValue("AimDrills", aimNumericBox.Value);
-            profileToEdit.SetSkillValue("Surgery", surgeryNumericBox.Value);
-            profileToEdit.SetSkillValue("ProneMovement", proneNumericBox.Value);
-            profileToEdit.SetSkillValue("Crafting", craftingNumericBox.Value);
-            profileToEdit.SetSkillValue("HideoutManagement", hideoutManagementNumericBox.Value);
+            profileToEdit.SetSkillValue("AimDrills", AimTrackBar.Value);
+            profileToEdit.SetSkillValue("Surgery", SurgeryTrackBar.Value);
+            profileToEdit.SetSkillValue("ProneMovement", ProneTrackBar.Value);
+            profileToEdit.SetSkillValue("Crafting", CraftingTrackBar.Value);
+            profileToEdit.SetSkillValue("HideoutManagement", HideoutTrackBar.Value);
             
 
             //weapon skills
-            profileToEdit.SetSkillValue("Pistol", pistolNumericBox.Value);
-            profileToEdit.SetSkillValue("Revolver", revolverNumericBox.Value);
-            profileToEdit.SetSkillValue("SMG", SMGNumericBox.Value);
-            profileToEdit.SetSkillValue("Assault", assaultNumericBox.Value);
-            profileToEdit.SetSkillValue("Shotgun", shotgunNumericBox.Value);
-            profileToEdit.SetSkillValue("Sniper", sniperNumericBox.Value);
-            profileToEdit.SetSkillValue("LMG", lmgNumericBox.Value);
-            profileToEdit.SetSkillValue("HMG", hmgNumericBox.Value);
-            profileToEdit.SetSkillValue("DMR", dmrNumericBox.Value);
-            profileToEdit.SetSkillValue("Launcher", launcherNumericBox.Value);
-            profileToEdit.SetSkillValue("AttachedLauncher", attachLauncherNumericBox.Value);
-            profileToEdit.SetSkillValue("Throwing", throwNumericBox.Value);
-            profileToEdit.SetSkillValue("Melee", meleeNumericBox.Value);
+            profileToEdit.SetSkillValue("Pistol", PistolTrackBar.Value);
+            profileToEdit.SetSkillValue("SMG", SMGTrackBar.Value);
+            profileToEdit.SetSkillValue("Assault", AssaultTrackBar.Value);
+            profileToEdit.SetSkillValue("Shotgun", ShotgunTrackBar.Value);
+            profileToEdit.SetSkillValue("Sniper", SniperTrackBar.Value);
+            profileToEdit.SetSkillValue("LMG", LMGTrackBar.Value);
+            profileToEdit.SetSkillValue("HMG", HMGTrackBar.Value);
+            profileToEdit.SetSkillValue("DMR", DMRTrackBar.Value);
+            profileToEdit.SetSkillValue("Launcher", LauncherTrackBar.Value);
+            profileToEdit.SetSkillValue("Throwing", ThrowingTrackBar.Value);
+            profileToEdit.SetSkillValue("Melee", MeleeTrackBar.Value);
 
             try
             {
@@ -226,39 +224,37 @@ namespace EFT_Launcher_12
 
             MetabolismTrackbar.Value = profileToEdit.GetSkillValue("Metabolism");
             ImmunityTrackbar.Value = profileToEdit.GetSkillValue("Immunity");
-            perceptionNumericBox.Value = profileToEdit.GetSkillValue("Perception");
-            intelNumericBox.Value = profileToEdit.GetSkillValue("Intellect");
-            attentionNumericBox.Value = profileToEdit.GetSkillValue("Attention");
-            charismaNumericBox.Value = profileToEdit.GetSkillValue("Charisma");
-            memoryNumericBox.Value = profileToEdit.GetSkillValue("Memory");
+            PerceptionTrackBar.Value = profileToEdit.GetSkillValue("Perception");
+            IntelectTrackBar.Value = profileToEdit.GetSkillValue("Intellect");
+            AttentionTrackBar.Value = profileToEdit.GetSkillValue("Attention");
+            CharismaTrackBar.Value = profileToEdit.GetSkillValue("Charisma");
+            MemoryTrackBar.Value = profileToEdit.GetSkillValue("Memory");
 
-            covertNumericBox.Value = profileToEdit.GetSkillValue("CovertMovement");
-            recoilNumericBox.Value = profileToEdit.GetSkillValue("RecoilControl");
-            searchNumericBox.Value = profileToEdit.GetSkillValue("Search");
-            magdrillsNumericBox.Value = profileToEdit.GetSkillValue("MagDrills");
+            CovertTrackBar.Value = profileToEdit.GetSkillValue("CovertMovement");
+            RecoilTrackBar.Value = profileToEdit.GetSkillValue("RecoilControl");
+            SearchingTrackBar.Value = profileToEdit.GetSkillValue("Search");
+            MagdrillsTrackBar.Value = profileToEdit.GetSkillValue("MagDrills");
 
-            aimNumericBox.Value = profileToEdit.GetSkillValue("AimDrills");
-            surgeryNumericBox.Value = profileToEdit.GetSkillValue("Surgery");
-            proneNumericBox.Value = profileToEdit.GetSkillValue("ProneMovement");
-            craftingNumericBox.Value = profileToEdit.GetSkillValue("Crafting");
-            hideoutManagementNumericBox.Value = profileToEdit.GetSkillValue("HideoutManagement");
+            AimTrackBar.Value = profileToEdit.GetSkillValue("AimDrills");
+            SurgeryTrackBar.Value = profileToEdit.GetSkillValue("Surgery");
+            ProneTrackBar.Value = profileToEdit.GetSkillValue("ProneMovement");
+            CraftingTrackBar.Value = profileToEdit.GetSkillValue("Crafting");
+            HideoutTrackBar.Value = profileToEdit.GetSkillValue("HideoutManagement");
 
 
             //weapons skills
-            pistolNumericBox.Value = profileToEdit.GetSkillValue("Pistol");
-            revolverNumericBox.Value = profileToEdit.GetSkillValue("Revolver");
-            SMGNumericBox.Value = profileToEdit.GetSkillValue("SMG");
-            assaultNumericBox.Value = profileToEdit.GetSkillValue("Assault");
-            shotgunNumericBox.Value = profileToEdit.GetSkillValue("Shotgun");
-            sniperNumericBox.Value = profileToEdit.GetSkillValue("Sniper");
+            PistolTrackBar.Value = profileToEdit.GetSkillValue("Pistol");
+            SMGTrackBar.Value = profileToEdit.GetSkillValue("SMG");
+            AssaultTrackBar.Value = profileToEdit.GetSkillValue("Assault");
+            ShotgunTrackBar.Value = profileToEdit.GetSkillValue("Shotgun");
+            SniperTrackBar.Value = profileToEdit.GetSkillValue("Sniper");
 
-            lmgNumericBox.Value = profileToEdit.GetSkillValue("LMG");
-            hmgNumericBox.Value = profileToEdit.GetSkillValue("HMG");
-            dmrNumericBox.Value = profileToEdit.GetSkillValue("DMR");
-            launcherNumericBox.Value = profileToEdit.GetSkillValue("Launcher");
-            attachLauncherNumericBox.Value = profileToEdit.GetSkillValue("AttachedLauncher");
-            throwNumericBox.Value = profileToEdit.GetSkillValue("Throwing");
-            meleeNumericBox.Value = profileToEdit.GetSkillValue("Melee");
+            LMGTrackBar.Value = profileToEdit.GetSkillValue("LMG");
+            HMGTrackBar.Value = profileToEdit.GetSkillValue("HMG");
+            DMRTrackBar.Value = profileToEdit.GetSkillValue("DMR");
+            LauncherTrackBar.Value = profileToEdit.GetSkillValue("Launcher");
+            ThrowingTrackBar.Value = profileToEdit.GetSkillValue("Throwing");
+            MeleeTrackBar.Value = profileToEdit.GetSkillValue("Melee");
 
             #endregion
         }

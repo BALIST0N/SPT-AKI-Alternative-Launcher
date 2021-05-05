@@ -65,35 +65,50 @@
             this.EnduranceLevelLabel = new System.Windows.Forms.Label();
             this.EnduranceTrackBar = new System.Windows.Forms.TrackBar();
             this.mentalSkillsTab = new System.Windows.Forms.TabPage();
+            this.MemoryLevelLabel = new System.Windows.Forms.Label();
+            this.MemoryTrackBar = new System.Windows.Forms.TrackBar();
+            this.AttentionLevelLabel = new System.Windows.Forms.Label();
+            this.AttentionTrackBar = new System.Windows.Forms.TrackBar();
+            this.PerceptionLevelLabel = new System.Windows.Forms.Label();
+            this.PerceptionTrackBar = new System.Windows.Forms.TrackBar();
+            this.CharismaLevelLabel = new System.Windows.Forms.Label();
+            this.CharismaTrackBar = new System.Windows.Forms.TrackBar();
+            this.IntelectLevelLabel = new System.Windows.Forms.Label();
+            this.IntelectTrackBar = new System.Windows.Forms.TrackBar();
             this.label20 = new System.Windows.Forms.Label();
-            this.memoryNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.intelNumericBox = new System.Windows.Forms.NumericUpDown();
             this.label21 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.attentionNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.charismaNumericBox = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.perceptionNumericBox = new System.Windows.Forms.NumericUpDown();
             this.combatSkillsTabPage = new System.Windows.Forms.TabPage();
+            this.PistolLevelLabel = new System.Windows.Forms.Label();
+            this.PistolTrackBar = new System.Windows.Forms.TrackBar();
+            this.SMGLevelLabel = new System.Windows.Forms.Label();
+            this.SMGTrackBar = new System.Windows.Forms.TrackBar();
+            this.AssaultLevelLabel = new System.Windows.Forms.Label();
+            this.AssaultTrackBar = new System.Windows.Forms.TrackBar();
+            this.SniperTrackBar = new System.Windows.Forms.TrackBar();
+            this.ShotgunLevelLabel = new System.Windows.Forms.Label();
+            this.ShotgunTrackBar = new System.Windows.Forms.TrackBar();
+            this.SniperLevelLabel = new System.Windows.Forms.Label();
+            this.LMGLevelLabel = new System.Windows.Forms.Label();
+            this.LMGTrackBar = new System.Windows.Forms.TrackBar();
+            this.HMGLevelLabel = new System.Windows.Forms.Label();
+            this.HMGTrackBar = new System.Windows.Forms.TrackBar();
+            this.DMRLevelLabel = new System.Windows.Forms.Label();
+            this.DMRTrackBar = new System.Windows.Forms.TrackBar();
+            this.LauncherLevelLabel = new System.Windows.Forms.Label();
+            this.LauncherTrackBar = new System.Windows.Forms.TrackBar();
+            this.RecoilTrackBar = new System.Windows.Forms.TrackBar();
+            this.MeleeTrackBar = new System.Windows.Forms.TrackBar();
+            this.ThrowingTrackBar = new System.Windows.Forms.TrackBar();
+            this.ThrowingLevelLabel = new System.Windows.Forms.Label();
+            this.MeleeLevelLabel = new System.Windows.Forms.Label();
+            this.RecoilLevelLabel = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.recoilNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.meleeNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.throwNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.attachLauncherNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.launcherNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.dmrNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.hmgNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.lmgNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.sniperNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.shotgunNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.assaultNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.SMGNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.revolverNumericBox = new System.Windows.Forms.NumericUpDown();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -102,24 +117,30 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.pistolNumericBox = new System.Windows.Forms.NumericUpDown();
             this.practicalSkillsTab = new System.Windows.Forms.TabPage();
-            this.aimNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.CraftingLevelLabel = new System.Windows.Forms.Label();
+            this.CraftingTrackBar = new System.Windows.Forms.TrackBar();
+            this.MagdrillsLevelLabel = new System.Windows.Forms.Label();
+            this.MagdrillsTrackBar = new System.Windows.Forms.TrackBar();
+            this.SearchingLevelLabel = new System.Windows.Forms.Label();
+            this.SearchingTrackBar = new System.Windows.Forms.TrackBar();
+            this.AimLevelLAbel = new System.Windows.Forms.Label();
+            this.AimTrackBar = new System.Windows.Forms.TrackBar();
+            this.HideoutLevelLabel = new System.Windows.Forms.Label();
+            this.HideoutTrackBar = new System.Windows.Forms.TrackBar();
+            this.label47 = new System.Windows.Forms.Label();
+            this.SurgeryTrackBar = new System.Windows.Forms.TrackBar();
+            this.ProneLevelLabel = new System.Windows.Forms.Label();
+            this.ProneTrackBar = new System.Windows.Forms.TrackBar();
+            this.CovertLevelLabel = new System.Windows.Forms.Label();
+            this.CovertTrackBar = new System.Windows.Forms.TrackBar();
             this.label46 = new System.Windows.Forms.Label();
-            this.hideoutManagementNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.craftingNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.surgeryNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.proneNumericBox = new System.Windows.Forms.NumericUpDown();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.magdrillsNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.covertNumericBox = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
-            this.searchNumericBox = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.masteringTabPage = new System.Windows.Forms.TabPage();
             this.masteringProgressNumericBox = new System.Windows.Forms.NumericUpDown();
@@ -151,35 +172,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.VitalityTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnduranceTrackBar)).BeginInit();
             this.mentalSkillsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoryNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intelNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.attentionNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.charismaNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perceptionNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemoryTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttentionTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PerceptionTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharismaTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntelectTrackBar)).BeginInit();
             this.combatSkillsTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recoilNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.throwNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.attachLauncherNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.launcherNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dmrNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hmgNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lmgNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sniperNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shotgunNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assaultNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SMGNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.revolverNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pistolNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PistolTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SMGTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssaultTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SniperTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShotgunTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LMGTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HMGTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DMRTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LauncherTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecoilTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThrowingTrackBar)).BeginInit();
             this.practicalSkillsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aimNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hideoutManagementNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.craftingNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surgeryNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proneNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magdrillsNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covertNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CraftingTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MagdrillsTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchingTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AimTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HideoutTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SurgeryTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProneTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CovertTrackBar)).BeginInit();
             this.masteringTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).BeginInit();
             this.hideoutTabPage.SuspendLayout();
@@ -648,67 +667,162 @@
             // mentalSkillsTab
             // 
             this.mentalSkillsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.mentalSkillsTab.Controls.Add(this.MemoryLevelLabel);
+            this.mentalSkillsTab.Controls.Add(this.MemoryTrackBar);
+            this.mentalSkillsTab.Controls.Add(this.AttentionLevelLabel);
+            this.mentalSkillsTab.Controls.Add(this.AttentionTrackBar);
+            this.mentalSkillsTab.Controls.Add(this.PerceptionLevelLabel);
+            this.mentalSkillsTab.Controls.Add(this.PerceptionTrackBar);
+            this.mentalSkillsTab.Controls.Add(this.CharismaLevelLabel);
+            this.mentalSkillsTab.Controls.Add(this.CharismaTrackBar);
+            this.mentalSkillsTab.Controls.Add(this.IntelectLevelLabel);
+            this.mentalSkillsTab.Controls.Add(this.IntelectTrackBar);
             this.mentalSkillsTab.Controls.Add(this.label20);
-            this.mentalSkillsTab.Controls.Add(this.memoryNumericBox);
-            this.mentalSkillsTab.Controls.Add(this.intelNumericBox);
             this.mentalSkillsTab.Controls.Add(this.label21);
             this.mentalSkillsTab.Controls.Add(this.label12);
-            this.mentalSkillsTab.Controls.Add(this.attentionNumericBox);
-            this.mentalSkillsTab.Controls.Add(this.charismaNumericBox);
             this.mentalSkillsTab.Controls.Add(this.label22);
             this.mentalSkillsTab.Controls.Add(this.label13);
-            this.mentalSkillsTab.Controls.Add(this.perceptionNumericBox);
             this.mentalSkillsTab.Location = new System.Drawing.Point(4, 23);
             this.mentalSkillsTab.Name = "mentalSkillsTab";
             this.mentalSkillsTab.Size = new System.Drawing.Size(660, 254);
             this.mentalSkillsTab.TabIndex = 8;
             this.mentalSkillsTab.Text = "Mental";
             // 
+            // MemoryLevelLabel
+            // 
+            this.MemoryLevelLabel.AutoSize = true;
+            this.MemoryLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemoryLevelLabel.Location = new System.Drawing.Point(431, 51);
+            this.MemoryLevelLabel.Name = "MemoryLevelLabel";
+            this.MemoryLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.MemoryLevelLabel.TabIndex = 61;
+            this.MemoryLevelLabel.Text = "0";
+            // 
+            // MemoryTrackBar
+            // 
+            this.MemoryTrackBar.AutoSize = false;
+            this.MemoryTrackBar.Location = new System.Drawing.Point(353, 69);
+            this.MemoryTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.MemoryTrackBar.Maximum = 5100;
+            this.MemoryTrackBar.Name = "MemoryTrackBar";
+            this.MemoryTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.MemoryTrackBar.SmallChange = 100;
+            this.MemoryTrackBar.TabIndex = 60;
+            this.MemoryTrackBar.TickFrequency = 1000;
+            this.MemoryTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.MemoryTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // AttentionLevelLabel
+            // 
+            this.AttentionLevelLabel.AutoSize = true;
+            this.AttentionLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttentionLevelLabel.Location = new System.Drawing.Point(431, 6);
+            this.AttentionLevelLabel.Name = "AttentionLevelLabel";
+            this.AttentionLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.AttentionLevelLabel.TabIndex = 59;
+            this.AttentionLevelLabel.Text = "0";
+            // 
+            // AttentionTrackBar
+            // 
+            this.AttentionTrackBar.AutoSize = false;
+            this.AttentionTrackBar.Location = new System.Drawing.Point(353, 26);
+            this.AttentionTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.AttentionTrackBar.Maximum = 5100;
+            this.AttentionTrackBar.Name = "AttentionTrackBar";
+            this.AttentionTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.AttentionTrackBar.SmallChange = 100;
+            this.AttentionTrackBar.TabIndex = 58;
+            this.AttentionTrackBar.TickFrequency = 1000;
+            this.AttentionTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.AttentionTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // PerceptionLevelLabel
+            // 
+            this.PerceptionLevelLabel.AutoSize = true;
+            this.PerceptionLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PerceptionLevelLabel.Location = new System.Drawing.Point(96, 93);
+            this.PerceptionLevelLabel.Name = "PerceptionLevelLabel";
+            this.PerceptionLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.PerceptionLevelLabel.TabIndex = 57;
+            this.PerceptionLevelLabel.Text = "0";
+            // 
+            // PerceptionTrackBar
+            // 
+            this.PerceptionTrackBar.AutoSize = false;
+            this.PerceptionTrackBar.Location = new System.Drawing.Point(7, 111);
+            this.PerceptionTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.PerceptionTrackBar.Maximum = 5100;
+            this.PerceptionTrackBar.Name = "PerceptionTrackBar";
+            this.PerceptionTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.PerceptionTrackBar.SmallChange = 100;
+            this.PerceptionTrackBar.TabIndex = 56;
+            this.PerceptionTrackBar.TickFrequency = 1000;
+            this.PerceptionTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.PerceptionTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // CharismaLevelLabel
+            // 
+            this.CharismaLevelLabel.AutoSize = true;
+            this.CharismaLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharismaLevelLabel.Location = new System.Drawing.Point(83, 51);
+            this.CharismaLevelLabel.Name = "CharismaLevelLabel";
+            this.CharismaLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.CharismaLevelLabel.TabIndex = 55;
+            this.CharismaLevelLabel.Text = "0";
+            // 
+            // CharismaTrackBar
+            // 
+            this.CharismaTrackBar.AutoSize = false;
+            this.CharismaTrackBar.Location = new System.Drawing.Point(7, 69);
+            this.CharismaTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.CharismaTrackBar.Maximum = 5100;
+            this.CharismaTrackBar.Name = "CharismaTrackBar";
+            this.CharismaTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.CharismaTrackBar.SmallChange = 100;
+            this.CharismaTrackBar.TabIndex = 54;
+            this.CharismaTrackBar.TickFrequency = 1000;
+            this.CharismaTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.CharismaTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // IntelectLevelLabel
+            // 
+            this.IntelectLevelLabel.AutoSize = true;
+            this.IntelectLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntelectLevelLabel.Location = new System.Drawing.Point(80, 7);
+            this.IntelectLevelLabel.Name = "IntelectLevelLabel";
+            this.IntelectLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.IntelectLevelLabel.TabIndex = 53;
+            this.IntelectLevelLabel.Text = "0";
+            // 
+            // IntelectTrackBar
+            // 
+            this.IntelectTrackBar.AutoSize = false;
+            this.IntelectTrackBar.Location = new System.Drawing.Point(7, 24);
+            this.IntelectTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.IntelectTrackBar.Maximum = 5100;
+            this.IntelectTrackBar.Name = "IntelectTrackBar";
+            this.IntelectTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.IntelectTrackBar.SmallChange = 100;
+            this.IntelectTrackBar.TabIndex = 52;
+            this.IntelectTrackBar.TickFrequency = 1000;
+            this.IntelectTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.IntelectTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(215, 79);
+            this.label20.Location = new System.Drawing.Point(360, 51);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(68, 18);
             this.label20.TabIndex = 51;
             this.label20.Text = "Memory :";
             // 
-            // memoryNumericBox
-            // 
-            this.memoryNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.memoryNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoryNumericBox.ForeColor = System.Drawing.Color.White;
-            this.memoryNumericBox.Location = new System.Drawing.Point(289, 74);
-            this.memoryNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.memoryNumericBox.Name = "memoryNumericBox";
-            this.memoryNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.memoryNumericBox.TabIndex = 50;
-            // 
-            // intelNumericBox
-            // 
-            this.intelNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.intelNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intelNumericBox.ForeColor = System.Drawing.Color.White;
-            this.intelNumericBox.Location = new System.Drawing.Point(94, 10);
-            this.intelNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.intelNumericBox.Name = "intelNumericBox";
-            this.intelNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.intelNumericBox.TabIndex = 42;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(209, 47);
+            this.label21.Location = new System.Drawing.Point(360, 6);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(74, 18);
             this.label21.TabIndex = 49;
@@ -718,47 +832,17 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 15);
+            this.label12.Location = new System.Drawing.Point(16, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 18);
             this.label12.TabIndex = 43;
             this.label12.Text = "Intellect :";
             // 
-            // attentionNumericBox
-            // 
-            this.attentionNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.attentionNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attentionNumericBox.ForeColor = System.Drawing.Color.White;
-            this.attentionNumericBox.Location = new System.Drawing.Point(289, 42);
-            this.attentionNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.attentionNumericBox.Name = "attentionNumericBox";
-            this.attentionNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.attentionNumericBox.TabIndex = 48;
-            // 
-            // charismaNumericBox
-            // 
-            this.charismaNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.charismaNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charismaNumericBox.ForeColor = System.Drawing.Color.White;
-            this.charismaNumericBox.Location = new System.Drawing.Point(94, 42);
-            this.charismaNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.charismaNumericBox.Name = "charismaNumericBox";
-            this.charismaNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.charismaNumericBox.TabIndex = 44;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(200, 15);
+            this.label22.Location = new System.Drawing.Point(16, 93);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(83, 18);
             this.label22.TabIndex = 47;
@@ -768,48 +852,43 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(17, 47);
+            this.label13.Location = new System.Drawing.Point(16, 51);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 18);
             this.label13.TabIndex = 45;
             this.label13.Text = "Charisma :";
             // 
-            // perceptionNumericBox
-            // 
-            this.perceptionNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.perceptionNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.perceptionNumericBox.ForeColor = System.Drawing.Color.White;
-            this.perceptionNumericBox.Location = new System.Drawing.Point(289, 10);
-            this.perceptionNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.perceptionNumericBox.Name = "perceptionNumericBox";
-            this.perceptionNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.perceptionNumericBox.TabIndex = 46;
-            // 
             // combatSkillsTabPage
             // 
             this.combatSkillsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.combatSkillsTabPage.Controls.Add(this.PistolLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.PistolTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.SMGLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.SMGTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.AssaultLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.AssaultTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.SniperTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.ShotgunLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.ShotgunTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.SniperLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.LMGLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.LMGTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.HMGLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.HMGTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.DMRLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.DMRTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.LauncherLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.LauncherTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.RecoilTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.MeleeTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.ThrowingTrackBar);
+            this.combatSkillsTabPage.Controls.Add(this.ThrowingLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.MeleeLevelLabel);
+            this.combatSkillsTabPage.Controls.Add(this.RecoilLevelLabel);
             this.combatSkillsTabPage.Controls.Add(this.label19);
-            this.combatSkillsTabPage.Controls.Add(this.recoilNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.meleeNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.throwNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.attachLauncherNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.launcherNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.dmrNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.hmgNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.lmgNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.sniperNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.shotgunNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.assaultNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.SMGNumericBox);
-            this.combatSkillsTabPage.Controls.Add(this.revolverNumericBox);
             this.combatSkillsTabPage.Controls.Add(this.label36);
             this.combatSkillsTabPage.Controls.Add(this.label35);
             this.combatSkillsTabPage.Controls.Add(this.label34);
-            this.combatSkillsTabPage.Controls.Add(this.label33);
             this.combatSkillsTabPage.Controls.Add(this.label32);
             this.combatSkillsTabPage.Controls.Add(this.label31);
             this.combatSkillsTabPage.Controls.Add(this.label30);
@@ -818,224 +897,315 @@
             this.combatSkillsTabPage.Controls.Add(this.label27);
             this.combatSkillsTabPage.Controls.Add(this.label17);
             this.combatSkillsTabPage.Controls.Add(this.label16);
-            this.combatSkillsTabPage.Controls.Add(this.label26);
-            this.combatSkillsTabPage.Controls.Add(this.pistolNumericBox);
             this.combatSkillsTabPage.Location = new System.Drawing.Point(4, 23);
             this.combatSkillsTabPage.Name = "combatSkillsTabPage";
             this.combatSkillsTabPage.Size = new System.Drawing.Size(660, 254);
             this.combatSkillsTabPage.TabIndex = 5;
             this.combatSkillsTabPage.Text = "Combat";
             // 
+            // PistolLevelLabel
+            // 
+            this.PistolLevelLabel.AutoSize = true;
+            this.PistolLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PistolLevelLabel.Location = new System.Drawing.Point(51, 0);
+            this.PistolLevelLabel.Name = "PistolLevelLabel";
+            this.PistolLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.PistolLevelLabel.TabIndex = 128;
+            this.PistolLevelLabel.Text = "0";
+            // 
+            // PistolTrackBar
+            // 
+            this.PistolTrackBar.AutoSize = false;
+            this.PistolTrackBar.Location = new System.Drawing.Point(0, 14);
+            this.PistolTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.PistolTrackBar.Maximum = 5100;
+            this.PistolTrackBar.Name = "PistolTrackBar";
+            this.PistolTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.PistolTrackBar.SmallChange = 100;
+            this.PistolTrackBar.TabIndex = 127;
+            this.PistolTrackBar.TickFrequency = 1000;
+            this.PistolTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.PistolTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // SMGLevelLabel
+            // 
+            this.SMGLevelLabel.AutoSize = true;
+            this.SMGLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SMGLevelLabel.Location = new System.Drawing.Point(49, 39);
+            this.SMGLevelLabel.Name = "SMGLevelLabel";
+            this.SMGLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.SMGLevelLabel.TabIndex = 124;
+            this.SMGLevelLabel.Text = "0";
+            // 
+            // SMGTrackBar
+            // 
+            this.SMGTrackBar.AutoSize = false;
+            this.SMGTrackBar.Location = new System.Drawing.Point(0, 56);
+            this.SMGTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.SMGTrackBar.Maximum = 5100;
+            this.SMGTrackBar.Name = "SMGTrackBar";
+            this.SMGTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.SMGTrackBar.SmallChange = 100;
+            this.SMGTrackBar.TabIndex = 123;
+            this.SMGTrackBar.TickFrequency = 1000;
+            this.SMGTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.SMGTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // AssaultLevelLabel
+            // 
+            this.AssaultLevelLabel.AutoSize = true;
+            this.AssaultLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssaultLevelLabel.Location = new System.Drawing.Point(62, 79);
+            this.AssaultLevelLabel.Name = "AssaultLevelLabel";
+            this.AssaultLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.AssaultLevelLabel.TabIndex = 122;
+            this.AssaultLevelLabel.Text = "0";
+            // 
+            // AssaultTrackBar
+            // 
+            this.AssaultTrackBar.AutoSize = false;
+            this.AssaultTrackBar.Location = new System.Drawing.Point(0, 97);
+            this.AssaultTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.AssaultTrackBar.Maximum = 5100;
+            this.AssaultTrackBar.Name = "AssaultTrackBar";
+            this.AssaultTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.AssaultTrackBar.SmallChange = 100;
+            this.AssaultTrackBar.TabIndex = 121;
+            this.AssaultTrackBar.TickFrequency = 1000;
+            this.AssaultTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.AssaultTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // SniperTrackBar
+            // 
+            this.SniperTrackBar.AutoSize = false;
+            this.SniperTrackBar.Location = new System.Drawing.Point(0, 189);
+            this.SniperTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.SniperTrackBar.Maximum = 5100;
+            this.SniperTrackBar.Name = "SniperTrackBar";
+            this.SniperTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.SniperTrackBar.SmallChange = 100;
+            this.SniperTrackBar.TabIndex = 120;
+            this.SniperTrackBar.TickFrequency = 1000;
+            this.SniperTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.SniperTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // ShotgunLevelLabel
+            // 
+            this.ShotgunLevelLabel.AutoSize = true;
+            this.ShotgunLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShotgunLevelLabel.Location = new System.Drawing.Point(71, 121);
+            this.ShotgunLevelLabel.Name = "ShotgunLevelLabel";
+            this.ShotgunLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.ShotgunLevelLabel.TabIndex = 119;
+            this.ShotgunLevelLabel.Text = "0";
+            // 
+            // ShotgunTrackBar
+            // 
+            this.ShotgunTrackBar.AutoSize = false;
+            this.ShotgunTrackBar.Location = new System.Drawing.Point(0, 142);
+            this.ShotgunTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.ShotgunTrackBar.Maximum = 5100;
+            this.ShotgunTrackBar.Name = "ShotgunTrackBar";
+            this.ShotgunTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.ShotgunTrackBar.SmallChange = 100;
+            this.ShotgunTrackBar.TabIndex = 118;
+            this.ShotgunTrackBar.TickFrequency = 1000;
+            this.ShotgunTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.ShotgunTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // SniperLevelLabel
+            // 
+            this.SniperLevelLabel.AutoSize = true;
+            this.SniperLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SniperLevelLabel.Location = new System.Drawing.Point(78, 172);
+            this.SniperLevelLabel.Name = "SniperLevelLabel";
+            this.SniperLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.SniperLevelLabel.TabIndex = 117;
+            this.SniperLevelLabel.Text = "0";
+            // 
+            // LMGLevelLabel
+            // 
+            this.LMGLevelLabel.AutoSize = true;
+            this.LMGLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LMGLevelLabel.Location = new System.Drawing.Point(397, -1);
+            this.LMGLevelLabel.Name = "LMGLevelLabel";
+            this.LMGLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.LMGLevelLabel.TabIndex = 116;
+            this.LMGLevelLabel.Text = "0";
+            // 
+            // LMGTrackBar
+            // 
+            this.LMGTrackBar.AutoSize = false;
+            this.LMGTrackBar.Location = new System.Drawing.Point(341, 14);
+            this.LMGTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.LMGTrackBar.Maximum = 5100;
+            this.LMGTrackBar.Name = "LMGTrackBar";
+            this.LMGTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.LMGTrackBar.SmallChange = 100;
+            this.LMGTrackBar.TabIndex = 115;
+            this.LMGTrackBar.TickFrequency = 1000;
+            this.LMGTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.LMGTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // HMGLevelLabel
+            // 
+            this.HMGLevelLabel.AutoSize = true;
+            this.HMGLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HMGLevelLabel.Location = new System.Drawing.Point(398, 39);
+            this.HMGLevelLabel.Name = "HMGLevelLabel";
+            this.HMGLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.HMGLevelLabel.TabIndex = 114;
+            this.HMGLevelLabel.Text = "0";
+            // 
+            // HMGTrackBar
+            // 
+            this.HMGTrackBar.AutoSize = false;
+            this.HMGTrackBar.Location = new System.Drawing.Point(341, 56);
+            this.HMGTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.HMGTrackBar.Maximum = 5100;
+            this.HMGTrackBar.Name = "HMGTrackBar";
+            this.HMGTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.HMGTrackBar.SmallChange = 100;
+            this.HMGTrackBar.TabIndex = 113;
+            this.HMGTrackBar.TickFrequency = 1000;
+            this.HMGTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.HMGTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // DMRLevelLabel
+            // 
+            this.DMRLevelLabel.AutoSize = true;
+            this.DMRLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DMRLevelLabel.Location = new System.Drawing.Point(397, 76);
+            this.DMRLevelLabel.Name = "DMRLevelLabel";
+            this.DMRLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.DMRLevelLabel.TabIndex = 112;
+            this.DMRLevelLabel.Text = "0";
+            // 
+            // DMRTrackBar
+            // 
+            this.DMRTrackBar.AutoSize = false;
+            this.DMRTrackBar.Location = new System.Drawing.Point(341, 97);
+            this.DMRTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.DMRTrackBar.Maximum = 5100;
+            this.DMRTrackBar.Name = "DMRTrackBar";
+            this.DMRTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.DMRTrackBar.SmallChange = 100;
+            this.DMRTrackBar.TabIndex = 111;
+            this.DMRTrackBar.TickFrequency = 1000;
+            this.DMRTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.DMRTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // LauncherLevelLabel
+            // 
+            this.LauncherLevelLabel.AutoSize = true;
+            this.LauncherLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LauncherLevelLabel.Location = new System.Drawing.Point(427, 123);
+            this.LauncherLevelLabel.Name = "LauncherLevelLabel";
+            this.LauncherLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.LauncherLevelLabel.TabIndex = 110;
+            this.LauncherLevelLabel.Text = "0";
+            // 
+            // LauncherTrackBar
+            // 
+            this.LauncherTrackBar.AutoSize = false;
+            this.LauncherTrackBar.Location = new System.Drawing.Point(341, 142);
+            this.LauncherTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.LauncherTrackBar.Maximum = 5100;
+            this.LauncherTrackBar.Name = "LauncherTrackBar";
+            this.LauncherTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.LauncherTrackBar.SmallChange = 100;
+            this.LauncherTrackBar.TabIndex = 109;
+            this.LauncherTrackBar.TickFrequency = 1000;
+            this.LauncherTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.LauncherTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // RecoilTrackBar
+            // 
+            this.RecoilTrackBar.AutoSize = false;
+            this.RecoilTrackBar.Location = new System.Drawing.Point(0, 232);
+            this.RecoilTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.RecoilTrackBar.Maximum = 5100;
+            this.RecoilTrackBar.Name = "RecoilTrackBar";
+            this.RecoilTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.RecoilTrackBar.SmallChange = 100;
+            this.RecoilTrackBar.TabIndex = 108;
+            this.RecoilTrackBar.TickFrequency = 1000;
+            this.RecoilTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.RecoilTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // MeleeTrackBar
+            // 
+            this.MeleeTrackBar.AutoSize = false;
+            this.MeleeTrackBar.Location = new System.Drawing.Point(341, 233);
+            this.MeleeTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.MeleeTrackBar.Maximum = 5100;
+            this.MeleeTrackBar.Name = "MeleeTrackBar";
+            this.MeleeTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.MeleeTrackBar.SmallChange = 100;
+            this.MeleeTrackBar.TabIndex = 107;
+            this.MeleeTrackBar.TickFrequency = 1000;
+            this.MeleeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.MeleeTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // ThrowingTrackBar
+            // 
+            this.ThrowingTrackBar.AutoSize = false;
+            this.ThrowingTrackBar.Location = new System.Drawing.Point(341, 189);
+            this.ThrowingTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.ThrowingTrackBar.Maximum = 5100;
+            this.ThrowingTrackBar.Name = "ThrowingTrackBar";
+            this.ThrowingTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.ThrowingTrackBar.SmallChange = 100;
+            this.ThrowingTrackBar.TabIndex = 106;
+            this.ThrowingTrackBar.TickFrequency = 1000;
+            this.ThrowingTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.ThrowingTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // ThrowingLevelLabel
+            // 
+            this.ThrowingLevelLabel.AutoSize = true;
+            this.ThrowingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThrowingLevelLabel.Location = new System.Drawing.Point(427, 173);
+            this.ThrowingLevelLabel.Name = "ThrowingLevelLabel";
+            this.ThrowingLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.ThrowingLevelLabel.TabIndex = 103;
+            this.ThrowingLevelLabel.Text = "0";
+            // 
+            // MeleeLevelLabel
+            // 
+            this.MeleeLevelLabel.AutoSize = true;
+            this.MeleeLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MeleeLevelLabel.Location = new System.Drawing.Point(404, 218);
+            this.MeleeLevelLabel.Name = "MeleeLevelLabel";
+            this.MeleeLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.MeleeLevelLabel.TabIndex = 101;
+            this.MeleeLevelLabel.Text = "0";
+            // 
+            // RecoilLevelLabel
+            // 
+            this.RecoilLevelLabel.AutoSize = true;
+            this.RecoilLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecoilLevelLabel.Location = new System.Drawing.Point(105, 215);
+            this.RecoilLevelLabel.Name = "RecoilLevelLabel";
+            this.RecoilLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.RecoilLevelLabel.TabIndex = 99;
+            this.RecoilLevelLabel.Text = "0";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(12, 202);
+            this.label19.Location = new System.Drawing.Point(5, 215);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(101, 18);
-            this.label19.TabIndex = 87;
+            this.label19.TabIndex = 97;
             this.label19.Text = "Recoil Control :";
-            // 
-            // recoilNumericBox
-            // 
-            this.recoilNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.recoilNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recoilNumericBox.ForeColor = System.Drawing.Color.White;
-            this.recoilNumericBox.Location = new System.Drawing.Point(122, 200);
-            this.recoilNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.recoilNumericBox.Name = "recoilNumericBox";
-            this.recoilNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.recoilNumericBox.TabIndex = 86;
-            // 
-            // meleeNumericBox
-            // 
-            this.meleeNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.meleeNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meleeNumericBox.ForeColor = System.Drawing.Color.White;
-            this.meleeNumericBox.Location = new System.Drawing.Point(332, 200);
-            this.meleeNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.meleeNumericBox.Name = "meleeNumericBox";
-            this.meleeNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.meleeNumericBox.TabIndex = 85;
-            // 
-            // throwNumericBox
-            // 
-            this.throwNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.throwNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.throwNumericBox.ForeColor = System.Drawing.Color.White;
-            this.throwNumericBox.Location = new System.Drawing.Point(332, 168);
-            this.throwNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.throwNumericBox.Name = "throwNumericBox";
-            this.throwNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.throwNumericBox.TabIndex = 84;
-            // 
-            // attachLauncherNumericBox
-            // 
-            this.attachLauncherNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.attachLauncherNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attachLauncherNumericBox.ForeColor = System.Drawing.Color.White;
-            this.attachLauncherNumericBox.Location = new System.Drawing.Point(332, 136);
-            this.attachLauncherNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.attachLauncherNumericBox.Name = "attachLauncherNumericBox";
-            this.attachLauncherNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.attachLauncherNumericBox.TabIndex = 83;
-            // 
-            // launcherNumericBox
-            // 
-            this.launcherNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.launcherNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.launcherNumericBox.ForeColor = System.Drawing.Color.White;
-            this.launcherNumericBox.Location = new System.Drawing.Point(332, 104);
-            this.launcherNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.launcherNumericBox.Name = "launcherNumericBox";
-            this.launcherNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.launcherNumericBox.TabIndex = 82;
-            // 
-            // dmrNumericBox
-            // 
-            this.dmrNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.dmrNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dmrNumericBox.ForeColor = System.Drawing.Color.White;
-            this.dmrNumericBox.Location = new System.Drawing.Point(332, 72);
-            this.dmrNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.dmrNumericBox.Name = "dmrNumericBox";
-            this.dmrNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.dmrNumericBox.TabIndex = 81;
-            // 
-            // hmgNumericBox
-            // 
-            this.hmgNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.hmgNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hmgNumericBox.ForeColor = System.Drawing.Color.White;
-            this.hmgNumericBox.Location = new System.Drawing.Point(332, 40);
-            this.hmgNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.hmgNumericBox.Name = "hmgNumericBox";
-            this.hmgNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.hmgNumericBox.TabIndex = 80;
-            // 
-            // lmgNumericBox
-            // 
-            this.lmgNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.lmgNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmgNumericBox.ForeColor = System.Drawing.Color.White;
-            this.lmgNumericBox.Location = new System.Drawing.Point(332, 8);
-            this.lmgNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.lmgNumericBox.Name = "lmgNumericBox";
-            this.lmgNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.lmgNumericBox.TabIndex = 79;
-            // 
-            // sniperNumericBox
-            // 
-            this.sniperNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.sniperNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sniperNumericBox.ForeColor = System.Drawing.Color.White;
-            this.sniperNumericBox.Location = new System.Drawing.Point(122, 168);
-            this.sniperNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.sniperNumericBox.Name = "sniperNumericBox";
-            this.sniperNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.sniperNumericBox.TabIndex = 78;
-            // 
-            // shotgunNumericBox
-            // 
-            this.shotgunNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.shotgunNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shotgunNumericBox.ForeColor = System.Drawing.Color.White;
-            this.shotgunNumericBox.Location = new System.Drawing.Point(122, 136);
-            this.shotgunNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.shotgunNumericBox.Name = "shotgunNumericBox";
-            this.shotgunNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.shotgunNumericBox.TabIndex = 77;
-            // 
-            // assaultNumericBox
-            // 
-            this.assaultNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.assaultNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assaultNumericBox.ForeColor = System.Drawing.Color.White;
-            this.assaultNumericBox.Location = new System.Drawing.Point(122, 104);
-            this.assaultNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.assaultNumericBox.Name = "assaultNumericBox";
-            this.assaultNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.assaultNumericBox.TabIndex = 76;
-            // 
-            // SMGNumericBox
-            // 
-            this.SMGNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.SMGNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SMGNumericBox.ForeColor = System.Drawing.Color.White;
-            this.SMGNumericBox.Location = new System.Drawing.Point(122, 72);
-            this.SMGNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.SMGNumericBox.Name = "SMGNumericBox";
-            this.SMGNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.SMGNumericBox.TabIndex = 75;
-            // 
-            // revolverNumericBox
-            // 
-            this.revolverNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.revolverNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revolverNumericBox.ForeColor = System.Drawing.Color.White;
-            this.revolverNumericBox.Location = new System.Drawing.Point(122, 40);
-            this.revolverNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.revolverNumericBox.Name = "revolverNumericBox";
-            this.revolverNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.revolverNumericBox.TabIndex = 74;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(279, 74);
+            this.label36.Location = new System.Drawing.Point(351, 76);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(47, 18);
             this.label36.TabIndex = 73;
@@ -1045,7 +1215,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(271, 202);
+            this.label35.Location = new System.Drawing.Point(351, 217);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(55, 18);
             this.label35.TabIndex = 72;
@@ -1055,27 +1225,17 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(252, 170);
+            this.label34.Location = new System.Drawing.Point(351, 172);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(74, 18);
             this.label34.TabIndex = 71;
             this.label34.Text = "Throwing :";
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(193, 138);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(133, 18);
-            this.label33.TabIndex = 70;
-            this.label33.Text = "Attached Launcher :";
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(253, 106);
+            this.label32.Location = new System.Drawing.Point(351, 123);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(73, 18);
             this.label32.TabIndex = 69;
@@ -1085,7 +1245,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(279, 42);
+            this.label31.Location = new System.Drawing.Point(351, 38);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(47, 18);
             this.label31.TabIndex = 68;
@@ -1095,7 +1255,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(282, 10);
+            this.label30.Location = new System.Drawing.Point(351, -1);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(44, 18);
             this.label30.TabIndex = 67;
@@ -1105,7 +1265,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(39, 170);
+            this.label29.Location = new System.Drawing.Point(5, 171);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(74, 18);
             this.label29.TabIndex = 66;
@@ -1115,7 +1275,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(45, 138);
+            this.label28.Location = new System.Drawing.Point(5, 122);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(68, 18);
             this.label28.TabIndex = 65;
@@ -1125,7 +1285,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(54, 106);
+            this.label27.Location = new System.Drawing.Point(5, 78);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(59, 18);
             this.label27.TabIndex = 64;
@@ -1135,7 +1295,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(68, 74);
+            this.label17.Location = new System.Drawing.Point(5, 40);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(45, 18);
             this.label17.TabIndex = 63;
@@ -1145,55 +1305,38 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(68, 10);
+            this.label16.Location = new System.Drawing.Point(5, -1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 18);
             this.label16.TabIndex = 47;
             this.label16.Text = "Pistol :";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(46, 42);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(70, 18);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "Revolver :";
-            // 
-            // pistolNumericBox
-            // 
-            this.pistolNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.pistolNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pistolNumericBox.ForeColor = System.Drawing.Color.White;
-            this.pistolNumericBox.Location = new System.Drawing.Point(122, 8);
-            this.pistolNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.pistolNumericBox.Name = "pistolNumericBox";
-            this.pistolNumericBox.Size = new System.Drawing.Size(52, 26);
-            this.pistolNumericBox.TabIndex = 62;
-            // 
             // practicalSkillsTab
             // 
             this.practicalSkillsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.practicalSkillsTab.Controls.Add(this.aimNumericBox);
+            this.practicalSkillsTab.Controls.Add(this.CraftingLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.CraftingTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.MagdrillsLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.MagdrillsTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.SearchingLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.SearchingTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.AimLevelLAbel);
+            this.practicalSkillsTab.Controls.Add(this.AimTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.HideoutLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.HideoutTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.label47);
+            this.practicalSkillsTab.Controls.Add(this.SurgeryTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.ProneLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.ProneTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.CovertLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.CovertTrackBar);
             this.practicalSkillsTab.Controls.Add(this.label46);
-            this.practicalSkillsTab.Controls.Add(this.hideoutManagementNumericBox);
-            this.practicalSkillsTab.Controls.Add(this.craftingNumericBox);
-            this.practicalSkillsTab.Controls.Add(this.surgeryNumericBox);
-            this.practicalSkillsTab.Controls.Add(this.proneNumericBox);
             this.practicalSkillsTab.Controls.Add(this.label45);
             this.practicalSkillsTab.Controls.Add(this.label44);
             this.practicalSkillsTab.Controls.Add(this.label43);
             this.practicalSkillsTab.Controls.Add(this.label42);
             this.practicalSkillsTab.Controls.Add(this.label18);
-            this.practicalSkillsTab.Controls.Add(this.magdrillsNumericBox);
-            this.practicalSkillsTab.Controls.Add(this.covertNumericBox);
             this.practicalSkillsTab.Controls.Add(this.label14);
-            this.practicalSkillsTab.Controls.Add(this.searchNumericBox);
             this.practicalSkillsTab.Controls.Add(this.label15);
             this.practicalSkillsTab.Location = new System.Drawing.Point(4, 23);
             this.practicalSkillsTab.Name = "practicalSkillsTab";
@@ -1201,96 +1344,213 @@
             this.practicalSkillsTab.TabIndex = 7;
             this.practicalSkillsTab.Text = "Practical";
             // 
-            // aimNumericBox
+            // CraftingLevelLabel
             // 
-            this.aimNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.aimNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aimNumericBox.ForeColor = System.Drawing.Color.White;
-            this.aimNumericBox.Location = new System.Drawing.Point(312, 11);
-            this.aimNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.aimNumericBox.Name = "aimNumericBox";
-            this.aimNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.aimNumericBox.TabIndex = 60;
+            this.CraftingLevelLabel.AutoSize = true;
+            this.CraftingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CraftingLevelLabel.Location = new System.Drawing.Point(425, 145);
+            this.CraftingLevelLabel.Name = "CraftingLevelLabel";
+            this.CraftingLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.CraftingLevelLabel.TabIndex = 104;
+            this.CraftingLevelLabel.Text = "0";
+            // 
+            // CraftingTrackBar
+            // 
+            this.CraftingTrackBar.AutoSize = false;
+            this.CraftingTrackBar.Location = new System.Drawing.Point(353, 164);
+            this.CraftingTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.CraftingTrackBar.Maximum = 5100;
+            this.CraftingTrackBar.Name = "CraftingTrackBar";
+            this.CraftingTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.CraftingTrackBar.SmallChange = 100;
+            this.CraftingTrackBar.TabIndex = 103;
+            this.CraftingTrackBar.TickFrequency = 1000;
+            this.CraftingTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.CraftingTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // MagdrillsLevelLabel
+            // 
+            this.MagdrillsLevelLabel.AutoSize = true;
+            this.MagdrillsLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MagdrillsLevelLabel.Location = new System.Drawing.Point(436, 96);
+            this.MagdrillsLevelLabel.Name = "MagdrillsLevelLabel";
+            this.MagdrillsLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.MagdrillsLevelLabel.TabIndex = 102;
+            this.MagdrillsLevelLabel.Text = "0";
+            // 
+            // MagdrillsTrackBar
+            // 
+            this.MagdrillsTrackBar.AutoSize = false;
+            this.MagdrillsTrackBar.Location = new System.Drawing.Point(353, 114);
+            this.MagdrillsTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.MagdrillsTrackBar.Maximum = 5100;
+            this.MagdrillsTrackBar.Name = "MagdrillsTrackBar";
+            this.MagdrillsTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.MagdrillsTrackBar.SmallChange = 100;
+            this.MagdrillsTrackBar.TabIndex = 101;
+            this.MagdrillsTrackBar.TickFrequency = 1000;
+            this.MagdrillsTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.MagdrillsTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // SearchingLevelLabel
+            // 
+            this.SearchingLevelLabel.AutoSize = true;
+            this.SearchingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchingLevelLabel.Location = new System.Drawing.Point(436, 50);
+            this.SearchingLevelLabel.Name = "SearchingLevelLabel";
+            this.SearchingLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.SearchingLevelLabel.TabIndex = 100;
+            this.SearchingLevelLabel.Text = "0";
+            // 
+            // SearchingTrackBar
+            // 
+            this.SearchingTrackBar.AutoSize = false;
+            this.SearchingTrackBar.Location = new System.Drawing.Point(353, 68);
+            this.SearchingTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.SearchingTrackBar.Maximum = 5100;
+            this.SearchingTrackBar.Name = "SearchingTrackBar";
+            this.SearchingTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.SearchingTrackBar.SmallChange = 100;
+            this.SearchingTrackBar.TabIndex = 99;
+            this.SearchingTrackBar.TickFrequency = 1000;
+            this.SearchingTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.SearchingTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // AimLevelLAbel
+            // 
+            this.AimLevelLAbel.AutoSize = true;
+            this.AimLevelLAbel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AimLevelLAbel.Location = new System.Drawing.Point(401, 7);
+            this.AimLevelLAbel.Name = "AimLevelLAbel";
+            this.AimLevelLAbel.Size = new System.Drawing.Size(16, 18);
+            this.AimLevelLAbel.TabIndex = 98;
+            this.AimLevelLAbel.Text = "0";
+            // 
+            // AimTrackBar
+            // 
+            this.AimTrackBar.AutoSize = false;
+            this.AimTrackBar.Location = new System.Drawing.Point(353, 25);
+            this.AimTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.AimTrackBar.Maximum = 5100;
+            this.AimTrackBar.Name = "AimTrackBar";
+            this.AimTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.AimTrackBar.SmallChange = 100;
+            this.AimTrackBar.TabIndex = 97;
+            this.AimTrackBar.TickFrequency = 1000;
+            this.AimTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.AimTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // HideoutLevelLabel
+            // 
+            this.HideoutLevelLabel.AutoSize = true;
+            this.HideoutLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HideoutLevelLabel.Location = new System.Drawing.Point(78, 146);
+            this.HideoutLevelLabel.Name = "HideoutLevelLabel";
+            this.HideoutLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.HideoutLevelLabel.TabIndex = 94;
+            this.HideoutLevelLabel.Text = "0";
+            // 
+            // HideoutTrackBar
+            // 
+            this.HideoutTrackBar.AutoSize = false;
+            this.HideoutTrackBar.Location = new System.Drawing.Point(7, 164);
+            this.HideoutTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.HideoutTrackBar.Maximum = 5100;
+            this.HideoutTrackBar.Name = "HideoutTrackBar";
+            this.HideoutTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.HideoutTrackBar.SmallChange = 100;
+            this.HideoutTrackBar.TabIndex = 93;
+            this.HideoutTrackBar.TickFrequency = 1000;
+            this.HideoutTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.HideoutTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(77, 96);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(16, 18);
+            this.label47.TabIndex = 92;
+            this.label47.Text = "0";
+            // 
+            // SurgeryTrackBar
+            // 
+            this.SurgeryTrackBar.AutoSize = false;
+            this.SurgeryTrackBar.Location = new System.Drawing.Point(6, 113);
+            this.SurgeryTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.SurgeryTrackBar.Maximum = 5100;
+            this.SurgeryTrackBar.Name = "SurgeryTrackBar";
+            this.SurgeryTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.SurgeryTrackBar.SmallChange = 100;
+            this.SurgeryTrackBar.TabIndex = 91;
+            this.SurgeryTrackBar.TickFrequency = 1000;
+            this.SurgeryTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.SurgeryTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // ProneLevelLabel
+            // 
+            this.ProneLevelLabel.AutoSize = true;
+            this.ProneLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProneLevelLabel.Location = new System.Drawing.Point(67, 50);
+            this.ProneLevelLabel.Name = "ProneLevelLabel";
+            this.ProneLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.ProneLevelLabel.TabIndex = 90;
+            this.ProneLevelLabel.Text = "0";
+            // 
+            // ProneTrackBar
+            // 
+            this.ProneTrackBar.AutoSize = false;
+            this.ProneTrackBar.Location = new System.Drawing.Point(7, 67);
+            this.ProneTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.ProneTrackBar.Maximum = 5100;
+            this.ProneTrackBar.Name = "ProneTrackBar";
+            this.ProneTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.ProneTrackBar.SmallChange = 100;
+            this.ProneTrackBar.TabIndex = 89;
+            this.ProneTrackBar.TickFrequency = 1000;
+            this.ProneTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.ProneTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // CovertLevelLabel
+            // 
+            this.CovertLevelLabel.AutoSize = true;
+            this.CovertLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CovertLevelLabel.Location = new System.Drawing.Point(67, 7);
+            this.CovertLevelLabel.Name = "CovertLevelLabel";
+            this.CovertLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.CovertLevelLabel.TabIndex = 63;
+            this.CovertLevelLabel.Text = "0";
+            // 
+            // CovertTrackBar
+            // 
+            this.CovertTrackBar.AutoSize = false;
+            this.CovertTrackBar.Location = new System.Drawing.Point(7, 24);
+            this.CovertTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.CovertTrackBar.Maximum = 5100;
+            this.CovertTrackBar.Name = "CovertTrackBar";
+            this.CovertTrackBar.Size = new System.Drawing.Size(300, 20);
+            this.CovertTrackBar.SmallChange = 100;
+            this.CovertTrackBar.TabIndex = 62;
+            this.CovertTrackBar.TickFrequency = 1000;
+            this.CovertTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.CovertTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
             // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(267, 16);
+            this.label46.Location = new System.Drawing.Point(364, 7);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(39, 18);
             this.label46.TabIndex = 61;
             this.label46.Text = "Aim :";
             // 
-            // hideoutManagementNumericBox
-            // 
-            this.hideoutManagementNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.hideoutManagementNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hideoutManagementNumericBox.ForeColor = System.Drawing.Color.White;
-            this.hideoutManagementNumericBox.Location = new System.Drawing.Point(100, 107);
-            this.hideoutManagementNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.hideoutManagementNumericBox.Name = "hideoutManagementNumericBox";
-            this.hideoutManagementNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.hideoutManagementNumericBox.TabIndex = 59;
-            // 
-            // craftingNumericBox
-            // 
-            this.craftingNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.craftingNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.craftingNumericBox.ForeColor = System.Drawing.Color.White;
-            this.craftingNumericBox.Location = new System.Drawing.Point(313, 109);
-            this.craftingNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.craftingNumericBox.Name = "craftingNumericBox";
-            this.craftingNumericBox.Size = new System.Drawing.Size(53, 26);
-            this.craftingNumericBox.TabIndex = 58;
-            // 
-            // surgeryNumericBox
-            // 
-            this.surgeryNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.surgeryNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.surgeryNumericBox.ForeColor = System.Drawing.Color.White;
-            this.surgeryNumericBox.Location = new System.Drawing.Point(100, 75);
-            this.surgeryNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.surgeryNumericBox.Name = "surgeryNumericBox";
-            this.surgeryNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.surgeryNumericBox.TabIndex = 57;
-            // 
-            // proneNumericBox
-            // 
-            this.proneNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.proneNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proneNumericBox.ForeColor = System.Drawing.Color.White;
-            this.proneNumericBox.Location = new System.Drawing.Point(100, 43);
-            this.proneNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.proneNumericBox.Name = "proneNumericBox";
-            this.proneNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.proneNumericBox.TabIndex = 56;
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(29, 109);
+            this.label45.Location = new System.Drawing.Point(12, 144);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(65, 18);
             this.label45.TabIndex = 55;
@@ -1300,7 +1560,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(243, 111);
+            this.label44.Location = new System.Drawing.Point(362, 145);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(64, 18);
             this.label44.TabIndex = 54;
@@ -1310,7 +1570,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(30, 77);
+            this.label43.Location = new System.Drawing.Point(12, 96);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(64, 18);
             this.label43.TabIndex = 53;
@@ -1320,7 +1580,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(42, 48);
+            this.label42.Location = new System.Drawing.Point(12, 49);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(52, 18);
             this.label42.TabIndex = 52;
@@ -1330,72 +1590,27 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(231, 80);
+            this.label18.Location = new System.Drawing.Point(362, 96);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(76, 18);
             this.label18.TabIndex = 51;
             this.label18.Text = "Mag Drills :";
             // 
-            // magdrillsNumericBox
-            // 
-            this.magdrillsNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.magdrillsNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.magdrillsNumericBox.ForeColor = System.Drawing.Color.White;
-            this.magdrillsNumericBox.Location = new System.Drawing.Point(313, 75);
-            this.magdrillsNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.magdrillsNumericBox.Name = "magdrillsNumericBox";
-            this.magdrillsNumericBox.Size = new System.Drawing.Size(53, 26);
-            this.magdrillsNumericBox.TabIndex = 50;
-            // 
-            // covertNumericBox
-            // 
-            this.covertNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.covertNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.covertNumericBox.ForeColor = System.Drawing.Color.White;
-            this.covertNumericBox.Location = new System.Drawing.Point(100, 11);
-            this.covertNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.covertNumericBox.Name = "covertNumericBox";
-            this.covertNumericBox.Size = new System.Drawing.Size(54, 26);
-            this.covertNumericBox.TabIndex = 46;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(38, 16);
+            this.label14.Location = new System.Drawing.Point(12, 7);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 18);
             this.label14.TabIndex = 47;
             this.label14.Text = "Covert :";
             // 
-            // searchNumericBox
-            // 
-            this.searchNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.searchNumericBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchNumericBox.ForeColor = System.Drawing.Color.White;
-            this.searchNumericBox.Location = new System.Drawing.Point(313, 43);
-            this.searchNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.searchNumericBox.Name = "searchNumericBox";
-            this.searchNumericBox.Size = new System.Drawing.Size(53, 26);
-            this.searchNumericBox.TabIndex = 48;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(231, 48);
+            this.label15.Location = new System.Drawing.Point(362, 50);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 18);
             this.label15.TabIndex = 49;
@@ -1654,37 +1869,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.EnduranceTrackBar)).EndInit();
             this.mentalSkillsTab.ResumeLayout(false);
             this.mentalSkillsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoryNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intelNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.attentionNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.charismaNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perceptionNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemoryTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttentionTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PerceptionTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CharismaTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntelectTrackBar)).EndInit();
             this.combatSkillsTabPage.ResumeLayout(false);
             this.combatSkillsTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recoilNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meleeNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.throwNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.attachLauncherNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.launcherNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dmrNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hmgNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lmgNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sniperNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shotgunNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assaultNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SMGNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.revolverNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pistolNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PistolTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SMGTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AssaultTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SniperTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShotgunTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LMGTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HMGTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DMRTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LauncherTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecoilTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeleeTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThrowingTrackBar)).EndInit();
             this.practicalSkillsTab.ResumeLayout(false);
             this.practicalSkillsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aimNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hideoutManagementNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.craftingNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surgeryNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proneNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magdrillsNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.covertNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CraftingTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MagdrillsTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchingTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AimTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HideoutTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SurgeryTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProneTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CovertTrackBar)).EndInit();
             this.masteringTabPage.ResumeLayout(false);
             this.masteringTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).EndInit();
@@ -1727,22 +1940,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage masteringTabPage;
         private System.Windows.Forms.TabPage combatSkillsTabPage;
-        private System.Windows.Forms.NumericUpDown meleeNumericBox;
-        private System.Windows.Forms.NumericUpDown throwNumericBox;
-        private System.Windows.Forms.NumericUpDown attachLauncherNumericBox;
-        private System.Windows.Forms.NumericUpDown launcherNumericBox;
-        private System.Windows.Forms.NumericUpDown dmrNumericBox;
-        private System.Windows.Forms.NumericUpDown hmgNumericBox;
-        private System.Windows.Forms.NumericUpDown lmgNumericBox;
-        private System.Windows.Forms.NumericUpDown sniperNumericBox;
-        private System.Windows.Forms.NumericUpDown shotgunNumericBox;
-        private System.Windows.Forms.NumericUpDown assaultNumericBox;
-        private System.Windows.Forms.NumericUpDown SMGNumericBox;
-        private System.Windows.Forms.NumericUpDown revolverNumericBox;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
@@ -1751,8 +1951,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.NumericUpDown pistolNumericBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox masteringComboBox;
         private System.Windows.Forms.Label label37;
@@ -1767,34 +1965,19 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.NumericUpDown traderSalesNumericBox;
         private System.Windows.Forms.TabPage practicalSkillsTab;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.NumericUpDown recoilNumericBox;
         private System.Windows.Forms.TabPage mentalSkillsTab;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.NumericUpDown memoryNumericBox;
-        private System.Windows.Forms.NumericUpDown intelNumericBox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown attentionNumericBox;
-        private System.Windows.Forms.NumericUpDown charismaNumericBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown perceptionNumericBox;
-        private System.Windows.Forms.NumericUpDown hideoutManagementNumericBox;
-        private System.Windows.Forms.NumericUpDown craftingNumericBox;
-        private System.Windows.Forms.NumericUpDown surgeryNumericBox;
-        private System.Windows.Forms.NumericUpDown proneNumericBox;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.NumericUpDown magdrillsNumericBox;
-        private System.Windows.Forms.NumericUpDown covertNumericBox;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown searchNumericBox;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown aimNumericBox;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.CheckBox wipeProfileCheckbox;
         private System.Windows.Forms.Label EnduranceLevelLabel;
@@ -1811,5 +1994,56 @@
         private System.Windows.Forms.TrackBar ImmunityTrackbar;
         private System.Windows.Forms.Label StressLevelLabel;
         private System.Windows.Forms.TrackBar StressTrackBar;
+        private System.Windows.Forms.Label IntelectLevelLabel;
+        private System.Windows.Forms.TrackBar IntelectTrackBar;
+        private System.Windows.Forms.Label CharismaLevelLabel;
+        private System.Windows.Forms.TrackBar CharismaTrackBar;
+        private System.Windows.Forms.Label PerceptionLevelLabel;
+        private System.Windows.Forms.TrackBar PerceptionTrackBar;
+        private System.Windows.Forms.Label AttentionLevelLabel;
+        private System.Windows.Forms.TrackBar AttentionTrackBar;
+        private System.Windows.Forms.Label MemoryLevelLabel;
+        private System.Windows.Forms.TrackBar MemoryTrackBar;
+        private System.Windows.Forms.Label CovertLevelLabel;
+        private System.Windows.Forms.TrackBar CovertTrackBar;
+        private System.Windows.Forms.Label ProneLevelLabel;
+        private System.Windows.Forms.TrackBar ProneTrackBar;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TrackBar SurgeryTrackBar;
+        private System.Windows.Forms.Label HideoutLevelLabel;
+        private System.Windows.Forms.TrackBar HideoutTrackBar;
+        private System.Windows.Forms.Label SearchingLevelLabel;
+        private System.Windows.Forms.TrackBar SearchingTrackBar;
+        private System.Windows.Forms.Label AimLevelLAbel;
+        private System.Windows.Forms.TrackBar AimTrackBar;
+        private System.Windows.Forms.Label RecoilLevelLabel;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label MagdrillsLevelLabel;
+        private System.Windows.Forms.TrackBar MagdrillsTrackBar;
+        private System.Windows.Forms.Label CraftingLevelLabel;
+        private System.Windows.Forms.TrackBar CraftingTrackBar;
+        private System.Windows.Forms.Label ThrowingLevelLabel;
+        private System.Windows.Forms.Label MeleeLevelLabel;
+        private System.Windows.Forms.TrackBar RecoilTrackBar;
+        private System.Windows.Forms.TrackBar MeleeTrackBar;
+        private System.Windows.Forms.TrackBar ThrowingTrackBar;
+        private System.Windows.Forms.Label LauncherLevelLabel;
+        private System.Windows.Forms.TrackBar LauncherTrackBar;
+        private System.Windows.Forms.Label LMGLevelLabel;
+        private System.Windows.Forms.TrackBar LMGTrackBar;
+        private System.Windows.Forms.Label HMGLevelLabel;
+        private System.Windows.Forms.TrackBar HMGTrackBar;
+        private System.Windows.Forms.Label DMRLevelLabel;
+        private System.Windows.Forms.TrackBar DMRTrackBar;
+        private System.Windows.Forms.Label PistolLevelLabel;
+        private System.Windows.Forms.TrackBar PistolTrackBar;
+        private System.Windows.Forms.Label SMGLevelLabel;
+        private System.Windows.Forms.TrackBar SMGTrackBar;
+        private System.Windows.Forms.Label AssaultLevelLabel;
+        private System.Windows.Forms.TrackBar AssaultTrackBar;
+        private System.Windows.Forms.TrackBar SniperTrackBar;
+        private System.Windows.Forms.Label ShotgunLevelLabel;
+        private System.Windows.Forms.TrackBar ShotgunTrackBar;
+        private System.Windows.Forms.Label SniperLevelLabel;
     }
 }
