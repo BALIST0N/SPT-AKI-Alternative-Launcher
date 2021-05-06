@@ -2,7 +2,6 @@ D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Lau
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.exe
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\bin\Debug\EmuTarkov-Launcher.pdb
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.EditProfileForm.resources
-D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Views.EditServerSettings.resources
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.MainWindow.resources
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Properties.Resources.resources
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.GenerateResource.cache

@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Linq;
-using EFT_Launcher_12.Views;
 using Newtonsoft.Json.Linq;
 
 namespace EFT_Launcher_12
@@ -28,10 +27,14 @@ namespace EFT_Launcher_12
             profileEditButton.Enabled = false;
             profilesListBox.SelectedIndex = 0;
             this.gamePathTextBox.Text = Globals.gameFolder;
-            this.backendUrlLabel.Text = "Backend URL : " + Globals.backendUrl;
+
+			this.profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
+            this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
+
+			this.backendUrlLabel.Text = "Backend URL : " + Globals.backendUrl;
         }
 
-		private void MainWindow_Shown(object sender, EventArgs e)
+        private void MainWindow_Shown(object sender, EventArgs e)
 		{
 			LoadProfiles();
 		}
@@ -41,7 +44,6 @@ namespace EFT_Launcher_12
 			if( Directory.Exists(Globals.profilesFolder) == false )
             {
 				MessageBox.Show("unable to find profiles, make sure the launcher is in SPT-AKI SERVER folder");
-				return;
 			}
 			else
             {
@@ -123,7 +125,15 @@ namespace EFT_Launcher_12
 		{
 			validateValues();
 		}
-
+		private void gamePathTextBox_Click(object sender, EventArgs e)
+		{
+			if (GameLocationFolderBrowser.ShowDialog() == DialogResult.OK )
+			{
+                gamePathTextBox.Text = GameLocationFolderBrowser.SelectedPath;
+				validateValues();
+			}
+			
+		}
 		private void profilesListBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			 validateValues();
@@ -135,41 +145,34 @@ namespace EFT_Launcher_12
             string profileid = profiles.Find(x => x.username == profilesListBox.SelectedItem.ToString()).id;
 
             string path = Path.Combine(Globals.profilesFolder, profileid + ".json");
-            if (File.Exists(path))
+
+            if (Application.OpenForms.OfType<EditProfileForm>().Count() == 0 && File.Exists(path) )
             {
-                if (Application.OpenForms.OfType<EditProfileForm>().Count() == 0)
-                {
-                    EditProfileForm edit = new EditProfileForm(profileid, this.Location);
-                    edit.Show();
-                }
+                EditProfileForm edit = new EditProfileForm(profileid, this.Location);
+                edit.Show();
             }
-            else
-            {
-                MessageBox.Show("this profile does't have data, launch the game for being able to edit your profile");
-            }
+
 
         }
 
         private void backendUrlLabel_Click(object sender, EventArgs e)
         {
+			//do something to change backend url
 
-            //popup window to allow change backend url
-            if (Application.OpenForms.OfType<EditServerSettings>().Count() == 0)
+			/*
+			bool httpStr = Regex.IsMatch(this.backendURLTextBox.Text, "https://", RegexOptions.IgnoreCase);
+			string ip = Regex.Replace(this.backendURLTextBox.Text, "https://", "", RegexOptions.IgnoreCase);
+			bool y = Regex.IsMatch(ip, "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
+
+            if (httpStr == true && y == true)
             {
-                //EditServerSettings windo = new EditServerSettings(this.Location);
-                //windo.Show();
+                this.backendURLTextBox.ForeColor = Color.White;
             }
+            else
+            {
+                this.backendURLTextBox.ForeColor = Color.Red;
+            }*/
 
-        }
-
-		private void backendUrlLabel_MouseEnter(object sender, EventArgs e)
-		{
-			//this.backendUrlLabel.BackColor = Color.Orange;
-		}
-
-		private void backendUrlLabel_MouseLeave(object sender, EventArgs e)
-		{
-			//this.backendUrlLabel.BackColor = Color.SandyBrown;
 		}
 
 		private void startButton_Click(object sender, EventArgs e)
@@ -180,29 +183,22 @@ namespace EFT_Launcher_12
 			{
 				try
 				{
-					LaunchServer();
+                    LaunchServer();
+					StartGame(profiles[select].id);
 				}
 				catch (Exception ex)
 				{
 					MessageBox.Show("something went wrong :" + ex.Message);
 				}
 			}
-
-			// start game
-			ProcessStartInfo startGame = new ProcessStartInfo(Path.Combine(Globals.gameFolder, "EscapeFromTarkov.exe"));
-			startGame.Arguments = GenerateToken(profiles[select].username, profiles[select].password, profiles[select].id);
-			startGame.UseShellExecute = false;
-			startGame.WorkingDirectory = Globals.gameFolder;
-			Process.Start(startGame);
-			this.startButton.Enabled = false;
 		}
 
-		//**************************************************//
-		//					PROCESS FUNCTIONS				//
-		//**************************************************//
+        //**************************************************//
+        //					PROCESS FUNCTIONS				//
+        //**************************************************//
 
 
-		private void LaunchServer()
+        private void LaunchServer()
         {
             Process proc = new Process();
             proc.StartInfo.WorkingDirectory = Globals.serverFolder;
@@ -236,12 +232,17 @@ namespace EFT_Launcher_12
             }
         }
 
-		private string GenerateToken(string username, string password, string accountid)
-		{
-			LoginToken token = new LoginToken(username, password);
-			string convertedStr = Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(token))) + "=";
-			//return "-force-gfx-jobs native -bC5vLmcuaS5u=" + convertedStr + "-token=" + accountid + " -config=" + JsonConvert.SerializeObject(Globals.clientConfig);
-			return "-token=" + accountid + " -config={'BackendUrl':'" + Globals.backendUrl + "','Version':'live'}";
+		private void StartGame(string id)
+        {
+			ProcessStartInfo startGame = new ProcessStartInfo(Path.Combine(Globals.gameFolder, "EscapeFromTarkov.exe"))
+			{
+				Arguments = "-token=" + id + " -config={'BackendUrl':'" + Globals.backendUrl + "','Version':'live'}",
+				UseShellExecute = false,
+				WorkingDirectory = Globals.gameFolder
+			};
+
+			Process.Start(startGame);
+			this.startButton.Enabled = false;
 		}
 
 		private void killServer()
@@ -331,20 +332,4 @@ namespace EFT_Launcher_12
 		public Profile(){}
 		
 	} 
-
-	internal class LoginToken
-	{
-		public string email;
-		public string password;
-		public bool toggle;
-		public long timestamp;
-
-		public LoginToken(string email, string password)
-		{
-			this.email = email;
-			this.password = password;
-			this.toggle = true;
-			this.timestamp = 132178097635361483;
-		}
-	}
 }

@@ -38,6 +38,7 @@
             this.backendUrlLabel = new System.Windows.Forms.Label();
             this.killServerButton = new System.Windows.Forms.Button();
             this.startServerChackBox = new System.Windows.Forms.CheckBox();
+            this.GameLocationFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -80,10 +81,10 @@
             this.profilesListBox.Name = "profilesListBox";
             this.profilesListBox.Size = new System.Drawing.Size(160, 26);
             this.profilesListBox.TabIndex = 1;
-            this.profilesListBox.SelectedIndexChanged += new System.EventHandler(this.profilesListBox_SelectedIndexChanged);
             // 
             // gamePathTextBox
             // 
+            this.gamePathTextBox.AccessibleDescription = "";
             this.gamePathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.gamePathTextBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamePathTextBox.ForeColor = System.Drawing.Color.White;
@@ -91,6 +92,7 @@
             this.gamePathTextBox.Name = "gamePathTextBox";
             this.gamePathTextBox.Size = new System.Drawing.Size(199, 26);
             this.gamePathTextBox.TabIndex = 2;
+            this.gamePathTextBox.Click += new System.EventHandler(this.gamePathTextBox_Click);
             this.gamePathTextBox.TextChanged += new System.EventHandler(this.gamePathTextBox_TextChanged);
             // 
             // profileEditButton
@@ -131,8 +133,6 @@
             this.backendUrlLabel.TabIndex = 9;
             this.backendUrlLabel.Text = "backend URL : ";
             this.backendUrlLabel.Click += new System.EventHandler(this.backendUrlLabel_Click);
-            this.backendUrlLabel.MouseEnter += new System.EventHandler(this.backendUrlLabel_MouseEnter);
-            this.backendUrlLabel.MouseLeave += new System.EventHandler(this.backendUrlLabel_MouseLeave);
             // 
             // killServerButton
             // 
@@ -159,6 +159,11 @@
             this.startServerChackBox.Text = "Start Server";
             this.startServerChackBox.UseVisualStyleBackColor = false;
             this.startServerChackBox.Visible = false;
+            // 
+            // GameLocationFolderBrowser
+            // 
+            this.GameLocationFolderBrowser.Description = "Select Patched EFT game folder";
+            this.GameLocationFolderBrowser.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
             // MainWindow
             // 
@@ -199,5 +204,6 @@
         private System.Windows.Forms.Label backendUrlLabel;
         private System.Windows.Forms.Button killServerButton;
         private System.Windows.Forms.CheckBox startServerChackBox;
+        private System.Windows.Forms.FolderBrowserDialog GameLocationFolderBrowser;
     }
 }

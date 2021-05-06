@@ -88,26 +88,17 @@
       <DependentUpon>EditProfileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Source\Globals.cs" />
-    <Compile Include="Views\EditServerSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\EditServerSettings.Designer.cs">
-      <DependentUpon>EditServerSettings.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Source\ProfileExtended.cs" />
+    <Compile Include="Source\Character.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Views\EditProfileForm.resx">
       <DependentUpon>EditProfileForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\EditServerSettings.resx">
-      <DependentUpon>EditServerSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
