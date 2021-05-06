@@ -27,13 +27,12 @@ namespace EFT_Launcher_12
             profileEditButton.Enabled = false;
             profilesListBox.SelectedIndex = 0;
             this.gamePathTextBox.Text = Globals.gameFolder;
-
+            this.backendUrlTextBox.Text = Globals.backendUrl;
+            this.backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
             this.profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
             this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
-
-            this.backendUrlLabel.Text = "Backend URL : " + Globals.backendUrl;
+ 
         }
-
 
         //**************************************************//
         //              MAIN WINDOW EVENTS                  //
@@ -42,6 +41,7 @@ namespace EFT_Launcher_12
         private void MainWindow_Shown(object sender, EventArgs e)
         {
             LoadProfiles();
+            backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width;
         }
 
         private void gamePathTextBox_TextChanged(object sender, EventArgs e)
@@ -53,12 +53,14 @@ namespace EFT_Launcher_12
         private void gamePathTextBox_Click(object sender, EventArgs e)
         {   
             //event when click on the "game Location" textbox, open a folder dialog and set into the textbox
-            if (GameLocationFolderBrowser.ShowDialog() == DialogResult.OK)
+            if(startButton.Enabled == false)
             {
-                gamePathTextBox.Text = GameLocationFolderBrowser.SelectedPath;
-                validateValues();
+                if (GameLocationFolderBrowser.ShowDialog() == DialogResult.OK)
+                {
+                    gamePathTextBox.Text = GameLocationFolderBrowser.SelectedPath;
+                    validateValues();
+                }
             }
-
         }
         private void profilesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -79,22 +81,24 @@ namespace EFT_Launcher_12
 
         }
 
-        private void backendUrlLabel_Click(object sender, EventArgs e)
+        private void backendUrlTextBox_TextChanged(object sender, EventArgs e)
         {
-            //do something to change backend url
+            backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width;
+            Globals.backendUrl = backendUrlTextBox.Text;
+            Properties.Settings.Default.backendURL = backendUrlTextBox.Text;
+            Properties.Settings.Default.Save();
 
             /*
-			bool httpStr = Regex.IsMatch(this.backendURLTextBox.Text, "https://", RegexOptions.IgnoreCase);
-			string ip = Regex.Replace(this.backendURLTextBox.Text, "https://", "", RegexOptions.IgnoreCase);
-			bool y = Regex.IsMatch(ip, "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
-
+            bool httpStr = Regex.IsMatch(backendUrlTextBox.Text, "https://|http://", RegexOptions.IgnoreCase);
+            string ip = Regex.Replace(backendUrlTextBox.Text, "https://|http://", "", RegexOptions.IgnoreCase);
+            bool y = Regex.IsMatch(ip, @"/[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}:[0-9]{1,5}/");
             if (httpStr == true && y == true)
             {
-                this.backendURLTextBox.ForeColor = Color.White;
+                this.backendUrlTextBox.ForeColor = Color.Black;
             }
             else
             {
-                this.backendURLTextBox.ForeColor = Color.Red;
+                this.backendUrlTextBox.ForeColor = Color.Red;
             }*/
 
         }
@@ -173,11 +177,12 @@ namespace EFT_Launcher_12
                 Globals.gameFolder = gamePathTextBox.Text;
                 Properties.Settings.Default.gameFolder = Globals.gameFolder;
                 Properties.Settings.Default.Save();
+                backendUrlTextBox.Visible = true;
             }
             else
             {
                 gamePathTextBox.ForeColor = Color.Red; //signal to the user its wrong game folder
-                backendUrlLabel.Text = "Backend URL : ?";
+                backendUrlTextBox.Visible = false;
             }
 
             if (profilesListBox.SelectedIndex > 0) //if there is a profile selected

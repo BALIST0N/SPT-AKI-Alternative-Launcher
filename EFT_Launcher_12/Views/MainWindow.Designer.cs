@@ -39,6 +39,7 @@
             this.killServerButton = new System.Windows.Forms.Button();
             this.startServerChackBox = new System.Windows.Forms.CheckBox();
             this.GameLocationFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.backendUrlTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -132,7 +133,6 @@
             this.backendUrlLabel.Size = new System.Drawing.Size(100, 18);
             this.backendUrlLabel.TabIndex = 9;
             this.backendUrlLabel.Text = "backend URL : ";
-            this.backendUrlLabel.Click += new System.EventHandler(this.backendUrlLabel_Click);
             // 
             // killServerButton
             // 
@@ -165,6 +165,18 @@
             this.GameLocationFolderBrowser.Description = "Select Patched EFT game folder";
             this.GameLocationFolderBrowser.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
+            // backendUrlTextBox
+            // 
+            this.backendUrlTextBox.AccessibleDescription = "";
+            this.backendUrlTextBox.BackColor = System.Drawing.Color.SandyBrown;
+            this.backendUrlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.backendUrlTextBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backendUrlTextBox.ForeColor = System.Drawing.Color.Black;
+            this.backendUrlTextBox.Location = new System.Drawing.Point(109, 124);
+            this.backendUrlTextBox.Name = "backendUrlTextBox";
+            this.backendUrlTextBox.Size = new System.Drawing.Size(140, 19);
+            this.backendUrlTextBox.TabIndex = 12;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +184,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 161);
+            this.Controls.Add(this.backendUrlTextBox);
             this.Controls.Add(this.startServerChackBox);
             this.Controls.Add(this.killServerButton);
             this.Controls.Add(this.backendUrlLabel);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.Button killServerButton;
         private System.Windows.Forms.CheckBox startServerChackBox;
         private System.Windows.Forms.FolderBrowserDialog GameLocationFolderBrowser;
+        private System.Windows.Forms.TextBox backendUrlTextBox;
     }
 }
