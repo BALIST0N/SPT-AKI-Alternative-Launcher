@@ -6,7 +6,10 @@ D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Properties.Resources.resources
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.GenerateResource.cache
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.CoreCompileInputs.cache
-D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.exe
-D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EmuTarkov-Launcher.pdb
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csprojAssemblyReference.cache
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.csproj.Fody.CopyLocal.cache
+D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\Output\SPT-AKI Alternative Launcher.exe.config
+D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\Output\SPT-AKI Alternative Launcher.exe
+D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\Output\SPT-AKI Alternative Launcher.pdb
+D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\SPT-AKI Alternative Launcher.exe
+D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\SPT-AKI Alternative Launcher.pdb

@@ -282,12 +282,17 @@ namespace EFT_Launcher_12
             WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
             WeaponMasteringTrackBar.Value = profileToEdit.skills.mastering.Find( x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString()) ).progress;
             WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);
+            TrackBars_ValueChanged(sender, e);
         }
 
         private void WeaponMasteringTrackBar_ValueChanged(object sender, EventArgs e)
         {
             profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = WeaponMasteringTrackBar.Value;
-            TrackBars_ValueChanged(sender,e);
+            TrackBars_ValueChanged(sender, e);
+        }
+        private void WeaponMasteringTrackBar_Scroll(object sender, EventArgs e)
+        {
+
         }
 
         private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -326,5 +331,7 @@ namespace EFT_Launcher_12
                 levelMax = u;
             }
         }
+
+
     }
 }
