@@ -191,7 +191,7 @@ namespace EFT_Launcher_12
 
         private void SetInfo()
         {
-            Text += profileToEdit.info.nickname;
+            this.Text += profileToEdit.info.nickname;
 
             nicknameTextBox.Text = profileToEdit.info.nickname;
             sideselectorComboBox.SelectedItem = profileToEdit.info.side;
@@ -279,14 +279,15 @@ namespace EFT_Launcher_12
 
         private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            masteringProgressNumericBox.ValueChanged -= new EventHandler(masteringProgressNumericBox_ValueChanged);
-            masteringProgressNumericBox.Value = profileToEdit.skills.mastering.Find( x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString()) ).progress;
-            masteringProgressNumericBox.ValueChanged += new EventHandler(masteringProgressNumericBox_ValueChanged);
+            WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
+            WeaponMasteringTrackBar.Value = profileToEdit.skills.mastering.Find( x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString()) ).progress;
+            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);
         }
 
-        private void masteringProgressNumericBox_ValueChanged(object sender, EventArgs e)
+        private void WeaponMasteringTrackBar_ValueChanged(object sender, EventArgs e)
         {
-            profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = Convert.ToInt32( masteringProgressNumericBox.Value);
+            profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = WeaponMasteringTrackBar.Value;
+            TrackBars_ValueChanged(sender,e);
         }
 
         private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -312,9 +313,6 @@ namespace EFT_Launcher_12
             catch{}
         }
 
-        /// <summary>
-        /// hideout upgrades level object
-        /// </summary>
         internal class HideoutUpgradesArea
         {
             public int areaType;

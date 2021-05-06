@@ -143,7 +143,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.masteringTabPage = new System.Windows.Forms.TabPage();
-            this.masteringProgressNumericBox = new System.Windows.Forms.NumericUpDown();
             this.masteringComboBox = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -159,6 +158,8 @@
             this.label39 = new System.Windows.Forms.Label();
             this.traderListComboBox = new System.Windows.Forms.ComboBox();
             this.traderLevelNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.WeaponMasteringTrackBar = new System.Windows.Forms.TrackBar();
+            this.WeaponMasteringLevelLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.experienceBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideoutLevelNumeric)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -200,12 +201,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProneTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CovertTrackBar)).BeginInit();
             this.masteringTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).BeginInit();
             this.hideoutTabPage.SuspendLayout();
             this.tradersTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.traderStandingNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderSalesNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponMasteringTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // experienceBox
@@ -1619,7 +1620,8 @@
             // masteringTabPage
             // 
             this.masteringTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.masteringTabPage.Controls.Add(this.masteringProgressNumericBox);
+            this.masteringTabPage.Controls.Add(this.WeaponMasteringLevelLabel);
+            this.masteringTabPage.Controls.Add(this.WeaponMasteringTrackBar);
             this.masteringTabPage.Controls.Add(this.masteringComboBox);
             this.masteringTabPage.Controls.Add(this.label37);
             this.masteringTabPage.Controls.Add(this.label6);
@@ -1628,22 +1630,6 @@
             this.masteringTabPage.Size = new System.Drawing.Size(660, 254);
             this.masteringTabPage.TabIndex = 3;
             this.masteringTabPage.Text = "Mastering";
-            // 
-            // masteringProgressNumericBox
-            // 
-            this.masteringProgressNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.masteringProgressNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masteringProgressNumericBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.masteringProgressNumericBox.Location = new System.Drawing.Point(221, 49);
-            this.masteringProgressNumericBox.Maximum = new decimal(new int[] {
-            5100,
-            0,
-            0,
-            0});
-            this.masteringProgressNumericBox.Name = "masteringProgressNumericBox";
-            this.masteringProgressNumericBox.Size = new System.Drawing.Size(100, 31);
-            this.masteringProgressNumericBox.TabIndex = 3;
-            this.masteringProgressNumericBox.ValueChanged += new System.EventHandler(this.masteringProgressNumericBox_ValueChanged);
             // 
             // masteringComboBox
             // 
@@ -1654,7 +1640,7 @@
             this.masteringComboBox.FormattingEnabled = true;
             this.masteringComboBox.Location = new System.Drawing.Point(15, 49);
             this.masteringComboBox.Name = "masteringComboBox";
-            this.masteringComboBox.Size = new System.Drawing.Size(200, 31);
+            this.masteringComboBox.Size = new System.Drawing.Size(271, 31);
             this.masteringComboBox.TabIndex = 2;
             this.masteringComboBox.SelectedIndexChanged += new System.EventHandler(this.masteringComboBox_SelectedIndexChanged);
             // 
@@ -1662,11 +1648,11 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(216, 20);
+            this.label37.Location = new System.Drawing.Point(13, 133);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(90, 26);
+            this.label37.Size = new System.Drawing.Size(100, 26);
             this.label37.TabIndex = 1;
-            this.label37.Text = "Progress";
+            this.label37.Text = "Progress :";
             // 
             // label6
             // 
@@ -1839,6 +1825,30 @@
             this.traderLevelNumericBox.Size = new System.Drawing.Size(54, 31);
             this.traderLevelNumericBox.TabIndex = 54;
             // 
+            // WeaponMasteringTrackBar
+            // 
+            this.WeaponMasteringTrackBar.AutoSize = false;
+            this.WeaponMasteringTrackBar.Location = new System.Drawing.Point(6, 178);
+            this.WeaponMasteringTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.WeaponMasteringTrackBar.Maximum = 5100;
+            this.WeaponMasteringTrackBar.Name = "WeaponMasteringTrackBar";
+            this.WeaponMasteringTrackBar.Size = new System.Drawing.Size(450, 30);
+            this.WeaponMasteringTrackBar.SmallChange = 100;
+            this.WeaponMasteringTrackBar.TabIndex = 63;
+            this.WeaponMasteringTrackBar.TickFrequency = 1000;
+            this.WeaponMasteringTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.WeaponMasteringTrackBar.ValueChanged += new System.EventHandler(this.WeaponMasteringTrackBar_ValueChanged);
+            // 
+            // WeaponMasteringLevelLabel
+            // 
+            this.WeaponMasteringLevelLabel.AutoSize = true;
+            this.WeaponMasteringLevelLabel.Font = new System.Drawing.Font("Consolas", 15F);
+            this.WeaponMasteringLevelLabel.Location = new System.Drawing.Point(111, 135);
+            this.WeaponMasteringLevelLabel.Name = "WeaponMasteringLevelLabel";
+            this.WeaponMasteringLevelLabel.Size = new System.Drawing.Size(21, 23);
+            this.WeaponMasteringLevelLabel.TabIndex = 64;
+            this.WeaponMasteringLevelLabel.Text = "0";
+            // 
             // EditProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1900,7 +1910,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CovertTrackBar)).EndInit();
             this.masteringTabPage.ResumeLayout(false);
             this.masteringTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.masteringProgressNumericBox)).EndInit();
             this.hideoutTabPage.ResumeLayout(false);
             this.hideoutTabPage.PerformLayout();
             this.tradersTabPage.ResumeLayout(false);
@@ -1908,6 +1917,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.traderStandingNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderSalesNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WeaponMasteringTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1954,7 +1964,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox masteringComboBox;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.NumericUpDown masteringProgressNumericBox;
         private System.Windows.Forms.TabPage tradersTabPage;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
@@ -2045,5 +2054,7 @@
         private System.Windows.Forms.Label ShotgunLevelLabel;
         private System.Windows.Forms.TrackBar ShotgunTrackBar;
         private System.Windows.Forms.Label SniperLevelLabel;
+        private System.Windows.Forms.Label WeaponMasteringLevelLabel;
+        private System.Windows.Forms.TrackBar WeaponMasteringTrackBar;
     }
 }
