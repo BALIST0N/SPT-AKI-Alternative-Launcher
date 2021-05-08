@@ -13,3 +13,4 @@ D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\Output\SPT-AKI Alternat
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\Output\SPT-AKI Alternative Launcher.pdb
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\SPT-AKI Alternative Launcher.exe
 D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\SPT-AKI Alternative Launcher.pdb
+D:\tarkov\Emutarkov-Alternative-Launcher\EFT_Launcher_12\obj\Debug\EFT_Launcher_12.Views.CreateProfileForm.resources

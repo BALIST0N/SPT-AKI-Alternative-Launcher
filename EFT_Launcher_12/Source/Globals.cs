@@ -12,6 +12,7 @@ namespace EFT_Launcher_12
 		
 		static Globals()
 		{
+			
 			//serverFolder = Environment.CurrentDirectory;
 			serverFolder = "D:/tarkov/EFT2";
 

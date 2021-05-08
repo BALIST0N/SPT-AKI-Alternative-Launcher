@@ -98,11 +98,137 @@ namespace EFT_Launcher_12
             }
         }
 
+        private void SetInfo()
+        {
+            this.Text += profileToEdit.info.nickname;
+
+            nicknameTextBox.Text = profileToEdit.info.nickname;
+            sideselectorComboBox.SelectedItem = profileToEdit.info.side;
+            ExperienceTrackBar.Value = profileToEdit.info.experience;
+            gameVersionCombo.SelectedItem = profileToEdit.info.gameVersion;
+
+            foreach(ProfileExtended.Skills.Mastering m in profileToEdit.skills.mastering)
+            {
+                masteringComboBox.Items.Add(m.id);
+            }
+
+            foreach(string tr in profileToEdit.traderStandings.Keys)
+            {
+                if(tradersNames.ContainsKey(tr) == true )
+                {
+                    traderListComboBox.Items.Add(tradersNames[tr]);
+                }
+                else
+                {
+                    traderListComboBox.Items.Add(tr);
+                }
+            }
+
+            #region INIT SKILLS numericBoxes
+            EnduranceTrackBar.Value = profileToEdit.GetSkillValue("Endurance");
+            StrengthTrackBar.Value = profileToEdit.GetSkillValue("Strength");
+            VitalityTrackBar.Value = profileToEdit.GetSkillValue("Vitality");
+            HealthTrackBar.Value = profileToEdit.GetSkillValue("Health");
+            StressTrackBar.Value = profileToEdit.GetSkillValue("StressResistance");
+
+            MetabolismTrackbar.Value = profileToEdit.GetSkillValue("Metabolism");
+            ImmunityTrackbar.Value = profileToEdit.GetSkillValue("Immunity");
+            PerceptionTrackBar.Value = profileToEdit.GetSkillValue("Perception");
+            IntelectTrackBar.Value = profileToEdit.GetSkillValue("Intellect");
+            AttentionTrackBar.Value = profileToEdit.GetSkillValue("Attention");
+            CharismaTrackBar.Value = profileToEdit.GetSkillValue("Charisma");
+            MemoryTrackBar.Value = profileToEdit.GetSkillValue("Memory");
+
+            CovertTrackBar.Value = profileToEdit.GetSkillValue("CovertMovement");
+            RecoilTrackBar.Value = profileToEdit.GetSkillValue("RecoilControl");
+            SearchingTrackBar.Value = profileToEdit.GetSkillValue("Search");
+            MagdrillsTrackBar.Value = profileToEdit.GetSkillValue("MagDrills");
+
+            AimTrackBar.Value = profileToEdit.GetSkillValue("AimDrills");
+            SurgeryTrackBar.Value = profileToEdit.GetSkillValue("Surgery");
+            ProneTrackBar.Value = profileToEdit.GetSkillValue("ProneMovement");
+            CraftingTrackBar.Value = profileToEdit.GetSkillValue("Crafting");
+            HideoutTrackBar.Value = profileToEdit.GetSkillValue("HideoutManagement");
+
+
+            //weapons skills
+            PistolTrackBar.Value = profileToEdit.GetSkillValue("Pistol");
+            SMGTrackBar.Value = profileToEdit.GetSkillValue("SMG");
+            AssaultTrackBar.Value = profileToEdit.GetSkillValue("Assault");
+            ShotgunTrackBar.Value = profileToEdit.GetSkillValue("Shotgun");
+            SniperTrackBar.Value = profileToEdit.GetSkillValue("Sniper");
+
+            LMGTrackBar.Value = profileToEdit.GetSkillValue("LMG");
+            HMGTrackBar.Value = profileToEdit.GetSkillValue("HMG");
+            DMRTrackBar.Value = profileToEdit.GetSkillValue("DMR");
+            LauncherTrackBar.Value = profileToEdit.GetSkillValue("Launcher");
+            ThrowingTrackBar.Value = profileToEdit.GetSkillValue("Throwing");
+            MeleeTrackBar.Value = profileToEdit.GetSkillValue("Melee");
+
+            #endregion
+        }
+
+        private void HideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //ignore raising value changed event
+            //super important it cause the hideout numeric to change values and save without user input
+            hideoutLevelNumeric.ValueChanged -= new EventHandler(HideoutLevelNumeric_ValueChanged);
+            hideoutLevelNumeric.Maximum = hideoutLevels[this.hideoutAreaComboBox.SelectedIndex].levelMax;
+            hideoutLevelNumeric.Value = profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level;
+            hideoutLevelNumeric.ValueChanged += new EventHandler(HideoutLevelNumeric_ValueChanged);//re-enable user input event ! 
+        }
+
+        private void HideoutLevelNumeric_ValueChanged(object sender, EventArgs e)
+        {
+            profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level = Convert.ToInt32(hideoutLevelNumeric.Value);
+            //profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
+        }
+
+        private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
+            WeaponMasteringTrackBar.Value = profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
+            TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
+            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);  
+        }
+
+        private void WeaponMasteringTrackBar_ValueChanged(object sender, EventArgs e)
+        {
+            if(masteringComboBox.SelectedIndex > 0 )
+            {
+                profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = WeaponMasteringTrackBar.Value;
+                TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
+            }
+        }
+
+        private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string trader = this.traderListComboBox.SelectedItem.ToString();
+            string traderid = tradersNames.FirstOrDefault(x => x.Value == trader).Key;
+
+            if (traderid != null) { trader = traderid; }
+
+            traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
+            traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
+            traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
+        }
+
+        private void TrackBars_ValueChanged(object sender, EventArgs e)
+        {
+            TrackBar t = (TrackBar)sender;
+            string name = t.Name.Replace("TrackBar", "").Replace("Trackbar", "") + "LevelLabel";
+            try
+            {
+                this.Controls.Find(name, true).FirstOrDefault().Text = t.Value.ToString();
+            }
+            catch{}
+        }
+
         private void SaveButton_Click(object sender, EventArgs e) //saving the profile 
         {
             profileToEdit.info.nickname = nicknameTextBox.Text;
             profileToEdit.info.side = sideselectorComboBox.SelectedItem.ToString();
-            profileToEdit.info.experience = Convert.ToInt32(experienceBox.Value);
+            profileToEdit.info.experience = ExperienceTrackBar.Value;
             profileToEdit.info.gameVersion = gameVersionCombo.SelectedItem.ToString();
 
             profileToEdit.SetSkillValue("Endurance", EnduranceTrackBar.Value);
@@ -189,135 +315,6 @@ namespace EFT_Launcher_12
 
         }
 
-        private void SetInfo()
-        {
-            this.Text += profileToEdit.info.nickname;
-
-            nicknameTextBox.Text = profileToEdit.info.nickname;
-            sideselectorComboBox.SelectedItem = profileToEdit.info.side;
-            experienceBox.Value = profileToEdit.info.experience;
-            gameVersionCombo.SelectedItem = profileToEdit.info.gameVersion;
-
-            foreach(ProfileExtended.Skills.Mastering m in profileToEdit.skills.mastering)
-            {
-                masteringComboBox.Items.Add(m.id);
-            }
-
-            foreach(string tr in profileToEdit.traderStandings.Keys)
-            {
-                if(tradersNames.ContainsKey(tr) == true )
-                {
-                    traderListComboBox.Items.Add(tradersNames[tr]);
-                }
-                else
-                {
-                    traderListComboBox.Items.Add(tr);
-                }
-            }
-
-            #region INIT SKILLS numericBoxes
-            EnduranceTrackBar.Value = profileToEdit.GetSkillValue("Endurance");
-            StrengthTrackBar.Value = profileToEdit.GetSkillValue("Strength");
-            VitalityTrackBar.Value = profileToEdit.GetSkillValue("Vitality");
-            HealthTrackBar.Value = profileToEdit.GetSkillValue("Health");
-            StressTrackBar.Value = profileToEdit.GetSkillValue("StressResistance");
-
-            MetabolismTrackbar.Value = profileToEdit.GetSkillValue("Metabolism");
-            ImmunityTrackbar.Value = profileToEdit.GetSkillValue("Immunity");
-            PerceptionTrackBar.Value = profileToEdit.GetSkillValue("Perception");
-            IntelectTrackBar.Value = profileToEdit.GetSkillValue("Intellect");
-            AttentionTrackBar.Value = profileToEdit.GetSkillValue("Attention");
-            CharismaTrackBar.Value = profileToEdit.GetSkillValue("Charisma");
-            MemoryTrackBar.Value = profileToEdit.GetSkillValue("Memory");
-
-            CovertTrackBar.Value = profileToEdit.GetSkillValue("CovertMovement");
-            RecoilTrackBar.Value = profileToEdit.GetSkillValue("RecoilControl");
-            SearchingTrackBar.Value = profileToEdit.GetSkillValue("Search");
-            MagdrillsTrackBar.Value = profileToEdit.GetSkillValue("MagDrills");
-
-            AimTrackBar.Value = profileToEdit.GetSkillValue("AimDrills");
-            SurgeryTrackBar.Value = profileToEdit.GetSkillValue("Surgery");
-            ProneTrackBar.Value = profileToEdit.GetSkillValue("ProneMovement");
-            CraftingTrackBar.Value = profileToEdit.GetSkillValue("Crafting");
-            HideoutTrackBar.Value = profileToEdit.GetSkillValue("HideoutManagement");
-
-
-            //weapons skills
-            PistolTrackBar.Value = profileToEdit.GetSkillValue("Pistol");
-            SMGTrackBar.Value = profileToEdit.GetSkillValue("SMG");
-            AssaultTrackBar.Value = profileToEdit.GetSkillValue("Assault");
-            ShotgunTrackBar.Value = profileToEdit.GetSkillValue("Shotgun");
-            SniperTrackBar.Value = profileToEdit.GetSkillValue("Sniper");
-
-            LMGTrackBar.Value = profileToEdit.GetSkillValue("LMG");
-            HMGTrackBar.Value = profileToEdit.GetSkillValue("HMG");
-            DMRTrackBar.Value = profileToEdit.GetSkillValue("DMR");
-            LauncherTrackBar.Value = profileToEdit.GetSkillValue("Launcher");
-            ThrowingTrackBar.Value = profileToEdit.GetSkillValue("Throwing");
-            MeleeTrackBar.Value = profileToEdit.GetSkillValue("Melee");
-
-            #endregion
-        }
-
-        private void HideoutAreaComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //ignore raising value changed event
-            //super important it cause the hideout numeric to change values and save without user input
-            hideoutLevelNumeric.ValueChanged -= new EventHandler(HideoutLevelNumeric_ValueChanged);
-
-            hideoutLevelNumeric.Maximum = hideoutLevels[this.hideoutAreaComboBox.SelectedIndex].levelMax;
-            hideoutLevelNumeric.Value = profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level;
-
-            hideoutLevelNumeric.ValueChanged += new EventHandler(HideoutLevelNumeric_ValueChanged);//re-enable user input event ! 
-        }
-
-        private void HideoutLevelNumeric_ValueChanged(object sender, EventArgs e)
-        {
-            profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level = Convert.ToInt32(hideoutLevelNumeric.Value);
-            //profileToEdit.hideout.areas.Find(x => x.type.Equals(this.hideoutAreaComboBox.SelectedIndex)).level = Convert.ToInt32(hideoutLevelNumeric.Value);
-        }
-
-        private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
-            WeaponMasteringTrackBar.Value = profileToEdit.skills.mastering.Find( x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString()) ).progress;
-            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);
-            TrackBars_ValueChanged(sender, e);
-        }
-
-        private void WeaponMasteringTrackBar_ValueChanged(object sender, EventArgs e)
-        {
-            profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = WeaponMasteringTrackBar.Value;
-            TrackBars_ValueChanged(sender, e);
-        }
-        private void WeaponMasteringTrackBar_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string trader = this.traderListComboBox.SelectedItem.ToString();
-            string traderid = tradersNames.FirstOrDefault(x => x.Value == trader).Key;
-
-            if (traderid != null) { trader = traderid; }
-
-            traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
-            traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
-            traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
-        }
-
-        private void TrackBars_ValueChanged(object sender, EventArgs e)
-        {
-            TrackBar t = (TrackBar)sender;
-            string name = t.Name.Replace("TrackBar", "").Replace("Trackbar", "") + "LevelLabel";
-            try
-            {
-                this.Controls.Find(name, true).FirstOrDefault().Text = t.Value.ToString();
-            }
-            catch{}
-        }
-
         internal class HideoutUpgradesArea
         {
             public int areaType;
@@ -331,7 +328,6 @@ namespace EFT_Launcher_12
                 levelMax = u;
             }
         }
-
 
     }
 }

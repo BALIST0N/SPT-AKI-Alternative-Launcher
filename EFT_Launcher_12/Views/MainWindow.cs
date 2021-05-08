@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Linq;
 using Newtonsoft.Json.Linq;
+using EFT_Launcher_12.Views;
 
 namespace EFT_Launcher_12
 {
@@ -137,7 +138,9 @@ namespace EFT_Launcher_12
 
                 if (profilesFiles.Length == 0) //file count = 0
                 {
-                    MessageBox.Show("There is no profiles actually ...? ");
+                    //MessageBox.Show("There is no profiles actually ...? ");
+                    CreateProfileForm C = new CreateProfileForm(this.Location);
+                    C.Show();
                 }
                 else
                 {

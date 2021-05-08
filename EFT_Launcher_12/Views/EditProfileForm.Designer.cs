@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.experienceBox = new System.Windows.Forms.NumericUpDown();
             this.nicknameTextBox = new System.Windows.Forms.TextBox();
             this.sideselectorComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +47,8 @@
             this.hideoutLevelNumeric = new System.Windows.Forms.NumericUpDown();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.generalTabPAge = new System.Windows.Forms.TabPage();
+            this.ExperienceLevelLabel = new System.Windows.Forms.Label();
+            this.ExperienceTrackBar = new System.Windows.Forms.TrackBar();
             this.wipeProfileCheckbox = new System.Windows.Forms.CheckBox();
             this.physSkillsTabPage = new System.Windows.Forms.TabPage();
             this.MetabolismLevelLabel = new System.Windows.Forms.Label();
@@ -128,7 +129,7 @@
             this.AimTrackBar = new System.Windows.Forms.TrackBar();
             this.HideoutLevelLabel = new System.Windows.Forms.Label();
             this.HideoutTrackBar = new System.Windows.Forms.TrackBar();
-            this.label47 = new System.Windows.Forms.Label();
+            this.SurgeryLevelLabel = new System.Windows.Forms.Label();
             this.SurgeryTrackBar = new System.Windows.Forms.TrackBar();
             this.ProneLevelLabel = new System.Windows.Forms.Label();
             this.ProneTrackBar = new System.Windows.Forms.TrackBar();
@@ -160,10 +161,10 @@
             this.label39 = new System.Windows.Forms.Label();
             this.traderListComboBox = new System.Windows.Forms.ComboBox();
             this.traderLevelNumericBox = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.experienceBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideoutLevelNumeric)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.generalTabPAge.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExperienceTrackBar)).BeginInit();
             this.physSkillsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MetabolismTrackbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HealthTrackBar)).BeginInit();
@@ -209,21 +210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // experienceBox
-            // 
-            this.experienceBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.experienceBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.experienceBox.ForeColor = System.Drawing.Color.White;
-            this.experienceBox.Location = new System.Drawing.Point(123, 81);
-            this.experienceBox.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.experienceBox.Name = "experienceBox";
-            this.experienceBox.Size = new System.Drawing.Size(167, 26);
-            this.experienceBox.TabIndex = 0;
-            // 
             // nicknameTextBox
             // 
             this.nicknameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -263,17 +249,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 52);
+            this.label2.Location = new System.Drawing.Point(76, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 18);
+            this.label2.Size = new System.Drawing.Size(42, 18);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Side : ";
+            this.label2.Text = "Side :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 83);
+            this.label3.Location = new System.Drawing.Point(32, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 18);
             this.label3.TabIndex = 5;
@@ -295,7 +281,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 116);
+            this.label7.Location = new System.Drawing.Point(18, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 18);
             this.label7.TabIndex = 11;
@@ -313,7 +299,7 @@
             this.gameVersionCombo.Items.AddRange(new object[] {
             "standard",
             "edge_of_darkness"});
-            this.gameVersionCombo.Location = new System.Drawing.Point(122, 113);
+            this.gameVersionCombo.Location = new System.Drawing.Point(122, 81);
             this.gameVersionCombo.Name = "gameVersionCombo";
             this.gameVersionCombo.Size = new System.Drawing.Size(168, 26);
             this.gameVersionCombo.TabIndex = 10;
@@ -439,9 +425,10 @@
             // generalTabPAge
             // 
             this.generalTabPAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.generalTabPAge.Controls.Add(this.ExperienceLevelLabel);
+            this.generalTabPAge.Controls.Add(this.ExperienceTrackBar);
             this.generalTabPAge.Controls.Add(this.wipeProfileCheckbox);
             this.generalTabPAge.Controls.Add(this.label1);
-            this.generalTabPAge.Controls.Add(this.experienceBox);
             this.generalTabPAge.Controls.Add(this.nicknameTextBox);
             this.generalTabPAge.Controls.Add(this.sideselectorComboBox);
             this.generalTabPAge.Controls.Add(this.label2);
@@ -456,12 +443,36 @@
             this.generalTabPAge.TabIndex = 0;
             this.generalTabPAge.Text = "General";
             // 
+            // ExperienceLevelLabel
+            // 
+            this.ExperienceLevelLabel.AutoSize = true;
+            this.ExperienceLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExperienceLevelLabel.Location = new System.Drawing.Point(118, 115);
+            this.ExperienceLevelLabel.Name = "ExperienceLevelLabel";
+            this.ExperienceLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.ExperienceLevelLabel.TabIndex = 54;
+            this.ExperienceLevelLabel.Text = "0";
+            // 
+            // ExperienceTrackBar
+            // 
+            this.ExperienceTrackBar.AutoSize = false;
+            this.ExperienceTrackBar.Location = new System.Drawing.Point(29, 132);
+            this.ExperienceTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.ExperienceTrackBar.Maximum = 23199001;
+            this.ExperienceTrackBar.Name = "ExperienceTrackBar";
+            this.ExperienceTrackBar.Size = new System.Drawing.Size(268, 20);
+            this.ExperienceTrackBar.SmallChange = 1000;
+            this.ExperienceTrackBar.TabIndex = 37;
+            this.ExperienceTrackBar.TickFrequency = 1000000;
+            this.ExperienceTrackBar.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.ExperienceTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
             // wipeProfileCheckbox
             // 
             this.wipeProfileCheckbox.AutoSize = true;
             this.wipeProfileCheckbox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.wipeProfileCheckbox.Font = new System.Drawing.Font("Candara", 11.25F);
-            this.wipeProfileCheckbox.Location = new System.Drawing.Point(13, 156);
+            this.wipeProfileCheckbox.Location = new System.Drawing.Point(9, 213);
             this.wipeProfileCheckbox.Name = "wipeProfileCheckbox";
             this.wipeProfileCheckbox.Size = new System.Drawing.Size(117, 22);
             this.wipeProfileCheckbox.TabIndex = 13;
@@ -1325,7 +1336,7 @@
             this.practicalSkillsTab.Controls.Add(this.AimTrackBar);
             this.practicalSkillsTab.Controls.Add(this.HideoutLevelLabel);
             this.practicalSkillsTab.Controls.Add(this.HideoutTrackBar);
-            this.practicalSkillsTab.Controls.Add(this.label47);
+            this.practicalSkillsTab.Controls.Add(this.SurgeryLevelLabel);
             this.practicalSkillsTab.Controls.Add(this.SurgeryTrackBar);
             this.practicalSkillsTab.Controls.Add(this.ProneLevelLabel);
             this.practicalSkillsTab.Controls.Add(this.ProneTrackBar);
@@ -1465,15 +1476,15 @@
             this.HideoutTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.HideoutTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
             // 
-            // label47
+            // SurgeryLevelLabel
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(77, 96);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(16, 18);
-            this.label47.TabIndex = 92;
-            this.label47.Text = "0";
+            this.SurgeryLevelLabel.AutoSize = true;
+            this.SurgeryLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SurgeryLevelLabel.Location = new System.Drawing.Point(77, 96);
+            this.SurgeryLevelLabel.Name = "SurgeryLevelLabel";
+            this.SurgeryLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.SurgeryLevelLabel.TabIndex = 92;
+            this.SurgeryLevelLabel.Text = "0";
             // 
             // SurgeryTrackBar
             // 
@@ -1653,7 +1664,6 @@
             this.WeaponMasteringTrackBar.TabIndex = 63;
             this.WeaponMasteringTrackBar.TickFrequency = 1000;
             this.WeaponMasteringTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.WeaponMasteringTrackBar.Scroll += new System.EventHandler(this.WeaponMasteringTrackBar_Scroll);
             this.WeaponMasteringTrackBar.ValueChanged += new System.EventHandler(this.WeaponMasteringTrackBar_ValueChanged);
             // 
             // masteringComboBox
@@ -1864,11 +1874,11 @@
             this.Name = "EditProfileForm";
             this.Text = "Editing profile : ";
             this.Load += new System.EventHandler(this.EditProfileForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.experienceBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideoutLevelNumeric)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.generalTabPAge.ResumeLayout(false);
             this.generalTabPAge.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExperienceTrackBar)).EndInit();
             this.physSkillsTabPage.ResumeLayout(false);
             this.physSkillsTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MetabolismTrackbar)).EndInit();
@@ -1924,8 +1934,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown experienceBox;
         private System.Windows.Forms.TextBox nicknameTextBox;
         private System.Windows.Forms.ComboBox sideselectorComboBox;
         private System.Windows.Forms.Label label1;
@@ -2018,7 +2026,7 @@
         private System.Windows.Forms.TrackBar CovertTrackBar;
         private System.Windows.Forms.Label ProneLevelLabel;
         private System.Windows.Forms.TrackBar ProneTrackBar;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label SurgeryLevelLabel;
         private System.Windows.Forms.TrackBar SurgeryTrackBar;
         private System.Windows.Forms.Label HideoutLevelLabel;
         private System.Windows.Forms.TrackBar HideoutTrackBar;
@@ -2057,5 +2065,7 @@
         private System.Windows.Forms.Label SniperLevelLabel;
         private System.Windows.Forms.Label WeaponMasteringLevelLabel;
         private System.Windows.Forms.TrackBar WeaponMasteringTrackBar;
+        private System.Windows.Forms.Label ExperienceLevelLabel;
+        private System.Windows.Forms.TrackBar ExperienceTrackBar;
     }
 }
