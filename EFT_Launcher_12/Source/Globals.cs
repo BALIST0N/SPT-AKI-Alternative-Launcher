@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace EFT_Launcher_12
 {
@@ -13,8 +12,8 @@ namespace EFT_Launcher_12
 		static Globals()
 		{
 			
-			//serverFolder = Environment.CurrentDirectory;
-			serverFolder = "D:/tarkov/EFT2";
+			serverFolder = Environment.CurrentDirectory;
+			//serverFolder = "D:/tarkov/EFT2";
 
 			profilesFolder = serverFolder + "/user/profiles";
 
