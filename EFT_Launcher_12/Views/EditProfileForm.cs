@@ -173,8 +173,10 @@ namespace EFT_Launcher_12
             //ignore raising value changed event
             //super important it cause the hideout numeric to change values and save without user input
             hideoutLevelNumeric.ValueChanged -= new EventHandler(HideoutLevelNumeric_ValueChanged);
-            hideoutLevelNumeric.Maximum = hideoutLevels[this.hideoutAreaComboBox.SelectedIndex].levelMax;
-            hideoutLevelNumeric.Value = profileToEdit.hideout.areas[this.hideoutAreaComboBox.SelectedIndex].level;
+            HideoutUpgradesArea h = hideoutLevels.Find(x => x.areaType == hideoutAreaComboBox.SelectedIndex);
+            hideoutLevelNumeric.Maximum = h.levelMax;
+            hideoutLevelNumeric.Value = profileToEdit.hideout.areas.Find(x => x.type == h.areaType).level;
+
             hideoutLevelNumeric.ValueChanged += new EventHandler(HideoutLevelNumeric_ValueChanged);//re-enable user input event ! 
         }
 
@@ -292,7 +294,7 @@ namespace EFT_Launcher_12
 
                 foreach (ProfileExtended.Hideout.Area a in profileToEdit.hideout.areas)
                 {
-                    characterPmcData.SelectToken("Hideout").SelectToken("Areas")[a.type]["level"] = a.level;
+                    characterPmcData.SelectToken("Hideout").SelectToken("$.Areas[?(@.type == "+a.type+")]")["level"] = a.level;
                 }
 
                 ProfileJSON["characters"]["pmc"] = characterPmcData;
