@@ -112,7 +112,7 @@ namespace EFT_Launcher_12
                 masteringComboBox.Items.Add(m.id);
             }
 
-            foreach(string tr in profileToEdit.traderStandings.Keys)
+            foreach(string tr in profileToEdit.TradersInfo.Keys)
             {
                 if(tradersNames.ContainsKey(tr) == true )
                 {
@@ -210,9 +210,10 @@ namespace EFT_Launcher_12
 
             if (traderid != null) { trader = traderid; }
 
-            traderLevelNumericBox.Value = profileToEdit.traderStandings[trader].currentLevel;
-            traderSalesNumericBox.Value = profileToEdit.traderStandings[trader].currentSalesSum;
-            traderStandingNumericBox.Value = profileToEdit.traderStandings[trader].currentStanding;
+            traderLevelNumericBox.Value = profileToEdit.TradersInfo[trader].loyaltyLevel;
+            traderSalesNumericBox.Value = profileToEdit.TradersInfo[trader].salesSum;
+            traderStandingNumericBox.Value = profileToEdit.TradersInfo[trader].standing;
+            traderUnlockedCkeckBox.Checked = profileToEdit.TradersInfo[trader].unlocked;
         }
 
         private void TrackBars_ValueChanged(object sender, EventArgs e)

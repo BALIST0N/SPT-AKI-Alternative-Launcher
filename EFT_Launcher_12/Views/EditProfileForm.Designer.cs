@@ -161,6 +161,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.traderListComboBox = new System.Windows.Forms.ComboBox();
             this.traderLevelNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.traderUnlockedCkeckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.hideoutLevelNumeric)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.generalTabPAge.SuspendLayout();
@@ -1736,6 +1737,7 @@
             // tradersTabPage
             // 
             this.tradersTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.tradersTabPage.Controls.Add(this.traderUnlockedCkeckBox);
             this.tradersTabPage.Controls.Add(this.label41);
             this.tradersTabPage.Controls.Add(this.traderStandingNumericBox);
             this.tradersTabPage.Controls.Add(this.label40);
@@ -1859,6 +1861,18 @@
             this.traderLevelNumericBox.Name = "traderLevelNumericBox";
             this.traderLevelNumericBox.Size = new System.Drawing.Size(54, 31);
             this.traderLevelNumericBox.TabIndex = 54;
+            // 
+            // traderUnlockedCkeckBox
+            // 
+            this.traderUnlockedCkeckBox.AutoSize = true;
+            this.traderUnlockedCkeckBox.Enabled = false;
+            this.traderUnlockedCkeckBox.Font = new System.Drawing.Font("Candara", 15.75F);
+            this.traderUnlockedCkeckBox.Location = new System.Drawing.Point(355, 164);
+            this.traderUnlockedCkeckBox.Name = "traderUnlockedCkeckBox";
+            this.traderUnlockedCkeckBox.Size = new System.Drawing.Size(115, 30);
+            this.traderUnlockedCkeckBox.TabIndex = 61;
+            this.traderUnlockedCkeckBox.Text = "Unlocked";
+            this.traderUnlockedCkeckBox.UseVisualStyleBackColor = true;
             // 
             // EditProfileForm
             // 
@@ -2067,5 +2081,6 @@
         private System.Windows.Forms.TrackBar WeaponMasteringTrackBar;
         private System.Windows.Forms.Label ExperienceLevelLabel;
         private System.Windows.Forms.TrackBar ExperienceTrackBar;
+        private System.Windows.Forms.CheckBox traderUnlockedCkeckBox;
     }
 }
