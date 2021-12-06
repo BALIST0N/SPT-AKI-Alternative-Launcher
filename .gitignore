@@ -1,5 +1,9 @@
 EFT_Launcher_12/obj
+EFT_Launcher_12/obj/Debug
+EFT_Launcher_12/obj/Release
 EFT_Launcher_12/Properties/Newtonsoft.Json.dll
+EFT_Launcher_12/Resources/Assembly-CSharp.dll
 EFT_Launcher_12/bin
 EFT_Launcher_12/Output
 /.vs
+/packages
