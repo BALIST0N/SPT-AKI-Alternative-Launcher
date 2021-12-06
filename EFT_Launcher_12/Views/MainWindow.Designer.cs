@@ -176,6 +176,7 @@
             this.backendUrlTextBox.Name = "backendUrlTextBox";
             this.backendUrlTextBox.Size = new System.Drawing.Size(140, 19);
             this.backendUrlTextBox.TabIndex = 12;
+            this.backendUrlTextBox.TextChanged += new System.EventHandler(this.backendUrlTextBox_TextChanged);
             // 
             // MainWindow
             // 

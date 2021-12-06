@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using EFT_Launcher_12.Views;
+using System.Reflection;
 
 namespace EFT_Launcher_12
 {
@@ -31,8 +32,7 @@ namespace EFT_Launcher_12
             this.backendUrlTextBox.Text = Globals.backendUrl;
             this.backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
             this.profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
-            this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
- 
+            this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged; 
         }
 
         //**************************************************//
@@ -50,7 +50,6 @@ namespace EFT_Launcher_12
             validateValues();
         }
 
-        
         private void gamePathTextBox_Click(object sender, EventArgs e)
         {   
             //event when click on the "game Location" textbox, open a folder dialog and set into the textbox
@@ -112,7 +111,11 @@ namespace EFT_Launcher_12
             {
                 try
                 {
-                    if (LaunchServer() == true) StartGame(profiles[select].id);   
+                    if (LaunchServer() == true)
+                    {
+                        ApplyDllPatch();
+                        StartGame(profiles[select].id);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -167,6 +170,79 @@ namespace EFT_Launcher_12
             }
         }
 
+
+        public void ApplyDllPatch()
+        {
+            string dll = Globals.gameFolder + "/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll";
+            if (File.Exists(dll + ".bak") == false )
+            {
+                File.Move(dll, dll + ".bak");
+            }
+
+            Stream ResourceFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("EFT_Launcher_12.Resources.Assembly-CSharp.dll");
+            using ( var fileStream = File.Create(dll) )
+            {
+                ResourceFile.Seek(0, SeekOrigin.Begin);
+                ResourceFile.CopyTo(fileStream);
+            }
+            ResourceFile.Dispose();
+            ResourceFile.Close();
+        }
+
+        public void CleanGameFiles()
+        {/*
+            var files = new string[]
+            {
+                Path.Combine(_gamePath, "BattlEye"),
+                Path.Combine(_gamePath, "Logs"),
+                Path.Combine(_gamePath, "ConsistencyInfo"),
+                Path.Combine(_gamePath, "EscapeFromTarkov_BE.exe"),
+                Path.Combine(_gamePath, "Uninstall.exe"),
+                Path.Combine(_gamePath, "UnityCrashHandler64.exe"),
+                Path.Combine(_gamePath, "WinPixEventRuntime.dll")
+            };
+
+            foreach (var file in files)
+            {
+                if (Directory.Exists(file))
+                {
+                    RemoveFilesRecurse(new DirectoryInfo(file));
+                }
+
+                if (File.Exists(file))
+                {
+                    File.Delete(file);
+                }
+            }
+
+
+            //***************** registry *****************
+
+            try
+            {
+                var key = Registry.CurrentUser.OpenSubKey(registrySettings, true);
+
+                foreach (var value in key.GetValueNames())
+                {
+                    key.DeleteValue(value);
+                }
+            }
+            catch{}
+
+            //**************** temp files ********************
+
+            var rootdir = new DirectoryInfo(Path.Combine(Path.GetTempPath(), @"Battlestate Games\EscapeFromTarkov"));
+
+            if (!rootdir.Exists)
+            {
+                return true;
+            }
+
+            return RemoveFilesRecurse(rootdir);
+
+            */
+        }
+    
         private void validateValues()
         {
             bool gameExists = false;
@@ -271,6 +347,7 @@ namespace EFT_Launcher_12
         {
             ProcessStartInfo startGame = new ProcessStartInfo(Path.Combine(Globals.gameFolder, "EscapeFromTarkov.exe"))
             {
+                //$"-force-gfx-jobs native -token={account.id} -config={Json.Serialize(new ClientConfig(server.backendUrl))}";
                 Arguments = "-token=" + id + " -config={'BackendUrl':'" + Globals.backendUrl + "','Version':'live'}",
                 UseShellExecute = false,
                 WorkingDirectory = Globals.gameFolder

@@ -6,7 +6,7 @@
       <Value Profile="(Default)">enter EFT folder path here</Value>
     </Setting>
     <Setting Name="backendURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://127.0.0.1:443</Value>
+      <Value Profile="(Default)">http://127.0.0.1:6969</Value>
     </Setting>
   </Settings>
 </SettingsFile>
