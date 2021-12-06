@@ -30,7 +30,7 @@ namespace EFT_Launcher_12
             this.backendUrlTextBox.Text = Globals.backendUrl;
             this.backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
             this.profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
-            this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged; 
+            this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
         }
 
         //**************************************************//
@@ -75,8 +75,6 @@ namespace EFT_Launcher_12
                 EditProfileForm edit = new EditProfileForm(profileid, this.Location);
                 edit.Show();
             }
-
-
         }
 
         private void backendUrlTextBox_TextChanged(object sender, EventArgs e)
@@ -121,7 +119,6 @@ namespace EFT_Launcher_12
                 }
             }
         }
-
 
 
         //**************************************************//
@@ -188,59 +185,61 @@ namespace EFT_Launcher_12
         }
 
         public void CleanGameFiles()
-        {/*
+        {
             var files = new string[]
             {
-                Path.Combine(_gamePath, "BattlEye"),
-                Path.Combine(_gamePath, "Logs"),
-                Path.Combine(_gamePath, "ConsistencyInfo"),
-                Path.Combine(_gamePath, "EscapeFromTarkov_BE.exe"),
-                Path.Combine(_gamePath, "Uninstall.exe"),
-                Path.Combine(_gamePath, "UnityCrashHandler64.exe"),
-                Path.Combine(_gamePath, "WinPixEventRuntime.dll")
+                Path.Combine(Globals.gameFolder, "BattlEye"),
+                Path.Combine(Globals.gameFolder, "Logs"),
+                Path.Combine(Globals.gameFolder, "ConsistencyInfo"),
+                Path.Combine(Globals.gameFolder, "EscapeFromTarkov_BE.exe"),
+                Path.Combine(Globals.gameFolder, "Uninstall.exe"),
+                Path.Combine(Globals.gameFolder, "UnityCrashHandler64.exe"),
+                Path.Combine(Globals.gameFolder, "WinPixEventRuntime.dll")
             };
 
             foreach (var file in files)
             {
-                if (Directory.Exists(file))
-                {
-                    RemoveFilesRecurse(new DirectoryInfo(file));
-                }
-
-                if (File.Exists(file))
-                {
-                    File.Delete(file);
-                }
+                if (Directory.Exists(file)) { RemoveFilesRecurse( new DirectoryInfo(file) ); }
+                if (File.Exists(file)) { File.Delete(file); }
             }
 
-
             //***************** registry *****************
-
             try
             {
-                var key = Registry.CurrentUser.OpenSubKey(registrySettings, true);
-
-                foreach (var value in key.GetValueNames())
-                {
-                    key.DeleteValue(value);
-                }
+                var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"Software\Battlestate Games\EscapeFromTarkov", true);
+                foreach (var value in key.GetValueNames()) { key.DeleteValue(value); }
             }
             catch{}
 
+
             //**************** temp files ********************
-
             var rootdir = new DirectoryInfo(Path.Combine(Path.GetTempPath(), @"Battlestate Games\EscapeFromTarkov"));
+            if (rootdir.Exists) { RemoveFilesRecurse(rootdir); }
+           
+        }
 
-            if (!rootdir.Exists)
+
+        public void RemoveFilesRecurse(DirectoryInfo basedir)
+        {
+            if (basedir.Exists)
             {
-                return true;
+                try
+                {
+                    foreach (var dir in basedir.EnumerateDirectories()) { RemoveFilesRecurse(dir); } // remove subdirectories
+                    var files = basedir.GetFiles(); // remove files
+
+                    foreach (var file in files)
+                    {
+                        file.IsReadOnly = false;
+                        file.Delete();
+                    }
+                    basedir.Delete();
+                }
+                catch (Exception) {}
             }
 
-            return RemoveFilesRecurse(rootdir);
-
-            */
         }
-    
+
         private void validateValues()
         {
             bool gameExists = false;
