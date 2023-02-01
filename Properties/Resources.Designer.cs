@@ -63,36 +63,6 @@ namespace SPTAKI_Alt_Launcher.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Aki_ByteBanger {
-            get {
-                object obj = ResourceManager.GetObject("Aki_ByteBanger", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Aki_Launcher_Base {
-            get {
-                object obj = ResourceManager.GetObject("Aki_Launcher_Base", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Assembly_CSharp_dll {
-            get {
-                object obj = ResourceManager.GetObject("Assembly_CSharp_dll", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] Newtonsoft_Json {
             get {
                 object obj = ResourceManager.GetObject("Newtonsoft_Json", resourceCulture);

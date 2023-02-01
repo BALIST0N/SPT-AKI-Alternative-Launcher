@@ -10,13 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Assembly-CSharp.dll.bpf" />
     <None Remove="Resources\bg.png" />
     <None Remove="Resources\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Assembly-CSharp.dll.bpf" />
     <EmbeddedResource Include="Resources\bg.png" />
     <EmbeddedResource Include="Resources\icon.ico" />
   </ItemGroup>
