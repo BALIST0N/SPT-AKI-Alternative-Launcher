@@ -10,7 +10,7 @@
 		static Globals()
 		{			
 			//serverFolder = Environment.CurrentDirectory;
-			serverFolder = "D:/tarkov/EFT2";
+			serverFolder = "D:/tarkov/Server/project";
 
 			profilesFolder = serverFolder + "/user/profiles";
 

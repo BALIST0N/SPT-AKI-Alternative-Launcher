@@ -82,6 +82,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.weaponsSkillsTabPage = new System.Windows.Forms.TabPage();
+            this.RevolverTrackBar = new System.Windows.Forms.TrackBar();
+            this.RevolverLevelLabel = new System.Windows.Forms.Label();
+            this.AttachedLauncherTrackBar = new System.Windows.Forms.TrackBar();
+            this.AttachedLauncherLevelLabel = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
             this.PistolLevelLabel = new System.Windows.Forms.Label();
             this.PistolTrackBar = new System.Windows.Forms.TrackBar();
             this.SMGLevelLabel = new System.Windows.Forms.Label();
@@ -113,6 +119,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.combatSkillsTab = new System.Windows.Forms.TabPage();
+            this.TroubleShootingTrackBar = new System.Windows.Forms.TrackBar();
+            this.TroubleShootingLevelLabel = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
             this.RecoilTrackBar = new System.Windows.Forms.TrackBar();
             this.ThrowingTrackBar = new System.Windows.Forms.TrackBar();
             this.ThrowingLevelLabel = new System.Windows.Forms.Label();
@@ -120,6 +129,12 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.practicalSkillsTab = new System.Windows.Forms.TabPage();
+            this.LightVestsLevelLabel = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.LightVestsTrackBar = new System.Windows.Forms.TrackBar();
+            this.HeavyVestsLevelLabel = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.HeavyVestsTrackBar = new System.Windows.Forms.TrackBar();
             this.WeaponTreatmentLevelLabel = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.WeaponTreatmentTrackBar = new System.Windows.Forms.TrackBar();
@@ -166,15 +181,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.traderListComboBox = new System.Windows.Forms.ComboBox();
             this.traderLevelNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.TroubleShootingTrackBar = new System.Windows.Forms.TrackBar();
-            this.TroubleShootingLevelLabel = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.RevolverTrackBar = new System.Windows.Forms.TrackBar();
-            this.RevolverLevelLabel = new System.Windows.Forms.Label();
-            this.AttachedLauncherTrackBar = new System.Windows.Forms.TrackBar();
-            this.AttachedLauncherLevelLabel = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hideoutLevelNumeric)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.generalTabPAge.SuspendLayout();
@@ -194,6 +200,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CharismaTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntelectTrackBar)).BeginInit();
             this.weaponsSkillsTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RevolverTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttachedLauncherTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PistolTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SMGTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AssaultTrackBar)).BeginInit();
@@ -205,9 +213,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.LauncherTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeleeTrackBar)).BeginInit();
             this.combatSkillsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TroubleShootingTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecoilTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThrowingTrackBar)).BeginInit();
             this.practicalSkillsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LightVestsTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeavyVestsTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponTreatmentTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CraftingTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MagdrillsTrackBar)).BeginInit();
@@ -224,9 +235,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.traderStandingNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderSalesNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TroubleShootingTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RevolverTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AttachedLauncherTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // nicknameTextBox
@@ -979,6 +987,78 @@
             this.weaponsSkillsTabPage.TabIndex = 5;
             this.weaponsSkillsTabPage.Text = "Weapons Skills";
             // 
+            // RevolverTrackBar
+            // 
+            this.RevolverTrackBar.AutoSize = false;
+            this.RevolverTrackBar.Location = new System.Drawing.Point(5, 268);
+            this.RevolverTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.RevolverTrackBar.Maximum = 5100;
+            this.RevolverTrackBar.Name = "RevolverTrackBar";
+            this.RevolverTrackBar.Size = new System.Drawing.Size(350, 23);
+            this.RevolverTrackBar.SmallChange = 100;
+            this.RevolverTrackBar.TabIndex = 134;
+            this.RevolverTrackBar.TickFrequency = 1000;
+            this.RevolverTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.RevolverTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // RevolverLevelLabel
+            // 
+            this.RevolverLevelLabel.AutoSize = true;
+            this.RevolverLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RevolverLevelLabel.Location = new System.Drawing.Point(103, 249);
+            this.RevolverLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RevolverLevelLabel.Name = "RevolverLevelLabel";
+            this.RevolverLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.RevolverLevelLabel.TabIndex = 133;
+            this.RevolverLevelLabel.Text = "0";
+            // 
+            // AttachedLauncherTrackBar
+            // 
+            this.AttachedLauncherTrackBar.AutoSize = false;
+            this.AttachedLauncherTrackBar.Location = new System.Drawing.Point(400, 268);
+            this.AttachedLauncherTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.AttachedLauncherTrackBar.Maximum = 5100;
+            this.AttachedLauncherTrackBar.Name = "AttachedLauncherTrackBar";
+            this.AttachedLauncherTrackBar.Size = new System.Drawing.Size(350, 23);
+            this.AttachedLauncherTrackBar.SmallChange = 100;
+            this.AttachedLauncherTrackBar.TabIndex = 132;
+            this.AttachedLauncherTrackBar.TickFrequency = 1000;
+            this.AttachedLauncherTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.AttachedLauncherTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // AttachedLauncherLevelLabel
+            // 
+            this.AttachedLauncherLevelLabel.AutoSize = true;
+            this.AttachedLauncherLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AttachedLauncherLevelLabel.Location = new System.Drawing.Point(568, 251);
+            this.AttachedLauncherLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AttachedLauncherLevelLabel.Name = "AttachedLauncherLevelLabel";
+            this.AttachedLauncherLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.AttachedLauncherLevelLabel.TabIndex = 131;
+            this.AttachedLauncherLevelLabel.Text = "0";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label49.Location = new System.Drawing.Point(410, 250);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(151, 18);
+            this.label49.TabIndex = 130;
+            this.label49.Text = "Underbarrel Launcher :";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label50.Location = new System.Drawing.Point(11, 248);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(79, 18);
+            this.label50.TabIndex = 129;
+            this.label50.Text = "Revolvers : ";
+            // 
             // PistolLevelLabel
             // 
             this.PistolLevelLabel.AutoSize = true;
@@ -1358,6 +1438,42 @@
             this.combatSkillsTab.TabIndex = 9;
             this.combatSkillsTab.Text = "Combat";
             // 
+            // TroubleShootingTrackBar
+            // 
+            this.TroubleShootingTrackBar.AutoSize = false;
+            this.TroubleShootingTrackBar.Location = new System.Drawing.Point(4, 87);
+            this.TroubleShootingTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.TroubleShootingTrackBar.Maximum = 5100;
+            this.TroubleShootingTrackBar.Name = "TroubleShootingTrackBar";
+            this.TroubleShootingTrackBar.Size = new System.Drawing.Size(350, 23);
+            this.TroubleShootingTrackBar.SmallChange = 100;
+            this.TroubleShootingTrackBar.TabIndex = 117;
+            this.TroubleShootingTrackBar.TickFrequency = 1000;
+            this.TroubleShootingTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.TroubleShootingTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // TroubleShootingLevelLabel
+            // 
+            this.TroubleShootingLevelLabel.AutoSize = true;
+            this.TroubleShootingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TroubleShootingLevelLabel.Location = new System.Drawing.Point(132, 69);
+            this.TroubleShootingLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TroubleShootingLevelLabel.Name = "TroubleShootingLevelLabel";
+            this.TroubleShootingLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.TroubleShootingLevelLabel.TabIndex = 116;
+            this.TroubleShootingLevelLabel.Text = "0";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label47.Location = new System.Drawing.Point(10, 69);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(116, 18);
+            this.label47.TabIndex = 115;
+            this.label47.Text = "Troubleshooting :";
+            // 
             // RecoilTrackBar
             // 
             this.RecoilTrackBar.AutoSize = false;
@@ -1431,6 +1547,12 @@
             // practicalSkillsTab
             // 
             this.practicalSkillsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.practicalSkillsTab.Controls.Add(this.LightVestsLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.label52);
+            this.practicalSkillsTab.Controls.Add(this.LightVestsTrackBar);
+            this.practicalSkillsTab.Controls.Add(this.HeavyVestsLevelLabel);
+            this.practicalSkillsTab.Controls.Add(this.label48);
+            this.practicalSkillsTab.Controls.Add(this.HeavyVestsTrackBar);
             this.practicalSkillsTab.Controls.Add(this.WeaponTreatmentLevelLabel);
             this.practicalSkillsTab.Controls.Add(this.label26);
             this.practicalSkillsTab.Controls.Add(this.WeaponTreatmentTrackBar);
@@ -1465,11 +1587,83 @@
             this.practicalSkillsTab.TabIndex = 7;
             this.practicalSkillsTab.Text = "Practical";
             // 
+            // LightVestsLevelLabel
+            // 
+            this.LightVestsLevelLabel.AutoSize = true;
+            this.LightVestsLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LightVestsLevelLabel.Location = new System.Drawing.Point(519, 255);
+            this.LightVestsLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LightVestsLevelLabel.Name = "LightVestsLevelLabel";
+            this.LightVestsLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.LightVestsLevelLabel.TabIndex = 113;
+            this.LightVestsLevelLabel.Text = "0";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label52.Location = new System.Drawing.Point(410, 255);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(82, 18);
+            this.label52.TabIndex = 112;
+            this.label52.Text = "Light Vests :";
+            // 
+            // LightVestsTrackBar
+            // 
+            this.LightVestsTrackBar.AutoSize = false;
+            this.LightVestsTrackBar.Location = new System.Drawing.Point(405, 275);
+            this.LightVestsTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.LightVestsTrackBar.Maximum = 5100;
+            this.LightVestsTrackBar.Name = "LightVestsTrackBar";
+            this.LightVestsTrackBar.Size = new System.Drawing.Size(350, 23);
+            this.LightVestsTrackBar.SmallChange = 100;
+            this.LightVestsTrackBar.TabIndex = 111;
+            this.LightVestsTrackBar.TickFrequency = 1000;
+            this.LightVestsTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.LightVestsTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
+            // HeavyVestsLevelLabel
+            // 
+            this.HeavyVestsLevelLabel.AutoSize = true;
+            this.HeavyVestsLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HeavyVestsLevelLabel.Location = new System.Drawing.Point(119, 255);
+            this.HeavyVestsLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HeavyVestsLevelLabel.Name = "HeavyVestsLevelLabel";
+            this.HeavyVestsLevelLabel.Size = new System.Drawing.Size(16, 18);
+            this.HeavyVestsLevelLabel.TabIndex = 110;
+            this.HeavyVestsLevelLabel.Text = "0";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label48.Location = new System.Drawing.Point(10, 255);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(90, 18);
+            this.label48.TabIndex = 109;
+            this.label48.Text = "Heavy Vests :";
+            // 
+            // HeavyVestsTrackBar
+            // 
+            this.HeavyVestsTrackBar.AutoSize = false;
+            this.HeavyVestsTrackBar.Location = new System.Drawing.Point(5, 275);
+            this.HeavyVestsTrackBar.Margin = new System.Windows.Forms.Padding(0);
+            this.HeavyVestsTrackBar.Maximum = 5100;
+            this.HeavyVestsTrackBar.Name = "HeavyVestsTrackBar";
+            this.HeavyVestsTrackBar.Size = new System.Drawing.Size(350, 23);
+            this.HeavyVestsTrackBar.SmallChange = 100;
+            this.HeavyVestsTrackBar.TabIndex = 108;
+            this.HeavyVestsTrackBar.TickFrequency = 1000;
+            this.HeavyVestsTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.HeavyVestsTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
+            // 
             // WeaponTreatmentLevelLabel
             // 
             this.WeaponTreatmentLevelLabel.AutoSize = true;
             this.WeaponTreatmentLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WeaponTreatmentLevelLabel.Location = new System.Drawing.Point(183, 225);
+            this.WeaponTreatmentLevelLabel.Location = new System.Drawing.Point(170, 205);
             this.WeaponTreatmentLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WeaponTreatmentLevelLabel.Name = "WeaponTreatmentLevelLabel";
             this.WeaponTreatmentLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1480,7 +1674,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(14, 225);
+            this.label26.Location = new System.Drawing.Point(10, 205);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(152, 18);
@@ -1490,7 +1684,7 @@
             // WeaponTreatmentTrackBar
             // 
             this.WeaponTreatmentTrackBar.AutoSize = false;
-            this.WeaponTreatmentTrackBar.Location = new System.Drawing.Point(8, 245);
+            this.WeaponTreatmentTrackBar.Location = new System.Drawing.Point(5, 225);
             this.WeaponTreatmentTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.WeaponTreatmentTrackBar.Maximum = 5100;
             this.WeaponTreatmentTrackBar.Name = "WeaponTreatmentTrackBar";
@@ -1505,7 +1699,7 @@
             // 
             this.CraftingLevelLabel.AutoSize = true;
             this.CraftingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CraftingLevelLabel.Location = new System.Drawing.Point(496, 167);
+            this.CraftingLevelLabel.Location = new System.Drawing.Point(497, 155);
             this.CraftingLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CraftingLevelLabel.Name = "CraftingLevelLabel";
             this.CraftingLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1515,7 +1709,7 @@
             // CraftingTrackBar
             // 
             this.CraftingTrackBar.AutoSize = false;
-            this.CraftingTrackBar.Location = new System.Drawing.Point(412, 189);
+            this.CraftingTrackBar.Location = new System.Drawing.Point(405, 175);
             this.CraftingTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.CraftingTrackBar.Maximum = 5100;
             this.CraftingTrackBar.Name = "CraftingTrackBar";
@@ -1530,7 +1724,7 @@
             // 
             this.MagdrillsLevelLabel.AutoSize = true;
             this.MagdrillsLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MagdrillsLevelLabel.Location = new System.Drawing.Point(509, 111);
+            this.MagdrillsLevelLabel.Location = new System.Drawing.Point(505, 105);
             this.MagdrillsLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MagdrillsLevelLabel.Name = "MagdrillsLevelLabel";
             this.MagdrillsLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1540,7 +1734,7 @@
             // MagdrillsTrackBar
             // 
             this.MagdrillsTrackBar.AutoSize = false;
-            this.MagdrillsTrackBar.Location = new System.Drawing.Point(412, 132);
+            this.MagdrillsTrackBar.Location = new System.Drawing.Point(405, 125);
             this.MagdrillsTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.MagdrillsTrackBar.Maximum = 5100;
             this.MagdrillsTrackBar.Name = "MagdrillsTrackBar";
@@ -1555,7 +1749,7 @@
             // 
             this.SearchingLevelLabel.AutoSize = true;
             this.SearchingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SearchingLevelLabel.Location = new System.Drawing.Point(509, 58);
+            this.SearchingLevelLabel.Location = new System.Drawing.Point(510, 55);
             this.SearchingLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SearchingLevelLabel.Name = "SearchingLevelLabel";
             this.SearchingLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1565,7 +1759,7 @@
             // SearchingTrackBar
             // 
             this.SearchingTrackBar.AutoSize = false;
-            this.SearchingTrackBar.Location = new System.Drawing.Point(412, 78);
+            this.SearchingTrackBar.Location = new System.Drawing.Point(405, 78);
             this.SearchingTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.SearchingTrackBar.Maximum = 5100;
             this.SearchingTrackBar.Name = "SearchingTrackBar";
@@ -1580,7 +1774,7 @@
             // 
             this.AimLevelLAbel.AutoSize = true;
             this.AimLevelLAbel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AimLevelLAbel.Location = new System.Drawing.Point(468, 8);
+            this.AimLevelLAbel.Location = new System.Drawing.Point(470, 5);
             this.AimLevelLAbel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AimLevelLAbel.Name = "AimLevelLAbel";
             this.AimLevelLAbel.Size = new System.Drawing.Size(16, 18);
@@ -1590,7 +1784,7 @@
             // AimTrackBar
             // 
             this.AimTrackBar.AutoSize = false;
-            this.AimTrackBar.Location = new System.Drawing.Point(412, 29);
+            this.AimTrackBar.Location = new System.Drawing.Point(405, 25);
             this.AimTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.AimTrackBar.Maximum = 5100;
             this.AimTrackBar.Name = "AimTrackBar";
@@ -1605,7 +1799,7 @@
             // 
             this.HideoutLevelLabel.AutoSize = true;
             this.HideoutLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HideoutLevelLabel.Location = new System.Drawing.Point(91, 168);
+            this.HideoutLevelLabel.Location = new System.Drawing.Point(90, 155);
             this.HideoutLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HideoutLevelLabel.Name = "HideoutLevelLabel";
             this.HideoutLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1615,7 +1809,7 @@
             // HideoutTrackBar
             // 
             this.HideoutTrackBar.AutoSize = false;
-            this.HideoutTrackBar.Location = new System.Drawing.Point(7, 189);
+            this.HideoutTrackBar.Location = new System.Drawing.Point(5, 175);
             this.HideoutTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.HideoutTrackBar.Maximum = 5100;
             this.HideoutTrackBar.Name = "HideoutTrackBar";
@@ -1630,7 +1824,7 @@
             // 
             this.SurgeryLevelLabel.AutoSize = true;
             this.SurgeryLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SurgeryLevelLabel.Location = new System.Drawing.Point(90, 111);
+            this.SurgeryLevelLabel.Location = new System.Drawing.Point(90, 105);
             this.SurgeryLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SurgeryLevelLabel.Name = "SurgeryLevelLabel";
             this.SurgeryLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1640,7 +1834,7 @@
             // SurgeryTrackBar
             // 
             this.SurgeryTrackBar.AutoSize = false;
-            this.SurgeryTrackBar.Location = new System.Drawing.Point(7, 130);
+            this.SurgeryTrackBar.Location = new System.Drawing.Point(5, 125);
             this.SurgeryTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.SurgeryTrackBar.Maximum = 5100;
             this.SurgeryTrackBar.Name = "SurgeryTrackBar";
@@ -1655,7 +1849,7 @@
             // 
             this.ProneLevelLabel.AutoSize = true;
             this.ProneLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ProneLevelLabel.Location = new System.Drawing.Point(78, 58);
+            this.ProneLevelLabel.Location = new System.Drawing.Point(78, 55);
             this.ProneLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ProneLevelLabel.Name = "ProneLevelLabel";
             this.ProneLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1665,7 +1859,7 @@
             // ProneTrackBar
             // 
             this.ProneTrackBar.AutoSize = false;
-            this.ProneTrackBar.Location = new System.Drawing.Point(8, 77);
+            this.ProneTrackBar.Location = new System.Drawing.Point(5, 75);
             this.ProneTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.ProneTrackBar.Maximum = 5100;
             this.ProneTrackBar.Name = "ProneTrackBar";
@@ -1680,7 +1874,7 @@
             // 
             this.CovertLevelLabel.AutoSize = true;
             this.CovertLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CovertLevelLabel.Location = new System.Drawing.Point(78, 8);
+            this.CovertLevelLabel.Location = new System.Drawing.Point(80, 5);
             this.CovertLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CovertLevelLabel.Name = "CovertLevelLabel";
             this.CovertLevelLabel.Size = new System.Drawing.Size(16, 18);
@@ -1690,7 +1884,7 @@
             // CovertTrackBar
             // 
             this.CovertTrackBar.AutoSize = false;
-            this.CovertTrackBar.Location = new System.Drawing.Point(8, 28);
+            this.CovertTrackBar.Location = new System.Drawing.Point(5, 25);
             this.CovertTrackBar.Margin = new System.Windows.Forms.Padding(0);
             this.CovertTrackBar.Maximum = 5100;
             this.CovertTrackBar.Name = "CovertTrackBar";
@@ -1705,7 +1899,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label46.Location = new System.Drawing.Point(425, 8);
+            this.label46.Location = new System.Drawing.Point(410, 5);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(39, 18);
@@ -1716,7 +1910,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label45.Location = new System.Drawing.Point(14, 167);
+            this.label45.Location = new System.Drawing.Point(10, 155);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(65, 18);
@@ -1727,7 +1921,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label44.Location = new System.Drawing.Point(422, 167);
+            this.label44.Location = new System.Drawing.Point(410, 155);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(64, 18);
@@ -1738,7 +1932,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label43.Location = new System.Drawing.Point(14, 111);
+            this.label43.Location = new System.Drawing.Point(10, 105);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(64, 18);
@@ -1749,7 +1943,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label42.Location = new System.Drawing.Point(14, 57);
+            this.label42.Location = new System.Drawing.Point(10, 55);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(52, 18);
@@ -1760,7 +1954,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(422, 111);
+            this.label18.Location = new System.Drawing.Point(410, 105);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(76, 18);
@@ -1771,7 +1965,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(14, 8);
+            this.label14.Location = new System.Drawing.Point(10, 5);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 18);
@@ -1782,7 +1976,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(422, 58);
+            this.label15.Location = new System.Drawing.Point(410, 55);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 18);
@@ -1926,7 +2120,8 @@
             this.traderUnlockedCkeckBox.AutoSize = true;
             this.traderUnlockedCkeckBox.Enabled = false;
             this.traderUnlockedCkeckBox.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.traderUnlockedCkeckBox.Location = new System.Drawing.Point(414, 189);
+            this.traderUnlockedCkeckBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.traderUnlockedCkeckBox.Location = new System.Drawing.Point(415, 190);
             this.traderUnlockedCkeckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderUnlockedCkeckBox.Name = "traderUnlockedCkeckBox";
             this.traderUnlockedCkeckBox.Size = new System.Drawing.Size(115, 30);
@@ -1938,7 +2133,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label41.Location = new System.Drawing.Point(282, 156);
+            this.label41.Location = new System.Drawing.Point(285, 155);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(91, 26);
@@ -1957,7 +2152,7 @@
             0,
             0,
             131072});
-            this.traderStandingNumericBox.Location = new System.Drawing.Point(288, 189);
+            this.traderStandingNumericBox.Location = new System.Drawing.Point(290, 190);
             this.traderStandingNumericBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderStandingNumericBox.Maximum = new decimal(new int[] {
             1874919423,
@@ -1972,7 +2167,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label40.Location = new System.Drawing.Point(121, 156);
+            this.label40.Location = new System.Drawing.Point(125, 155);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(97, 26);
@@ -1985,7 +2180,7 @@
             this.traderSalesNumericBox.Enabled = false;
             this.traderSalesNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.traderSalesNumericBox.ForeColor = System.Drawing.Color.White;
-            this.traderSalesNumericBox.Location = new System.Drawing.Point(127, 189);
+            this.traderSalesNumericBox.Location = new System.Drawing.Point(125, 190);
             this.traderSalesNumericBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderSalesNumericBox.Maximum = new decimal(new int[] {
             1874919423,
@@ -2000,7 +2195,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label38.Location = new System.Drawing.Point(26, 156);
+            this.label38.Location = new System.Drawing.Point(30, 155);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(59, 26);
@@ -2011,7 +2206,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label39.Location = new System.Drawing.Point(26, 37);
+            this.label39.Location = new System.Drawing.Point(25, 35);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(69, 26);
@@ -2028,7 +2223,7 @@
             this.traderListComboBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.traderListComboBox.ForeColor = System.Drawing.Color.White;
             this.traderListComboBox.FormattingEnabled = true;
-            this.traderListComboBox.Location = new System.Drawing.Point(31, 70);
+            this.traderListComboBox.Location = new System.Drawing.Point(30, 66);
             this.traderListComboBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderListComboBox.Name = "traderListComboBox";
             this.traderListComboBox.Size = new System.Drawing.Size(356, 31);
@@ -2041,7 +2236,7 @@
             this.traderLevelNumericBox.Enabled = false;
             this.traderLevelNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.traderLevelNumericBox.ForeColor = System.Drawing.Color.White;
-            this.traderLevelNumericBox.Location = new System.Drawing.Point(31, 189);
+            this.traderLevelNumericBox.Location = new System.Drawing.Point(30, 190);
             this.traderLevelNumericBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderLevelNumericBox.Maximum = new decimal(new int[] {
             1874919423,
@@ -2052,115 +2247,6 @@
             this.traderLevelNumericBox.Size = new System.Drawing.Size(63, 31);
             this.traderLevelNumericBox.TabIndex = 54;
             // 
-            // TroubleShootingTrackBar
-            // 
-            this.TroubleShootingTrackBar.AutoSize = false;
-            this.TroubleShootingTrackBar.Location = new System.Drawing.Point(4, 87);
-            this.TroubleShootingTrackBar.Margin = new System.Windows.Forms.Padding(0);
-            this.TroubleShootingTrackBar.Maximum = 5100;
-            this.TroubleShootingTrackBar.Name = "TroubleShootingTrackBar";
-            this.TroubleShootingTrackBar.Size = new System.Drawing.Size(350, 23);
-            this.TroubleShootingTrackBar.SmallChange = 100;
-            this.TroubleShootingTrackBar.TabIndex = 117;
-            this.TroubleShootingTrackBar.TickFrequency = 1000;
-            this.TroubleShootingTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.TroubleShootingTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
-            // 
-            // TroubleShootingLevelLabel
-            // 
-            this.TroubleShootingLevelLabel.AutoSize = true;
-            this.TroubleShootingLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TroubleShootingLevelLabel.Location = new System.Drawing.Point(132, 69);
-            this.TroubleShootingLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.TroubleShootingLevelLabel.Name = "TroubleShootingLevelLabel";
-            this.TroubleShootingLevelLabel.Size = new System.Drawing.Size(16, 18);
-            this.TroubleShootingLevelLabel.TabIndex = 116;
-            this.TroubleShootingLevelLabel.Text = "0";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label47.Location = new System.Drawing.Point(10, 69);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(116, 18);
-            this.label47.TabIndex = 115;
-            this.label47.Text = "Troubleshooting :";
-            
-            // 
-            // RevolverTrackBar
-            // 
-            this.RevolverTrackBar.AutoSize = false;
-            this.RevolverTrackBar.Location = new System.Drawing.Point(5, 268);
-            this.RevolverTrackBar.Margin = new System.Windows.Forms.Padding(0);
-            this.RevolverTrackBar.Maximum = 5100;
-            this.RevolverTrackBar.Name = "RevolverTrackBar";
-            this.RevolverTrackBar.Size = new System.Drawing.Size(350, 23);
-            this.RevolverTrackBar.SmallChange = 100;
-            this.RevolverTrackBar.TabIndex = 134;
-            this.RevolverTrackBar.TickFrequency = 1000;
-            this.RevolverTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.RevolverTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
-            // 
-            // RevolverLevelLabel
-            // 
-            this.RevolverLevelLabel.AutoSize = true;
-            this.RevolverLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RevolverLevelLabel.Location = new System.Drawing.Point(103, 249);
-            this.RevolverLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.RevolverLevelLabel.Name = "RevolverLevelLabel";
-            this.RevolverLevelLabel.Size = new System.Drawing.Size(16, 18);
-            this.RevolverLevelLabel.TabIndex = 133;
-            this.RevolverLevelLabel.Text = "0";
-            // 
-            // AttachedLauncherTrackBar
-            // 
-            this.AttachedLauncherTrackBar.AutoSize = false;
-            this.AttachedLauncherTrackBar.Location = new System.Drawing.Point(400, 268);
-            this.AttachedLauncherTrackBar.Margin = new System.Windows.Forms.Padding(0);
-            this.AttachedLauncherTrackBar.Maximum = 5100;
-            this.AttachedLauncherTrackBar.Name = "AttachedLauncherTrackBar";
-            this.AttachedLauncherTrackBar.Size = new System.Drawing.Size(350, 23);
-            this.AttachedLauncherTrackBar.SmallChange = 100;
-            this.AttachedLauncherTrackBar.TabIndex = 132;
-            this.AttachedLauncherTrackBar.TickFrequency = 1000;
-            this.AttachedLauncherTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.AttachedLauncherTrackBar.ValueChanged += new System.EventHandler(this.TrackBars_ValueChanged);
-            // 
-            // AttachedLauncherLevelLabel
-            // 
-            this.AttachedLauncherLevelLabel.AutoSize = true;
-            this.AttachedLauncherLevelLabel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AttachedLauncherLevelLabel.Location = new System.Drawing.Point(568, 251);
-            this.AttachedLauncherLevelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AttachedLauncherLevelLabel.Name = "AttachedLauncherLevelLabel";
-            this.AttachedLauncherLevelLabel.Size = new System.Drawing.Size(16, 18);
-            this.AttachedLauncherLevelLabel.TabIndex = 131;
-            this.AttachedLauncherLevelLabel.Text = "0";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label49.Location = new System.Drawing.Point(410, 250);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(151, 18);
-            this.label49.TabIndex = 130;
-            this.label49.Text = "Underbarrel Launcher :";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label50.Location = new System.Drawing.Point(11, 248);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(79, 18);
-            this.label50.TabIndex = 129;
-            this.label50.Text = "Revolvers : ";
-            // 
             // EditProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2169,7 +2255,6 @@
             this.ClientSize = new System.Drawing.Size(776, 355);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.saveButton);
-            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -2199,6 +2284,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.IntelectTrackBar)).EndInit();
             this.weaponsSkillsTabPage.ResumeLayout(false);
             this.weaponsSkillsTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RevolverTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttachedLauncherTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PistolTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SMGTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AssaultTrackBar)).EndInit();
@@ -2211,10 +2298,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.MeleeTrackBar)).EndInit();
             this.combatSkillsTab.ResumeLayout(false);
             this.combatSkillsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TroubleShootingTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecoilTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThrowingTrackBar)).EndInit();
             this.practicalSkillsTab.ResumeLayout(false);
             this.practicalSkillsTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LightVestsTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HeavyVestsTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WeaponTreatmentTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CraftingTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MagdrillsTrackBar)).EndInit();
@@ -2234,9 +2324,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.traderStandingNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderSalesNumericBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traderLevelNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TroubleShootingTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RevolverTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AttachedLauncherTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2389,5 +2476,11 @@
         private Label AttachedLauncherLevelLabel;
         private Label label49;
         private Label label50;
+        private Label HeavyVestsLevelLabel;
+        private Label label48;
+        private TrackBar HeavyVestsTrackBar;
+        private Label LightVestsLevelLabel;
+        private Label label52;
+        private TrackBar LightVestsTrackBar;
     }
 }

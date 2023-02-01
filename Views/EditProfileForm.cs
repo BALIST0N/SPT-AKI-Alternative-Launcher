@@ -18,8 +18,8 @@ namespace SPTAKI_Alt_Launcher
             this.StartPosition = FormStartPosition.Manual;
             location.X += 100;
             this.Location = location;
-            
-            #region init Traders Names
+
+        #region init Traders Names
             tradersNames.Add("5a7c2eca46aef81a7ca2145d", "Mechanic");
             tradersNames.Add("5ac3b934156ae10c4430e83c", "Ragman");
             tradersNames.Add("5c0647fdd443bc2504c2d371", "Jaeger");
@@ -28,6 +28,7 @@ namespace SPTAKI_Alt_Launcher
             tradersNames.Add("579dc571d53a0658a154fbec", "Fence");
             tradersNames.Add("5935c25fb3acc3127c3d8cd9", "Peacekeeper");
             tradersNames.Add("58330581ace78e27b8b10cee", "Skier");
+            tradersNames.Add("638f541a29ffd1183d187f57", "Lighthousekeeper");
             tradersNames.Add("ragfair", "Ragfair");
             #endregion
 
@@ -44,16 +45,18 @@ namespace SPTAKI_Alt_Launcher
             hideoutLevels.Add(new HideoutUpgradesArea(9,  "Rest Space", 3));
             hideoutLevels.Add(new HideoutUpgradesArea(10, "Workbench", 3));
             hideoutLevels.Add(new HideoutUpgradesArea(11, "Intel Center", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(12, "Shooting Range", 1));
+            hideoutLevels.Add(new HideoutUpgradesArea(12, "Shooting Range", 3));
             hideoutLevels.Add(new HideoutUpgradesArea(13, "Library", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(14, "Scav Case", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(15, "Illumination", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(16, "?trophies rack?", 1));
+            hideoutLevels.Add(new HideoutUpgradesArea(16, "Place of Fame", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(17, "Air Filter", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(18, "Solar Power", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(19, "Booze Generator", 1));
             hideoutLevels.Add(new HideoutUpgradesArea(20, "Bitcoin Farm", 3));
             hideoutLevels.Add(new HideoutUpgradesArea(21, "Christmas Tree", 1));
+            hideoutLevels.Add(new HideoutUpgradesArea(22, "Emergency Wall", 6));
+            hideoutLevels.Add(new HideoutUpgradesArea(23, "Gym", 1));
             #endregion
             InitializeComponent();
         }
@@ -147,6 +150,8 @@ namespace SPTAKI_Alt_Launcher
             WeaponTreatmentTrackBar.Value = profileToEdit.GetSkillValue("WeaponTreatment");
             TroubleShootingTrackBar.Value = profileToEdit.GetSkillValue("TroubleShooting");
 
+            LightVestsTrackBar.Value = profileToEdit.GetSkillValue("LightVests");
+            HeavyVestsTrackBar.Value = profileToEdit.GetSkillValue("HeavyVests");
             //weapons skills
             PistolTrackBar.Value = profileToEdit.GetSkillValue("Pistol");
             SMGTrackBar.Value = profileToEdit.GetSkillValue("SMG");

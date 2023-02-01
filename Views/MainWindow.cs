@@ -103,7 +103,7 @@ namespace SPTAKI_Alt_Launcher
                 {
                     if (LaunchServer() == true)
                     {
-                        ApplyDllPatch();
+                        //ApplyDllPatch();
                         StartGame(profiles[select].id);
                     }
                 }
