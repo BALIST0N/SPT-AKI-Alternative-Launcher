@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Text;
-using Aki.Launcher;
 
 namespace SPTAKI_Alt_Launcher
 {
@@ -159,27 +158,6 @@ namespace SPTAKI_Alt_Launcher
         }
 
 
-        public void ApplyDllPatch()
-        {
-
-            string dll = Globals.gameFolder + "/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll";
-            if (File.Exists(dll + ".bak") == false)
-            {
-                Stream ResourceFile = Assembly.GetExecutingAssembly().GetManifestResourceStream("SPTAKI_Alt_Launcher.Resources.Assembly-CSharp.dll.bpf");
-                using ( var fileStream = File.Create(dll + ".bpf") )
-                {
-                    ResourceFile.Seek(0, SeekOrigin.Begin);
-                    ResourceFile.CopyTo(fileStream);
-                }
-                ResourceFile.Dispose();
-                ResourceFile.Close();
-
-                Aki.Launcher.Helpers.FilePatcher.Patch(dll, dll + ".bpf");
-    
-                File.Delete(dll + ".bpf");
-
-            }
-        }
 
         private void validateValues()
         {
@@ -358,21 +336,7 @@ namespace SPTAKI_Alt_Launcher
         public bool wipe;
         public string edition;
 
-        public Profile() { }
-
-        public AccountInfo ProfileToAccountInfo()
-        {
-            return new AccountInfo()
-            {
-                id = this.id,
-                nickname = this.username,
-                username = this.username,
-                password = this.password,
-                wipe = this.wipe,
-                edition = this.edition
-            };
-        }
-       
+        public Profile() { }       
 
     }
 }
