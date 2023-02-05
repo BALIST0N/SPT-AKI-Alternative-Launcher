@@ -19,7 +19,7 @@ namespace SPTAKI_Alt_Launcher
             location.X += 100;
             this.Location = location;
 
-        #region init Traders Names
+            #region init Traders Names
             tradersNames.Add("5a7c2eca46aef81a7ca2145d", "Mechanic");
             tradersNames.Add("5ac3b934156ae10c4430e83c", "Ragman");
             tradersNames.Add("5c0647fdd443bc2504c2d371", "Jaeger");
@@ -194,7 +194,7 @@ namespace SPTAKI_Alt_Launcher
             WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
             WeaponMasteringTrackBar.Value = profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
             TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
-            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);  
+            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);
         }
 
         private void WeaponMasteringTrackBar_ValueChanged(object sender, EventArgs e)

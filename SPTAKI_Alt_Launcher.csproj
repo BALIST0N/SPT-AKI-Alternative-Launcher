@@ -7,6 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <BaseIntermediateOutputPath>Output\</BaseIntermediateOutputPath>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,12 +22,13 @@
 
   <ItemGroup>
     <Reference Include="Aki.ByteBanger">
-      <HintPath>Aki.ByteBanger.dll</HintPath>
-      <CopyLocal>False</CopyLocal>
+      <HintPath>Resources\Aki.ByteBanger.dll</HintPath>
+    </Reference>
+    <Reference Include="Aki.Launcher">
+      <HintPath>Resources\Aki.Launcher.dll</HintPath>
     </Reference>
     <Reference Include="Aki.Launcher.Base">
-      <HintPath>Aki.Launcher.Base.dll</HintPath>
-      <CopyLocal>False</CopyLocal>
+      <HintPath>Resources\Aki.Launcher.Base.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Newtonsoft.Json.dll</HintPath>

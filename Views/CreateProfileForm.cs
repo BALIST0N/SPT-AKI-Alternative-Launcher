@@ -17,11 +17,12 @@ namespace SPTAKI_Alt_Launcher
             location.Y += 5;
             this.Location = location;
             InitializeComponent();
+            baseProfile = "{\"info\":{\"id\":\"\",\"username\":\"\",\"password\":\"\",\"wipe\":true,\"edition\":\"\"},\"characters\":{\"pmc\":{\"UnlockedInfo\":{\"unlockedProductionRecipe\":[]}},\"scav\":{}},\"vitality\":{\"health\":{\"Hydration\":0,\"Energy\":0,\"Temperature\":0,\"Head\":0,\"Chest\":0,\"Stomach\":0,\"LeftArm\":0,\"RightArm\":0,\"LeftLeg\":0,\"RightLeg\":0},\"effects\":{\"Head\":{},\"Chest\":{},\"Stomach\":{},\"LeftArm\":{},\"RightArm\":{},\"LeftLeg\":{},\"RightLeg\":{}}},\"inraid\":{\"location\":\"none\",\"character\":\"none\"},\"insurance\":[]}";
+
         }
 
         private void CreateProfileForm_Load(object sender, EventArgs e)
         {
-            baseProfile = "{\"info\":{\"id\":\"\",\"username\":\"\",\"password\":\"\",\"wipe\":true,\"edition\":\"\"},\"vitality\":{\"health\":{\"Hydration\":0,\"Energy\":0,\"Head\":0,\"Chest\":0,\"Stomach\":0,\"LeftArm\":0,\"RightArm\":0,\"LeftLeg\":0,\"RightLeg\":0},\"effects\":{\"Head\":{},\"Chest\":{},\"Stomach\":{},\"LeftArm\":{},\"RightArm\":{},\"LeftLeg\":{},\"RightLeg\":{}}},\"inraid\":{\"location\":\"none\",\"character\":\"none\"},\"insurance\":[],\"characters\":{\"pmc\":{},\"scav\":{}}}";
             editionListBox.SelectedIndex = 0;
         }
 
@@ -37,12 +38,12 @@ namespace SPTAKI_Alt_Launcher
 
                 try
                 {
-                    using (StreamWriter file = File.CreateText(Path.Combine(Globals.profilesFolder, id + ".json")))
+                    using StreamWriter file = File.CreateText( Path.Combine(Globals.profilesFolder, id + ".json") );
+                    JsonSerializer serializer = new()
                     {
-                        JsonSerializer serializer = new JsonSerializer();
-                        serializer.Formatting = Formatting.Indented;
-                        serializer.Serialize(file, profileDATA);
-                    }
+                        Formatting = Formatting.Indented
+                    };
+                    serializer.Serialize(file, profileDATA);
                 }
                 catch (Exception ex)
                 {
@@ -63,7 +64,7 @@ namespace SPTAKI_Alt_Launcher
         {
             string res = "";
             Random R = new Random();
-            for (int i = 0; i<= 4;i++)
+            for (int i = 0; i < 8;i++)
             {
                 res += R.Next(0, 16).ToString("X").ToLower();
             }
@@ -72,7 +73,7 @@ namespace SPTAKI_Alt_Launcher
 
         private void usernameTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ( !(char.IsLetter(e.KeyChar)) && !(char.IsNumber(e.KeyChar)) && !(char.IsControl(e.KeyChar)) )
+            if( !char.IsLetter(e.KeyChar) && !char.IsNumber(e.KeyChar) && !char.IsControl(e.KeyChar) )
             {
                 e.Handled = true;
             }

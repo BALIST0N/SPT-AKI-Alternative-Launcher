@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
+using SPTAKI_Alt_Launcher.Properties;
+using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text;
@@ -10,20 +12,21 @@ namespace SPTAKI_Alt_Launcher
         private List<Profile> profiles = new List<Profile>();
         private delegate void SetTextCallback(string text);
         private delegate void ResetLauncherCallback();
-        private string serverProcessName;
+        private Process serverProcess;
+        private int gameProcessId;
 
         public MainWindow()
         {
             InitializeComponent();
-            this.FormClosing += MainWindow_FormClosing;
+            FormClosing += MainWindow_FormClosing;
             startButton.Enabled = false;
             profileEditButton.Enabled = false;
             profilesListBox.SelectedIndex = 0;
-            this.gamePathTextBox.Text = Globals.gameFolder;
-            this.backendUrlTextBox.Text = Globals.backendUrl;
-            this.backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
-            this.profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
-            this.gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
+            gamePathTextBox.Text = Globals.gameFolder;
+            backendUrlTextBox.Text = Globals.backendUrl;
+            backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
+            profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
+            gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
         }
 
         //**************************************************//
@@ -34,6 +37,8 @@ namespace SPTAKI_Alt_Launcher
         {
             LoadProfiles();
             backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width;
+            serverOutputRichBox.Text = " "; //load someting on the RTB cuz sometimes font doesn't load properly..?
+            serverOutputRichBox.Font = new Font("Consolas", 10);
         }
 
         private void gamePathTextBox_TextChanged(object sender, EventArgs e)
@@ -94,22 +99,9 @@ namespace SPTAKI_Alt_Launcher
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            int select = profilesListBox.SelectedIndex - 1;
-
             if (startServerChackBox.Checked || startServerChackBox.Visible == false)
             {
-                try
-                {
-                    if (LaunchServer() == true)
-                    {
-                        //ApplyDllPatch();
-                        StartGame(profiles[select].id);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("something went wrong :" + ex.Message);
-                }
+                LaunchServer();
             }
         }
 
@@ -157,8 +149,6 @@ namespace SPTAKI_Alt_Launcher
             }
         }
 
-
-
         private void validateValues()
         {
             bool gameExists = false;
@@ -190,9 +180,21 @@ namespace SPTAKI_Alt_Launcher
                 profileEditButton.Enabled = false;
             }
 
-            if (gameExists && profileExists && serverProcessName == null)
+            if (gameExists && profileExists )
             {
                 startButton.Enabled = true;
+
+                //check if server is running
+                if(this.serverProcess != null)
+                {
+                    foreach (Process theprocess in Process.GetProcesses())
+                    {
+                        if (theprocess.Id == this.serverProcess.Id)
+                        {
+                            startButton.Enabled = false;
+                        }
+                    }
+                }
             }
             else
             {
@@ -210,8 +212,8 @@ namespace SPTAKI_Alt_Launcher
             }
             else
             {
-                this.Height = 190;
-                serverOutputRichBox.Text = "";
+                this.Height = 225;
+                this.serverOutputRichBox.Clear();
                 this.startButton.Enabled = true;
                 this.killServerButton.Hide();
             }
@@ -222,45 +224,49 @@ namespace SPTAKI_Alt_Launcher
         //              PROCESS FUNCTIONS & EVENTS          //
         //**************************************************//
 
-        private bool LaunchServer()
+        private void LaunchServer()
         {
+            string serverExe =  Directory.GetFiles(Globals.serverFolder, "*Server.exe")[0];
+
             /* start the server exe silently and with a few parameters 
             receive all the console output into a rich textbox */
-            Process proc = new Process();
-            proc.StartInfo.WorkingDirectory = Globals.serverFolder;
+            this.serverProcess = new Process();
+            this.serverProcess.StartInfo.WorkingDirectory = Globals.serverFolder;
 
-            if (File.Exists(Path.Combine(Globals.serverFolder, "Server.exe")))
+            if (File.Exists(serverExe) )
             {
-                proc.StartInfo.FileName = Path.Combine(Globals.serverFolder, "Server.exe");
-                proc.StartInfo.CreateNoWindow = true;
-                proc.StartInfo.UseShellExecute = false; //very important, tie the console window with the launcher so the application can read the console
+                this.serverProcess.StartInfo.FileName = serverExe;
+                this.serverProcess.StartInfo.CreateNoWindow = true;
+                this.serverProcess.StartInfo.UseShellExecute = false; //very important, tie the console window with the launcher so the application can read the console
+                
+                this.serverProcess.StartInfo.RedirectStandardError = true; //redirect everything otherwise nothing will be send
+                this.serverProcess.StartInfo.RedirectStandardInput = true;
+                this.serverProcess.StartInfo.RedirectStandardOutput = true;
+                this.serverProcess.StartInfo.StandardOutputEncoding = Encoding.UTF8; //utf-8 because i didn't find better readable text
+                this.serverProcess.EnableRaisingEvents = true; // /!\ enables handlers for reading info
+                this.serverProcess.Exited += ServerTerminated;
+                this.serverProcess.Start();
+                
+                this.serverProcess.BeginOutputReadLine();
+                this.serverProcess.OutputDataReceived += proc_OutputDataReceived;
 
-                proc.StartInfo.RedirectStandardError = true; //redirect everything otherwise nothing will be send
-                proc.StartInfo.RedirectStandardInput = true;
-                proc.StartInfo.RedirectStandardOutput = true;
-                proc.StartInfo.StandardOutputEncoding = Encoding.UTF8; //utf-8 because i didn't find better readable text
-                proc.EnableRaisingEvents = true; // /!\ enables handlers for reading info
-                proc.Exited += ServerTerminated;
-
-                proc.Start();
-
-                proc.BeginOutputReadLine();
-                proc.OutputDataReceived += proc_OutputDataReceived;
-                serverProcessName = proc.ProcessName;
-
-                this.Height = 400;
+                this.Height = 450;
                 this.killServerButton.Show();
-                return true;
+
             }
             else
             {
                 MessageBox.Show("we didn't find server ?");
-                return false;
-            }
+            }                                                                             
         }
 
         private void StartGame(string id)
         {
+            string dll = Globals.gameFolder + "/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll";
+            string bpf = Globals.serverFolder + "/Aki_Data/Launcher/Patches/aki-core/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll.bpf";
+
+            Aki.Launcher.Helpers.FilePatcher.Patch(dll, bpf, false);
+
             ProcessStartInfo startGame = new ProcessStartInfo(Path.Combine(Globals.gameFolder, "EscapeFromTarkov.exe"))
             {
                 //$"-force-gfx-jobs native -token={account.id} -config={Json.Serialize(new ClientConfig(server.backendUrl))}";
@@ -269,24 +275,34 @@ namespace SPTAKI_Alt_Launcher
                 WorkingDirectory = Globals.gameFolder
             };
 
-            Process.Start(startGame);
+            Process p = Process.Start(startGame);
+            this.gameProcessId = p.Id;
             this.startButton.Enabled = false;
-        }
-
-        private void killServer()
-        {
-            Process[] procs = Process.GetProcessesByName(serverProcessName);
-
-            if (procs.Length > 0)
-            {
-                procs[0].Kill();
-            }
-            serverProcessName = null;
+            
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
             killServer();
+        }
+
+        private void killServerButton_Click(object sender, EventArgs e)
+        {
+            killServer();
+        }
+
+        private void killServer()
+        {
+            if(this.serverProcess != null) 
+            {
+                this.serverProcess.Kill(true);
+                this.serverProcess.WaitForExitAsync();
+            }
+        }
+
+        private void ServerTerminated(object sender, EventArgs e)
+        {
+            resetLauncherSize();
         }
 
         void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)
@@ -304,28 +320,26 @@ namespace SPTAKI_Alt_Launcher
             // InvokeRequired required compares the thread ID of the
             // calling thread to the thread ID of the creating thread.
             // If these threads are different, it returns true.
-            if (serverOutputRichBox.InvokeRequired)
+            if (this.serverOutputRichBox.InvokeRequired)
             {
                 SetTextCallback d = new SetTextCallback(SetConsoleOutputText);
                 Invoke(d, new object[] { text });
             }
             else
             {
-                serverOutputRichBox.Text += text;
-                serverOutputRichBox.SelectionStart = serverOutputRichBox.Text.Length;
-                serverOutputRichBox.ScrollToCaret();
+                this.serverOutputRichBox.Text += text;
+                this.serverOutputRichBox.SelectionStart = serverOutputRichBox.Text.Length;
+                this.serverOutputRichBox.ScrollToCaret();
+
+                if (text.Contains(Settings.Default.backendURL) == true )
+                {
+                    StartGame( profiles[profilesListBox.SelectedIndex - 1].id );
+                }
+
             }
         }
 
-        private void killServerButton_Click(object sender, EventArgs e)
-        {
-            killServer();
-        }
 
-        private void ServerTerminated(object sender, EventArgs e)
-        {
-            resetLauncherSize();
-        }
     }
 
     internal class Profile
