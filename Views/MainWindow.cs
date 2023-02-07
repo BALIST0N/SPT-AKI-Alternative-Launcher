@@ -27,6 +27,7 @@ namespace SPTAKI_Alt_Launcher
             backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
             profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
             gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
+            killServer();
         }
 
         //**************************************************//
@@ -51,10 +52,11 @@ namespace SPTAKI_Alt_Launcher
             //event when click on the "game Location" textbox, open a folder dialog and set into the textbox
             if (startButton.Enabled == false)
             {
+                GameLocationFolderBrowser.InitialDirectory = Environment.CurrentDirectory;
                 if (GameLocationFolderBrowser.ShowDialog() == DialogResult.OK)
                 {
                     gamePathTextBox.Text = GameLocationFolderBrowser.SelectedPath;
-                    validateValues();
+                    //event textChanged raised automaticly to validate values
                 }
             }
         }
@@ -111,13 +113,21 @@ namespace SPTAKI_Alt_Launcher
         //**************************************************//
         public void LoadProfiles()
         {
-            if (Directory.Exists(Globals.profilesFolder) == false) //if "profiles folder doesn't exist ?"
+            if (Directory.Exists(Globals.profilesFolder) == false) //if "profiles" folder doesn't exist
             {
-                MessageBox.Show("unable to find profiles, make sure the launcher is in SPT-AKI SERVER folder");
+                if(Directory.Exists(Globals.profilesFolder.Replace("/profiles","")) == false) //if there is not a /user folder
+                {
+                    MessageBox.Show("unable to find profiles, make sure the launcher is in SPT-AKI SERVER folder");
+                }
+                else
+                {
+                    MessageBox.Show("unable to find profiles, make sure the folder is created in /user (/user/profiles/)");
+                }
+
             }
             else
             {
-                var profilesFiles = Directory.GetFiles(Globals.profilesFolder);
+                var profilesFiles = Directory.GetFiles(Globals.profilesFolder,"*.json");
 
                 if (profilesFiles.Length == 0) //file count = 0
                 {
@@ -158,11 +168,16 @@ namespace SPTAKI_Alt_Launcher
             if (File.Exists(Path.Combine(gamePathTextBox.Text, "EscapeFromTarkov.exe")))
             {
                 gameExists = true;
-                gamePathTextBox.ForeColor = Color.White;
-                Globals.gameFolder = gamePathTextBox.Text;
-                Properties.Settings.Default.gameFolder = Globals.gameFolder;
-                Properties.Settings.Default.Save();
                 backendUrlTextBox.Visible = true;
+
+                if (gamePathTextBox.ForeColor != Color.White) //no need to save again if its already saved : ) 
+                {
+                    Globals.gameFolder = gamePathTextBox.Text;
+                    Properties.Settings.Default.gameFolder = Globals.gameFolder;
+                    Properties.Settings.Default.Save();
+                    gamePathTextBox.ForeColor = Color.White;
+                }
+                
             }
             else
             {
@@ -187,12 +202,9 @@ namespace SPTAKI_Alt_Launcher
                 //check if server is running
                 if(this.serverProcess != null)
                 {
-                    foreach (Process theprocess in Process.GetProcesses())
+                    if (Process.GetProcessById(serverProcess.Id).Id == this.serverProcess.Id)
                     {
-                        if (theprocess.Id == this.serverProcess.Id)
-                        {
-                            startButton.Enabled = false;
-                        }
+                        startButton.Enabled = false;
                     }
                 }
             }
@@ -244,6 +256,7 @@ namespace SPTAKI_Alt_Launcher
                 this.serverProcess.StartInfo.RedirectStandardOutput = true;
                 this.serverProcess.StartInfo.StandardOutputEncoding = Encoding.UTF8; //utf-8 because i didn't find better readable text
                 this.serverProcess.EnableRaisingEvents = true; // /!\ enables handlers for reading info
+                
                 this.serverProcess.Exited += ServerTerminated;
                 this.serverProcess.Start();
                 
@@ -293,16 +306,22 @@ namespace SPTAKI_Alt_Launcher
 
         private void killServer()
         {
-            if(this.serverProcess != null) 
+            if(this.serverProcess != null)
             {
                 this.serverProcess.Kill(true);
-                this.serverProcess.WaitForExitAsync();
+            }
+            else
+            {
+                //kill all the process who where already running the server, to avoid errors
+                Process.GetProcesses().FirstOrDefault( x => x.ProcessName == "Aki.Server")?.Kill();
+                Process.GetProcesses().Where(x => x.ProcessName == "conhost").ToList().ForEach(x => x.Kill() );
             }
         }
 
         private void ServerTerminated(object sender, EventArgs e)
         {
             resetLauncherSize();
+            this.serverProcess = null;
         }
 
         void proc_OutputDataReceived(object sender, DataReceivedEventArgs e)

@@ -91,7 +91,7 @@
             this.gamePathTextBox.AccessibleDescription = "";
             this.gamePathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.gamePathTextBox.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.gamePathTextBox.ForeColor = System.Drawing.Color.White;
+            this.gamePathTextBox.ForeColor = System.Drawing.Color.Red;
             this.gamePathTextBox.Location = new System.Drawing.Point(134, 16);
             this.gamePathTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.gamePathTextBox.Name = "gamePathTextBox";
@@ -186,7 +186,6 @@
             this.backendUrlTextBox.Name = "backendUrlTextBox";
             this.backendUrlTextBox.Size = new System.Drawing.Size(163, 19);
             this.backendUrlTextBox.TabIndex = 12;
-            this.backendUrlTextBox.TextChanged += new System.EventHandler(this.backendUrlTextBox_TextChanged);
             // 
             // MainWindow
             // 
