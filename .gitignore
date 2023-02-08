@@ -1,6 +1,6 @@
 /bin
 /obj
 /Output
-/Properties/PublishProfiles
 /.vs
 SPTAKI_Alt_Launcher.csproj.user
+/Properties/PublishProfiles/FolderProfile.pubxml.user
