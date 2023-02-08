@@ -8,22 +8,23 @@
 		public static string backendUrl;
 		
 		static Globals()
-		{			
-			//serverFolder = Environment.CurrentDirectory;
-			serverFolder = "D:/tarkov/3.4.1 server";
+		{
+			#if DEBUG
+				serverFolder = "D:/tarkov/3.4.1 server";
+			#else
+				serverFolder = Environment.CurrentDirectory;
+			#endif
 
-			profilesFolder = serverFolder + "/user/profiles";
+            profilesFolder = serverFolder + "/user/profiles";
 
 			gameFolder = Properties.Settings.Default.gameFolder;
 			backendUrl = Properties.Settings.Default.backendURL;
 
-            
-
             /** 
+             * 
 			 * resources for game patcher :
 			 * .bpf /Aki_Data/Launcher/Patches/aki-core/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll.bpf
 			 * .dll /EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll
-			 * 
 			 * 
 			**/
         }
