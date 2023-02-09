@@ -2118,9 +2118,8 @@
             // traderUnlockedCkeckBox
             // 
             this.traderUnlockedCkeckBox.AutoSize = true;
-            this.traderUnlockedCkeckBox.Enabled = false;
             this.traderUnlockedCkeckBox.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.traderUnlockedCkeckBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.traderUnlockedCkeckBox.ForeColor = System.Drawing.Color.White;
             this.traderUnlockedCkeckBox.Location = new System.Drawing.Point(415, 190);
             this.traderUnlockedCkeckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderUnlockedCkeckBox.Name = "traderUnlockedCkeckBox";
@@ -2128,6 +2127,7 @@
             this.traderUnlockedCkeckBox.TabIndex = 61;
             this.traderUnlockedCkeckBox.Text = "Unlocked";
             this.traderUnlockedCkeckBox.UseVisualStyleBackColor = true;
+            this.traderUnlockedCkeckBox.CheckedChanged += new System.EventHandler(this.traderUnlockedCkeckBox_CheckedChanged);
             // 
             // label41
             // 
@@ -2144,7 +2144,6 @@
             // 
             this.traderStandingNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.traderStandingNumericBox.DecimalPlaces = 2;
-            this.traderStandingNumericBox.Enabled = false;
             this.traderStandingNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.traderStandingNumericBox.ForeColor = System.Drawing.Color.White;
             this.traderStandingNumericBox.Increment = new decimal(new int[] {
@@ -2155,13 +2154,14 @@
             this.traderStandingNumericBox.Location = new System.Drawing.Point(290, 190);
             this.traderStandingNumericBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderStandingNumericBox.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
+            999,
+            0,
             0,
             0});
             this.traderStandingNumericBox.Name = "traderStandingNumericBox";
             this.traderStandingNumericBox.Size = new System.Drawing.Size(100, 31);
             this.traderStandingNumericBox.TabIndex = 59;
+            this.traderStandingNumericBox.ValueChanged += new System.EventHandler(this.traderStandingNumericBox_ValueChanged);
             // 
             // label40
             // 
@@ -2177,19 +2177,20 @@
             // traderSalesNumericBox
             // 
             this.traderSalesNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.traderSalesNumericBox.Enabled = false;
             this.traderSalesNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.traderSalesNumericBox.ForeColor = System.Drawing.Color.White;
             this.traderSalesNumericBox.Location = new System.Drawing.Point(125, 190);
             this.traderSalesNumericBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderSalesNumericBox.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
+            999999999,
+            0,
             0,
             0});
             this.traderSalesNumericBox.Name = "traderSalesNumericBox";
+            this.traderSalesNumericBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.traderSalesNumericBox.Size = new System.Drawing.Size(138, 31);
             this.traderSalesNumericBox.TabIndex = 57;
+            this.traderSalesNumericBox.ValueChanged += new System.EventHandler(this.traderSalesNumericBox_ValueChanged);
             // 
             // label38
             // 
@@ -2233,19 +2234,19 @@
             // traderLevelNumericBox
             // 
             this.traderLevelNumericBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.traderLevelNumericBox.Enabled = false;
             this.traderLevelNumericBox.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.traderLevelNumericBox.ForeColor = System.Drawing.Color.White;
             this.traderLevelNumericBox.Location = new System.Drawing.Point(30, 190);
             this.traderLevelNumericBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.traderLevelNumericBox.Maximum = new decimal(new int[] {
-            1874919423,
-            2328306,
+            4,
+            0,
             0,
             0});
             this.traderLevelNumericBox.Name = "traderLevelNumericBox";
             this.traderLevelNumericBox.Size = new System.Drawing.Size(63, 31);
             this.traderLevelNumericBox.TabIndex = 54;
+            this.traderLevelNumericBox.ValueChanged += new System.EventHandler(this.traderLevelNumericBox_ValueChanged);
             // 
             // EditProfileForm
             // 

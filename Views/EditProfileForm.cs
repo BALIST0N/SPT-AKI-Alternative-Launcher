@@ -116,11 +116,12 @@ namespace SPTAKI_Alt_Launcher
                 {
                     traderListComboBox.Items.Add(tradersNames[tr]);
                 }
-                else
+                else //if its a modded trader then add trader id...
                 {
                     traderListComboBox.Items.Add(tr);
                 }
             }
+            this.traderListComboBox.SelectedIndex = 0;
 
             #region INIT SKILLS trackbars
             EnduranceTrackBar.Value = profileToEdit.GetSkillValue("Endurance");
@@ -207,12 +208,24 @@ namespace SPTAKI_Alt_Launcher
             }
         }
 
+        //when you move any skill trackbar value, it must change label value (don't forget to add this event to the control !)
+        private void TrackBars_ValueChanged(object sender, EventArgs e)
+        {
+            TrackBar t = (TrackBar)sender;
+            string name = t.Name.Replace("TrackBar", "").Replace("Trackbar", "") + "LevelLabel";
+            try
+            {
+                this.Controls.Find(name, true).FirstOrDefault().Text = t.Value.ToString();
+            }
+            catch { }
+        }
+
+
+
+        //****************** TRADER WINDOW FUNCTIONS & EVENTS ************************// 
         private void traderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string trader = this.traderListComboBox.SelectedItem.ToString();
-            string traderid = tradersNames.FirstOrDefault(x => x.Value == trader).Key;
-
-            if (traderid != null) { trader = traderid; }
+            string trader = getSelectedTrader();
 
             traderLevelNumericBox.Value = profileToEdit.TradersInfo[trader].loyaltyLevel;
             traderSalesNumericBox.Value = profileToEdit.TradersInfo[trader].salesSum;
@@ -220,17 +233,36 @@ namespace SPTAKI_Alt_Launcher
             traderUnlockedCkeckBox.Checked = profileToEdit.TradersInfo[trader].unlocked;
         }
 
-        //when you move any skill trackbar value, it must change label value (don't forget to add this event to the control !)
-        private void TrackBars_ValueChanged(object sender, EventArgs e)
+        private void traderUnlockedCkeckBox_CheckedChanged(object sender, EventArgs e)
         {
-            TrackBar t = (TrackBar)sender;
-            string name = t.Name.Replace("TrackBar", "").Replace("Trackbar", "") + "LevelLabel";
-            try
-            {               
-                this.Controls.Find(name, true).FirstOrDefault().Text = t.Value.ToString();
-            }
-            catch{}
+            profileToEdit.TradersInfo[getSelectedTrader()].unlocked = this.traderUnlockedCkeckBox.Checked;
         }
+
+        private void traderStandingNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            profileToEdit.TradersInfo[getSelectedTrader()].standing = this.traderStandingNumericBox.Value;
+        }
+
+        private void traderSalesNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            profileToEdit.TradersInfo[getSelectedTrader()].salesSum = (int)Math.Round(this.traderSalesNumericBox.Value,0);
+        }
+
+        private void traderLevelNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            profileToEdit.TradersInfo[getSelectedTrader()].loyaltyLevel = (int)Math.Round(this.traderLevelNumericBox.Value,0);
+        }
+
+
+        private string getSelectedTrader()
+        {
+            string trader = this.traderListComboBox.SelectedItem.ToString();
+            string traderid = tradersNames.FirstOrDefault(x => x.Value == trader).Key;
+
+            if (traderid != null) { trader = traderid; }//if its not a modded trader, convert the name into the trader id
+            return trader;
+        }
+
 
         private void SaveButton_Click(object sender, EventArgs e) //saving the profile 
         {
@@ -293,6 +325,7 @@ namespace SPTAKI_Alt_Launcher
                 characterPmcData.SelectToken("Info")["Experience"] = profileToEdit.info.experience;
                 characterPmcData.SelectToken("Info")["GameVersion"] = profileToEdit.info.gameVersion;
 
+                
                 for (int i = 0; i < profileToEdit.skills.common.Count; i++)
                 {
                     characterPmcData.SelectToken("Skills").SelectToken("Common")[i]["Progress"] = profileToEdit.skills.common[i].progress;
@@ -305,9 +338,17 @@ namespace SPTAKI_Alt_Launcher
 
                 foreach (ProfileExtended.Hideout.Area a in profileToEdit.hideout.areas)
                 {
-                    characterPmcData.SelectToken("Hideout").SelectToken("$.Areas[?(@.type == "+a.type+")]")["level"] = a.level;
+                    characterPmcData.SelectToken("Hideout").SelectToken("$.Areas[?(@.type == "+a.type+")]")["level"] = a.level; //some json LINQ magic i don't understand....
                 }
 
+                foreach(KeyValuePair<string, ProfileExtended.Trader> T in profileToEdit.TradersInfo )
+                {   
+                    characterPmcData.SelectToken("TradersInfo."+T.Key)["loyaltyLevel"] = T.Value.loyaltyLevel;
+                    characterPmcData.SelectToken("TradersInfo."+T.Key)["salesSum"] = T.Value.salesSum;
+                    characterPmcData.SelectToken("TradersInfo."+T.Key)["standing"] = T.Value.standing;
+                    characterPmcData.SelectToken("TradersInfo."+T.Key)["unlocked"] = T.Value.unlocked;
+                }
+                
                 ProfileJSON["characters"]["pmc"] = characterPmcData;
                 ProfileJSON["info"]["wipe"] = this.wipeProfileCheckbox.Checked;
 
@@ -341,6 +382,7 @@ namespace SPTAKI_Alt_Launcher
                 levelMax = u;
             }
         }
+
 
     }
 }
