@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
 
 namespace SPTAKI_Alt_Launcher
 {
@@ -26,7 +22,7 @@ namespace SPTAKI_Alt_Launcher
             editionListBox.SelectedIndex = 0;
         }
 
-        private void profileEditButton_Click(object sender, EventArgs e)
+        private void profileCreateButton_Click(object sender, EventArgs e)
         {
             if (usernameTextBox.Text.Length > 0)
             {

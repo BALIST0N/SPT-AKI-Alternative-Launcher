@@ -253,7 +253,6 @@ namespace SPTAKI_Alt_Launcher
             profileToEdit.TradersInfo[getSelectedTrader()].loyaltyLevel = (int)Math.Round(this.traderLevelNumericBox.Value,0);
         }
 
-
         private string getSelectedTrader()
         {
             string trader = this.traderListComboBox.SelectedItem.ToString();
@@ -262,7 +261,6 @@ namespace SPTAKI_Alt_Launcher
             if (traderid != null) { trader = traderid; }//if its not a modded trader, convert the name into the trader id
             return trader;
         }
-
 
         private void SaveButton_Click(object sender, EventArgs e) //saving the profile 
         {
@@ -325,7 +323,6 @@ namespace SPTAKI_Alt_Launcher
                 characterPmcData.SelectToken("Info")["Experience"] = profileToEdit.info.experience;
                 characterPmcData.SelectToken("Info")["GameVersion"] = profileToEdit.info.gameVersion;
 
-                
                 for (int i = 0; i < profileToEdit.skills.common.Count; i++)
                 {
                     characterPmcData.SelectToken("Skills").SelectToken("Common")[i]["Progress"] = profileToEdit.skills.common[i].progress;

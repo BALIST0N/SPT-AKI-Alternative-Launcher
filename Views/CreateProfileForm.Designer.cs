@@ -102,7 +102,7 @@ namespace SPTAKI_Alt_Launcher
             this.profileCreateButton.TabIndex = 7;
             this.profileCreateButton.Text = "Create !";
             this.profileCreateButton.UseVisualStyleBackColor = false;
-            this.profileCreateButton.Click += new System.EventHandler(this.profileEditButton_Click);
+            this.profileCreateButton.Click += new System.EventHandler(this.profileCreateButton_Click);
             // 
             // CreateProfileForm
             // 
