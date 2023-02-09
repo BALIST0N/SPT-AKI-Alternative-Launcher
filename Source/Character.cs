@@ -29,7 +29,7 @@
             public class Mastering
             {
                 public string id;
-                public int progress;
+                public decimal progress;
             }
         }
 

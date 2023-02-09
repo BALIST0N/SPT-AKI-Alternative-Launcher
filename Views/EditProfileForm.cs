@@ -191,15 +191,16 @@ namespace SPTAKI_Alt_Launcher
 
         private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //remove event (same like hideout values)
             WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
-            WeaponMasteringTrackBar.Value = profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
+            WeaponMasteringTrackBar.Value = (int)profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
             TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
-            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged);
+            WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged); //re-add the event otherwise it will not be triggerd
         }
 
         private void WeaponMasteringTrackBar_ValueChanged(object sender, EventArgs e)
         {
-            if(masteringComboBox.SelectedIndex > 0 )
+            if(masteringComboBox.SelectedIndex > -1 )
             {
                 profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress = WeaponMasteringTrackBar.Value;
                 TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
