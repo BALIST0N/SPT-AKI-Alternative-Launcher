@@ -36,12 +36,19 @@
         public int GetSkillValue(string skill)
         {
             //return profileToEdit.skills[profileToEdit.skills.listskills.FindIndex(x => x.id.Equals(skill))].progress;
-            return Convert.ToInt32( this.skills.common.Find(x => x.id.Equals(skill)).progress );
+            return Convert.ToInt32( this.skills.common.Find(x => x.id.Equals(skill))?.progress );
         }
 
         public void SetSkillValue(string skill, decimal newval)
         {
-            this.skills.common.Find(x => x.id.Equals(skill)).progress = newval;
+            try
+            {
+                this.skills.common.Find(x => x.id.Equals(skill)).progress = newval;
+            }
+            catch(NullReferenceException e)
+            {
+                MessageBox.Show("unable to modify the skill " + skill + ", maybe it doesn't exist in the profile ? " );
+            }
         }
 
         public class Hideout
