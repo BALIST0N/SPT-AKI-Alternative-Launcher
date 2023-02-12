@@ -9,11 +9,13 @@ namespace SPTAKI_Alt_Launcher
         ProfileExtended profileToEdit;
         List<HideoutUpgradesArea> hideoutLevels;
         Dictionary<string, string> tradersNames;
+        List<MasteringWeaponLevel> weaponMasteringLevels;
 
         public EditProfileForm(string id, Point location)
         {
             profilePath = Path.Combine(Globals.profilesFolder, id +".json");
             tradersNames = new Dictionary<string, string>();
+            weaponMasteringLevels = new List<MasteringWeaponLevel>();
             hideoutLevels = new List<HideoutUpgradesArea>();
             this.StartPosition = FormStartPosition.Manual;
             location.X += 100;
@@ -83,12 +85,26 @@ namespace SPTAKI_Alt_Launcher
                         this.Close();
                     }                    
                 }
+
+                using (StreamReader r = new StreamReader(Globals.serverFolder + "/Aki_Data/Server/database/globals.json"))
+                {
+                    dynamic global = JObject.Parse(r.ReadToEnd());
+                    weaponMasteringLevels = JsonConvert.DeserializeObject<List<MasteringWeaponLevel>>( (string)global["config"]["Mastering"].ToString() ); 
+                }
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("profile can't be loaded : " + ex.Message);
                 Close();
             }
+
+            //load mastering table
+
+
+
+
 
             foreach (HideoutUpgradesArea h in hideoutLevels)
             {
@@ -193,8 +209,12 @@ namespace SPTAKI_Alt_Launcher
         private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //remove event (same like hideout values)
+
+            MasteringWeaponLevel wml = weaponMasteringLevels.Find(x => x.Name == this.masteringComboBox.SelectedItem.ToString());
+
             WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
             WeaponMasteringTrackBar.Value = (int)profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
+            WeaponMasteringTrackBar.Maximum = wml.Level2 + wml.Level3;
             TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
             WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged); //re-add the event otherwise it will not be triggerd
         }
@@ -377,6 +397,20 @@ namespace SPTAKI_Alt_Launcher
                 areaType = t;
                 areaName = n;
                 levelMax = u;
+            }
+        }
+
+        internal class MasteringWeaponLevel
+        {
+            public string Name;
+            public int Level2;
+            public int Level3;
+
+            public MasteringWeaponLevel(string name, int l2,int l3) 
+            {
+                Name = name;
+                Level2 = l2;
+                Level3 = l3;
             }
         }
 
