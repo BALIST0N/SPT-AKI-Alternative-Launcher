@@ -91,20 +91,12 @@ namespace SPTAKI_Alt_Launcher
                     dynamic global = JObject.Parse(r.ReadToEnd());
                     weaponMasteringLevels = JsonConvert.DeserializeObject<List<MasteringWeaponLevel>>( (string)global["config"]["Mastering"].ToString() ); 
                 }
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("profile can't be loaded : " + ex.Message);
                 Close();
             }
-
-            //load mastering table
-
-
-
-
 
             foreach (HideoutUpgradesArea h in hideoutLevels)
             {
@@ -209,9 +201,7 @@ namespace SPTAKI_Alt_Launcher
         private void masteringComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //remove event (same like hideout values)
-
             MasteringWeaponLevel wml = weaponMasteringLevels.Find(x => x.Name == this.masteringComboBox.SelectedItem.ToString());
-
             WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
             WeaponMasteringTrackBar.Value = (int)profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
             WeaponMasteringTrackBar.Maximum = wml.Level2 + wml.Level3;
