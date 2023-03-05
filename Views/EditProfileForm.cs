@@ -305,7 +305,10 @@ namespace SPTAKI_Alt_Launcher
             profileToEdit.SetSkillValue("RecoilControl", RecoilTrackBar.Value);
             profileToEdit.SetSkillValue("WeaponTreatment", WeaponTreatmentTrackBar.Value);
             profileToEdit.SetSkillValue("TroubleShooting", TroubleShootingTrackBar.Value);
-            
+
+            profileToEdit.SetSkillValue("LightVests", LightVestsTrackBar.Value);
+            profileToEdit.SetSkillValue("HeavyVests", HeavyVestsTrackBar.Value);
+
 
             //weapon skills
             profileToEdit.SetSkillValue("Pistol", PistolTrackBar.Value);
