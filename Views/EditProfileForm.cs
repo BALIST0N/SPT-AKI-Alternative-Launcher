@@ -203,8 +203,12 @@ namespace SPTAKI_Alt_Launcher
             //remove event (same like hideout values)
             MasteringWeaponLevel wml = weaponMasteringLevels.Find(x => x.Name == this.masteringComboBox.SelectedItem.ToString());
             WeaponMasteringTrackBar.ValueChanged -= new EventHandler(WeaponMasteringTrackBar_ValueChanged);
-            WeaponMasteringTrackBar.Value = (int)profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
             WeaponMasteringTrackBar.Maximum = wml.Level2 + wml.Level3;
+
+            int masterValue = (int)profileToEdit.skills.mastering.Find(x => x.id.Equals(this.masteringComboBox.SelectedItem.ToString())).progress;
+            if(masterValue > WeaponMasteringTrackBar.Maximum) { masterValue = WeaponMasteringTrackBar.Maximum; }
+
+            WeaponMasteringTrackBar.Value = masterValue;
             TrackBars_ValueChanged(WeaponMasteringTrackBar, e);
             WeaponMasteringTrackBar.ValueChanged += new EventHandler(WeaponMasteringTrackBar_ValueChanged); //re-add the event otherwise it will not be triggerd
         }
