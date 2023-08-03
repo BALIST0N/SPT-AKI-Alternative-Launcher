@@ -35,8 +35,9 @@
 
         public int GetSkillValue(string skill)
         {
-            //return profileToEdit.skills[profileToEdit.skills.listskills.FindIndex(x => x.id.Equals(skill))].progress;
-            return Convert.ToInt32( this.skills.common.Find(x => x.id.Equals(skill))?.progress );
+            int i = Convert.ToInt32(this.skills.common.Find(x => x.id.Equals(skill))?.progress);
+            if(i > 5100){ i = 5100; }
+            return i;
         }
 
         public void SetSkillValue(string skill, decimal newval)

@@ -4,6 +4,7 @@ using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text;
+using System.Xml.Linq;
 
 namespace SPTAKI_Alt_Launcher
 {
@@ -24,6 +25,7 @@ namespace SPTAKI_Alt_Launcher
             profilesListBox.SelectedIndex = 0;
             gamePathTextBox.Text = Globals.gameFolder;
             backendUrlTextBox.Text = Globals.backendUrl;
+            BackgroundColorSelector.Checked = Settings.Default.blackbg;
             backendUrlTextBox.TextChanged += backendUrlTextBox_TextChanged;
             profilesListBox.SelectedIndexChanged += profilesListBox_SelectedIndexChanged;
             gamePathTextBox.TextChanged += gamePathTextBox_TextChanged;
@@ -37,7 +39,7 @@ namespace SPTAKI_Alt_Launcher
         private void MainWindow_Shown(object sender, EventArgs e)
         {
             LoadProfiles();
-            backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width;
+            backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width + 25;
             serverOutputRichBox.Text = " "; //load someting on the RTB cuz sometimes font doesn't load properly..?
             serverOutputRichBox.Font = new Font("Consolas", 10);
         }
@@ -79,10 +81,10 @@ namespace SPTAKI_Alt_Launcher
 
         private void backendUrlTextBox_TextChanged(object sender, EventArgs e)
         {
-            backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width;
+            backendUrlTextBox.Width = TextRenderer.MeasureText(backendUrlTextBox.Text, backendUrlTextBox.Font).Width + 25;
             Globals.backendUrl = backendUrlTextBox.Text;
-            Properties.Settings.Default.backendURL = backendUrlTextBox.Text;
-            Properties.Settings.Default.Save();
+            Settings.Default.backendURL = backendUrlTextBox.Text;
+            Settings.Default.Save();
 
             /*
             bool httpStr = Regex.IsMatch(backendUrlTextBox.Text, "https://|http://", RegexOptions.IgnoreCase);
@@ -115,7 +117,7 @@ namespace SPTAKI_Alt_Launcher
         {
             if (Directory.Exists(Globals.profilesFolder) == false) //if "profiles" folder doesn't exist
             {
-                if(Directory.Exists(Globals.profilesFolder.Replace("/profiles","")) == false) //if there is not a /user folder
+                if (Directory.Exists(Globals.profilesFolder.Replace("/profiles", "")) == false) //if there is not a /user folder
                 {
                     MessageBox.Show("unable to find profiles, make sure the launcher is in SPT-AKI SERVER folder");
                 }
@@ -127,7 +129,7 @@ namespace SPTAKI_Alt_Launcher
             }
             else
             {
-                var profilesFiles = Directory.GetFiles(Globals.profilesFolder,"*.json");
+                var profilesFiles = Directory.GetFiles(Globals.profilesFolder, "*.json");
 
                 if (profilesFiles.Length == 0) //file count = 0
                 {
@@ -177,7 +179,7 @@ namespace SPTAKI_Alt_Launcher
                     Properties.Settings.Default.Save();
                     gamePathTextBox.ForeColor = Color.White;
                 }
-                
+
             }
             else
             {
@@ -195,12 +197,12 @@ namespace SPTAKI_Alt_Launcher
                 profileEditButton.Enabled = false;
             }
 
-            if (gameExists && profileExists )
+            if (gameExists && profileExists)
             {
                 startButton.Enabled = true;
 
                 //check if server is running
-                if(this.serverProcess != null)
+                if (this.serverProcess != null)
                 {
                     if (Process.GetProcessById(serverProcess.Id).Id == this.serverProcess.Id)
                     {
@@ -231,6 +233,48 @@ namespace SPTAKI_Alt_Launcher
             }
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.BackgroundColorSelector.Checked == true)
+            {
+                this.BackgroundImage = null;
+
+                this.label1.BackColor = Color.Transparent;
+                this.label1.ForeColor = Color.White;
+
+                this.backendUrlLabel.BackColor = Color.Transparent;
+                this.backendUrlLabel.ForeColor = Color.White;
+
+                this.backendUrlTextBox.BackColor = Color.FromArgb(32, 32, 32);
+                this.backendUrlTextBox.BorderStyle = BorderStyle.Fixed3D;
+                this.backendUrlTextBox.ForeColor = Color.White;
+
+
+            }
+            else
+            {
+
+                this.BackgroundImage = Resources.bg;
+
+                this.label1.BackColor = Color.Tomato;
+                this.label1.ForeColor = Color.Black;
+
+                this.backendUrlLabel.BackColor = Color.SandyBrown;
+                this.backendUrlLabel.ForeColor = Color.Black;
+
+                this.backendUrlTextBox.BackColor = Color.SandyBrown;
+                this.backendUrlTextBox.BorderStyle = BorderStyle.None;
+                this.backendUrlTextBox.ForeColor = Color.Black;
+            }
+
+            Settings.Default.blackbg = this.BackgroundColorSelector.Checked;
+            Settings.Default.Save();
+
+        }
+
+
+
+
 
         //**************************************************//
         //              PROCESS FUNCTIONS & EVENTS          //
@@ -238,39 +282,39 @@ namespace SPTAKI_Alt_Launcher
 
         private void LaunchServer()
         {
-            string serverExe =  Directory.GetFiles(Globals.serverFolder, "*Server.exe")[0];
+            string serverExe = Directory.GetFiles(Globals.serverFolder, "*Server.exe")[0];
 
             /* start the server exe silently and with a few parameters 
             receive all the console output into a rich textbox */
             this.serverProcess = new Process();
             this.serverProcess.StartInfo.WorkingDirectory = Globals.serverFolder;
 
-            if (File.Exists(serverExe) )
+            if (File.Exists(serverExe))
             {
                 this.serverProcess.StartInfo.FileName = serverExe;
                 this.serverProcess.StartInfo.CreateNoWindow = true;
                 this.serverProcess.StartInfo.UseShellExecute = false; //very important, tie the console window with the launcher so the application can read the console
-                
+
                 this.serverProcess.StartInfo.RedirectStandardError = true; //redirect everything otherwise nothing will be send
                 this.serverProcess.StartInfo.RedirectStandardInput = true;
                 this.serverProcess.StartInfo.RedirectStandardOutput = true;
                 this.serverProcess.StartInfo.StandardOutputEncoding = Encoding.UTF8; //utf-8 because i didn't find better readable text
                 this.serverProcess.EnableRaisingEvents = true; // /!\ enables handlers for reading info
-                
+
                 this.serverProcess.Exited += ServerTerminated;
                 this.serverProcess.Start();
-                
+
                 this.serverProcess.BeginOutputReadLine();
                 this.serverProcess.OutputDataReceived += proc_OutputDataReceived;
 
-                this.Height = 450;
+                this.Height = 520;
                 this.killServerButton.Show();
 
             }
             else
             {
                 MessageBox.Show("we didn't find server ?");
-            }                                                                             
+            }
         }
 
         private void StartGame(string id)
@@ -291,7 +335,7 @@ namespace SPTAKI_Alt_Launcher
             Process p = Process.Start(startGame);
             this.gameProcessId = p.Id;
             this.startButton.Enabled = false;
-            
+
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -306,15 +350,15 @@ namespace SPTAKI_Alt_Launcher
 
         private void killServer()
         {
-            if(this.serverProcess != null)
+            if (this.serverProcess != null)
             {
                 this.serverProcess.Kill(true);
             }
             else
             {
                 //kill all the process who where already running the server, to avoid errors
-                Process.GetProcesses().FirstOrDefault( x => x.ProcessName == "Aki.Server")?.Kill();
-                Process.GetProcesses().Where(x => x.ProcessName == "conhost").ToList().ForEach(x => x.Kill() );
+                Process.GetProcesses().FirstOrDefault(x => x.ProcessName == "Aki.Server")?.Kill();
+                Process.GetProcesses().Where(x => x.ProcessName == "conhost").ToList().ForEach(x => x.Kill());
             }
         }
 
@@ -350,14 +394,13 @@ namespace SPTAKI_Alt_Launcher
                 this.serverOutputRichBox.SelectionStart = serverOutputRichBox.Text.Length;
                 this.serverOutputRichBox.ScrollToCaret();
 
-                if (text.Contains(Settings.Default.backendURL) == true )
+                if (text.Contains(Settings.Default.backendURL) == true)
                 {
-                    StartGame( profiles[profilesListBox.SelectedIndex - 1].id );
+                    StartGame(profiles[profilesListBox.SelectedIndex - 1].id);
                 }
 
             }
         }
-
 
     }
 
@@ -369,7 +412,7 @@ namespace SPTAKI_Alt_Launcher
         public bool wipe;
         public string edition;
 
-        public Profile() { }       
+        public Profile() { }
 
     }
 }

@@ -311,6 +311,7 @@ namespace SPTAKI_Alt_Launcher
 
 
             //weapon skills
+            profileToEdit.SetSkillValue("Melee", MeleeTrackBar.Value);
             profileToEdit.SetSkillValue("Pistol", PistolTrackBar.Value);
             profileToEdit.SetSkillValue("SMG", SMGTrackBar.Value);
             profileToEdit.SetSkillValue("Assault", AssaultTrackBar.Value);

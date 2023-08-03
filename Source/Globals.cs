@@ -10,7 +10,7 @@
 		static Globals()
 		{
 			#if DEBUG
-				serverFolder = "D:/tarkov/EFT2";
+				serverFolder = "D:/TARKOV/SPT";
 			#else
 				serverFolder = Environment.CurrentDirectory;
 			#endif
