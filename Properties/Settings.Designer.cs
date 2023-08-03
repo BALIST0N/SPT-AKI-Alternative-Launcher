@@ -25,7 +25,7 @@ namespace SPTAKI_Alt_Launcher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enter EFT folder path here")]
+        [global::System.Configuration.DefaultSettingValueAttribute("SELECT SPT FOLDER HERE")]
         public string gameFolder {
             get {
                 return ((string)(this["gameFolder"]));

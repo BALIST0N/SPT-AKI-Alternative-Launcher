@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="gameFolder" Type="System.String" Scope="User">
-      <Value Profile="(Default)">enter EFT folder path here</Value>
+      <Value Profile="(Default)">SELECT SPT FOLDER HERE</Value>
     </Setting>
     <Setting Name="backendURL" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://127.0.0.1:6969</Value>
