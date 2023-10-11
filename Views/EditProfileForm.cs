@@ -35,30 +35,31 @@ namespace SPTAKI_Alt_Launcher
             #endregion
 
             #region hideoutlevel init
-            hideoutLevels.Add(new HideoutUpgradesArea(0,  "Vents", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(1,  "Security", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(2,  "Lavatory", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(3,  "Stash", 4));
-            hideoutLevels.Add(new HideoutUpgradesArea(4,  "Generator", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(5,  "Heating", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(6,  "Water Collector", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(7,  "MedStation", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(8,  "Nutrition Unit", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(9,  "Rest Space", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(10, "Workbench", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(11, "Intel Center", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(12, "Shooting Range", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(13, "Library", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(14, "Scav Case", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(15, "Illumination", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(16, "Place of Fame", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(17, "Air Filter", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(18, "Solar Power", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(19, "Booze Generator", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(20, "Bitcoin Farm", 3));
-            hideoutLevels.Add(new HideoutUpgradesArea(21, "Christmas Tree", 1));
-            hideoutLevels.Add(new HideoutUpgradesArea(22, "Emergency Wall", 6));
-            hideoutLevels.Add(new HideoutUpgradesArea(23, "Gym", 1));
+            hideoutLevels.Add(new HideoutUpgradesArea(0,  "VENTS"           ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(1,  "SECURITY"        ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(2,  "LAVATORY"        ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(3,  "STASH"           ,4));
+            hideoutLevels.Add(new HideoutUpgradesArea(4,  "GENERATOR"       ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(5,  "HEATING"         ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(6,  "WATER COLLECTOR" ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(7,  "MEDSTATION"      ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(8,  "NUTRITION UNIT"  ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(9,  "REST SPACE"      ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(10, "WORKBENCH"       ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(11, "INTEL CENTER"    ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(12, "SHOOTING RANGE"  ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(13, "LIBRARY"         ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(14, "SCAV CASE"       ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(15, "ILLUMINATION"    ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(16, "PLACE OF FAME"   ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(17, "AIR FILTERING"   ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(18, "SOLAR POWER"     ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(19, "BOOZE GENERATOR" ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(20, "BITCOIN FARM"    ,3));
+            hideoutLevels.Add(new HideoutUpgradesArea(21, "CHRISTMAS TREE"  ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(22, "EMERGENCY WALL"  ,6));
+            hideoutLevels.Add(new HideoutUpgradesArea(23, "GYM"             ,1));
+            hideoutLevels.Add(new HideoutUpgradesArea(24, "WEAPON STAND"    ,3));
             #endregion
             InitializeComponent();
         }
