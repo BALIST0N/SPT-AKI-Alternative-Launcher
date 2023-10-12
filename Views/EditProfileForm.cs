@@ -359,10 +359,14 @@ namespace SPTAKI_Alt_Launcher
 
                 foreach(KeyValuePair<string, ProfileExtended.Trader> T in profileToEdit.TradersInfo )
                 {   
-                    characterPmcData.SelectToken("TradersInfo."+T.Key)["loyaltyLevel"] = T.Value.loyaltyLevel;
-                    characterPmcData.SelectToken("TradersInfo."+T.Key)["salesSum"] = T.Value.salesSum;
-                    characterPmcData.SelectToken("TradersInfo."+T.Key)["standing"] = T.Value.standing;
-                    characterPmcData.SelectToken("TradersInfo."+T.Key)["unlocked"] = T.Value.unlocked;
+                    if(T.Key.Contains('.') == false)
+                    {
+                        characterPmcData.SelectToken("TradersInfo." + T.Key)["loyaltyLevel"] = T.Value.loyaltyLevel;
+                        characterPmcData.SelectToken("TradersInfo." + T.Key)["salesSum"] = T.Value.salesSum;
+                        characterPmcData.SelectToken("TradersInfo." + T.Key)["standing"] = T.Value.standing;
+                        characterPmcData.SelectToken("TradersInfo." + T.Key)["unlocked"] = T.Value.unlocked;
+                    }
+                                                              
                 }
                 
                 ProfileJSON["characters"]["pmc"] = characterPmcData;
